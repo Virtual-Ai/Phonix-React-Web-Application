@@ -30,6 +30,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@react-firebase/auth": "^0.2.10",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -37,8 +38,10 @@
     "bootstrap": "5.0.0-beta1",
     "chartist": "^0.11.4",
     "chartist-plugin-tooltips-updated": "^0.1.4",
+    "firebase": "^8.4.1",
     "moment-timezone": "^0.5.31",
     "node-sass": "^4.14.1",
+    "random-id": "0.0.2",
     "react": "^16.13.1",
     "react-chartist": "^0.14.3",
     "react-chatbot-kit": "^1.1.20",
@@ -52,8 +55,7 @@
     "react-scripts": "3.4.3",
     "react-transition-group": "^4.4.1",
     "simplebar-react": "^2.3.0",
-    "styled-components": "^5.2.3",
-    "random-id": "0.0.2"
+    "styled-components": "^5.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
