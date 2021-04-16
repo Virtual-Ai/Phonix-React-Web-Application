@@ -75,7 +75,7 @@ class Signin extends Component {
       .signInWithEmailAndPassword(email, password)
       .catch(function (error) {
         var errorMessage = error.message;
-        alert("errorMessage: " + errorMessage);
+        alert(errorMessage);
       });
 
     await firebase.auth().onAuthStateChanged(function (user) {

@@ -58,20 +58,20 @@ class Signup extends Component {
   handlePassChange(e) {
     this.setState({ password: e.target.value });
   }
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     var email = this.state.email.trim();
     var password = this.state.password.trim();
 
     var flag = 0;
 
-    firebase
+    await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(function (error) {
         flag = 1;
         var errorMessage = error.message;
-        alert("errorMessage: " + errorMessage);
+        alert(errorMessage);
       });
 
     if (email !== "" && password !== "" && flag === 0) {
