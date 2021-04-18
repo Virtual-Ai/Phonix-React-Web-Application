@@ -1,13 +1,87 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import ImageLight from "../assets/img/login-office.jpeg";
 import ImageDark from "../assets/img/login-office-dark.jpeg";
 import { GithubIcon, TwitterIcon } from "../icons";
 import { Label, Input, Button } from "@windmill/react-ui";
+import firebase from "firebase/app";
+import "firebase/auth";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyDoURAS2kwFuhokGfqgGJ2oUWV95Mnw0r0",
+  authDomain: "react-grammar-app.firebaseapp.com",
+  projectId: "react-grammar-app",
+  storageBucket: "react-grammar-app.appspot.com",
+  messagingSenderId: "797313993235",
+  appId: "1:797313993235:web:8203ccedbe7110ae34cde6",
+};
 class Login extends Component {
+  constructor(props) {
+    super(props);
+
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    } else {
+      firebase.app(); // if already initialized, use that one
+    }
+
+    this.state = { email: "", password: "", redirect: null };
+
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePassChange = this.handlePassChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleEmailChange(e) {
+    this.setState({ email: e.target.value });
+  }
+  handlePassChange(e) {
+    this.setState({ password: e.target.value });
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    var email = this.state.email.trim();
+    var password = this.state.password.trim();
+    var flag = 0;
+
+    console.log(email, password);
+
+    await firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch(function (error) {
+        var errorMessage = error.message;
+        alert(errorMessage);
+      });
+
+    await firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        console.log(user);
+        flag = 1;
+      } else {
+        alert("Wrong Credentials");
+        flag = 0;
+      }
+    });
+
+    if (flag === 1) {
+      this.setState({ redirect: "/" });
+    }
+
+    // if (flag === 1) {
+    //   this.setState({ redirect: null });
+    // }
+    // if (email !== "" && password !== "" && flag === 0) {
+    //   this.setState({ redirect: "/" });
+    // }
+  }
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect to={"/"} />;
+    }
     return (
       <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
         <div className="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
@@ -34,6 +108,8 @@ class Login extends Component {
                 <Label>
                   <span>Email</span>
                   <Input
+                    value={this.state.email}
+                    onChange={this.handleEmailChange}
                     className="mt-1"
                     type="email"
                     placeholder="john@doe.com"
@@ -43,13 +119,20 @@ class Login extends Component {
                 <Label className="mt-4">
                   <span>Password</span>
                   <Input
+                    value={this.state.password}
+                    onChange={this.handlePassChange}
                     className="mt-1"
                     type="password"
                     placeholder="***************"
                   />
                 </Label>
 
-                <Button className="mt-4" block tag={Link} to="/app">
+                <Button
+                  className="mt-4"
+                  onClick={this.handleSubmit}
+                  block
+                  tag={Link}
+                >
                   Log in
                 </Button>
 

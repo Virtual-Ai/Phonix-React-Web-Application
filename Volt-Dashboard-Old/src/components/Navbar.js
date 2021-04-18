@@ -1,14 +1,13 @@
-import React from 'react' //  { useState }
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react"; //  { useState }
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  // faBell,
   faCog,
   faEnvelopeOpen,
   faSearch,
   faSignOutAlt,
   faUserShield,
-} from '@fortawesome/free-solid-svg-icons'
-import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
+} from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import {
   // Row,
   // Col,
@@ -20,14 +19,14 @@ import {
   Container,
   // ListGroup,
   InputGroup,
-} from '@themesberg/react-bootstrap'
+} from "@themesberg/react-bootstrap";
 
 // import { ProgressTrackWidget } from './Widgets'
 
 // import NOTIFICATIONS_DATA from '../data/notifications';
-import Profile3 from '../assets/img/brand/bot3.png'
+import Profile3 from "../assets/img/brand/bot3.png";
 
-import { Routes } from '../routes'
+import { Routes } from "../routes";
 
 export default (props) => {
   // const [notifications, setNotifications] = useState(NOTIFICATIONS_DATA);
@@ -43,8 +42,8 @@ export default (props) => {
   // };
 
   const style = {
-    display: 'unset',
-  }
+    display: "unset",
+  };
 
   // const Notification = (props) => {
   //   const { link, sender, image, time, message, read = false } = props;
@@ -130,7 +129,7 @@ export default (props) => {
             <Dropdown.Toggle as={Nav.Link} className="pt-1 px-0">
               <div
                 className="media d-flex align-items-center"
-                style={{ height: '100px' }}
+                style={{ height: "100px" }}
               >
                 <Image
                   src={Profile3}
@@ -139,7 +138,7 @@ export default (props) => {
                 <div className="media-body ms-2 text-dark align-items-center d-none d-lg-block">
                   <span
                     className="mb-0  fw-bold"
-                    style={{ fontSize: '2.875rem', margin: '25px' }}
+                    style={{ fontSize: "2.875rem", margin: "25px" }}
                   >
                     [ player name ]
                   </span>
@@ -149,7 +148,7 @@ export default (props) => {
             </Dropdown.Toggle>
             <Dropdown.Menu
               className="user-dropdown dropdown-menu-right mt-2"
-              style={{ left: '0 !important' }}
+              style={{ left: "0 !important" }}
             >
               <Dropdown.Item className="fw-bold">
                 <FontAwesomeIcon icon={faUserCircle} className="me-2" /> My
@@ -159,7 +158,7 @@ export default (props) => {
                 <FontAwesomeIcon icon={faCog} className="me-2" /> Settings
               </Dropdown.Item>
               <Dropdown.Item className="fw-bold">
-                <FontAwesomeIcon icon={faEnvelopeOpen} className="me-2" />{' '}
+                <FontAwesomeIcon icon={faEnvelopeOpen} className="me-2" />{" "}
                 Messages
               </Dropdown.Item>
               <Dropdown.Item className="fw-bold">
@@ -175,7 +174,7 @@ export default (props) => {
                 <FontAwesomeIcon
                   icon={faSignOutAlt}
                   className="text-danger me-2"
-                />{' '}
+                />{" "}
                 Logout
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -183,5 +182,5 @@ export default (props) => {
         </div>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
