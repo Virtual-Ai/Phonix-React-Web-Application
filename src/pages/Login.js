@@ -67,7 +67,7 @@ class Login extends Component {
     });
 
     if (flag === 1) {
-      this.setState({ redirect: "/" });
+      this.setState({ redirect: "/app" });
     }
 
     // if (flag === 1) {
@@ -80,7 +80,7 @@ class Login extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to={"/"} />;
+      return <Redirect to={"/app"} />;
     }
     return (
       <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
