@@ -53,7 +53,7 @@ function Chat() {
           recognitionEnable={true}
           width="700px"
           headerTitle="Phonix"
-          enableSmoothScroll="True"
+          enableSmoothScroll={true}
         />
       </div>
     </React.StrictMode>
