@@ -1,9 +1,9 @@
-import React from 'react'
-import '../assets/css/landingpage.css'
-import { Link } from 'react-router-dom'
-import bot3 from '../assets/img/bot3.png'
-import Header from './Header'
-import HeroHome from './HeroHome'
+import React from "react";
+import "../assets/css/landingpage.css";
+import { Link } from "react-router-dom";
+import bot3 from "../assets/img/bot3.png";
+import Header from "./Header";
+import HeroHome from "./HeroHome";
 
 function LandingPage() {
   return (
@@ -78,32 +78,40 @@ function LandingPage() {
       <div id="hero" className="container mx-auto h-screen">
         <div
           className="text-center px-3 lg:px-0"
-          style={{ marginTop: '75px', width: 'max-content' }}
+          style={{ marginTop: "75px", width: "max-content" }}
         >
-          <button
-            id="navAction"
-            className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-          >
-            Play !
-          </button>
-          <button
-            id="navAction"
-            className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-          >
-            Chat
-          </button>
-          <button
-            id="navAction"
-            className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-          >
-            Learn
-          </button>
+          <Link to="/app/play">
+            <button
+              id="navAction"
+              className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+            >
+              Play !
+            </button>
+          </Link>
+
+          <Link to="/app/chatbot">
+            <button
+              id="navAction"
+              className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+            >
+              Chat
+            </button>
+          </Link>
+
+          <Link to="/app/learn">
+            <button
+              id="navAction"
+              className="playBtn mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+            >
+              Learn
+            </button>
+          </Link>
         </div>
         <div
           className="col-xl-5 col-lg-5 order-1 order-lg-2 hero-img"
           data-aos="zoom-in"
           data-aos-delay="150"
-          style={{ width: 'max-content' }}
+          style={{ width: "max-content" }}
         >
           <center>
             <img src={bot3} className="img-fluid animated" alt="" />
@@ -111,6 +119,6 @@ function LandingPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default LandingPage
+export default LandingPage;
