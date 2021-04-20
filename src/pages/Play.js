@@ -27,7 +27,7 @@ function Cards() {
         	<Card colored className="text-blue-50 bg-ycard">
           		<CardBody>
 	            	<p className="mb-4 font-semibold">
-		            	Nouns
+		            	NOUNS
 	    			</p>
         	  	</CardBody>
         	</Card>        
@@ -35,7 +35,7 @@ function Cards() {
 
         <Card colored className="text-white bg-purple-600">
           <CardBody>
-            <p className="mb-4 font-semibold">Adjectives</p>
+            <p className="mb-4 font-semibold">ADVERBS</p>
             <p></p>
           </CardBody>
         </Card>
