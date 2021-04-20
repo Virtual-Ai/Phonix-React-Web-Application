@@ -10,9 +10,13 @@ const Modals = lazy(() => import('../pages/Modals'))
 const Tables = lazy(() => import('../pages/Tables'))
 const Page404 = lazy(() => import('../pages/404'))
 const Blank = lazy(() => import('../pages/Blank'))
+
 const Chat = lazy(() => import('../pages/ChatBot'))
 const Play = lazy(() => import('../pages/Play'))
 const Learn = lazy(() => import('../pages/Learn'))
+
+const Verbs = lazy(() => import('../pages/Quiz/Verbs'))
+const Nouns = lazy(() => import('../pages/Quiz/Nouns'))
 
 /**
  * ⚠ These are internal routes!
@@ -31,18 +35,30 @@ const routes = [
   },
 
   {
-    path: '/chatbot', // the url
-    component: Chat, // view rendered
+    path: '/chatbot', 
+    component: Chat, 
   },
 
   {
-    path: '/play', // the url
-    component: Play, // view rendered
+    path: '/play', 
+    component: Play, 
   },
 
+  // Quiz Links 
+
   {
-    path: '/learn', // the url
-    component: Learn, // view rendered
+    path: '/play/verbs', 
+    component: Verbs, 
+  },  
+
+  {
+    path: '/play/nouns', 
+    component: Nouns, 
+  },    
+
+  {
+    path: '/learn', 
+    component: Learn, 
   },  
 
   {
