@@ -15,9 +15,6 @@ module.exports = windmill({
         ycard: "#f5bf00",
         bcard: "#4fb0d7",
       },
-      backgroundImage: {
-        card1:url("")
-      }
     },
   },
 })
