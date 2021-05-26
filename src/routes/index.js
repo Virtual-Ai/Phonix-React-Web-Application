@@ -18,6 +18,10 @@ const Learn = lazy(() => import('../pages/Learn'))
 const Verbs = lazy(() => import('../pages/Quiz/Verbs'))
 const Nouns = lazy(() => import('../pages/Quiz/Nouns'))
 
+const Lcard1 = lazy(() => import('../pages/Learn/Learn1'))
+
+
+
 /**
  * ⚠ These are internal routes!
  * They will be rendered inside the app, using the default `containers/Layout`.
@@ -56,9 +60,17 @@ const routes = [
     component: Nouns, 
   },    
 
+
   {
     path: '/learn', 
     component: Learn, 
+  },  
+
+  // Learn Links
+
+  {
+    path: '/learn/basic-grammar', 
+    component: Lcard1, 
   },  
 
   {
