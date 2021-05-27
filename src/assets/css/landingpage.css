@@ -6,13 +6,17 @@ html {
 }
 
 .gradient {
-  background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+  background-image: linear-gradient(-225deg, #efc259 20%, #fea052 100%);
 }
 
 #navAction,
 .gradient2 {
   background-color: #f39f86;
   background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+}
+
+.landing-background{
+  background-color: #fea052;
 }
 
 /* Browser mockup code
@@ -213,4 +217,64 @@ html {
   100% {
     transform: translateY(-10px);
   }
+}
+
+
+/* New Sreenidhi Components */
+
+.button-landing{
+  border-radius: 5rem;
+  font-size: 1.5rem;
+}
+
+.nav{
+  height: 80px;
+  display: block;
+}
+
+.nav-menu{
+  background: #f8f9fa;
+  border: 1px solid #dcdcdd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex
+}
+
+.nav-brand{
+ margin: auto;
+ margin-left: 0rem;
+ font-size: 1.3rem;
+}
+
+.horizontal-list{
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.horizontal-list li{
+  float: left;
+  padding: 0px;
+  height: 80px;
+}
+
+
+.nav-tab{
+  padding: 0px 28px;
+  display: block;
+  font-size: 18px;
+  transition: background 0.3s;
+  /* color: #eeeeee; */
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.horizontal-list li{
+  float: left;
+  margin: auto;
+  height: 80px;
 }
