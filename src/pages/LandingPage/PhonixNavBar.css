@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+*{
+    font-family: "Balsamiq Sans";
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    padding-left:1rem;
+    padding-right:1rem;
+    height: 5rem;
+}
+.brand{
+    font-size: 1.5rem;
+    color: rgb(117, 2, 37);
+    font-weight: bold;
+    margin: auto auto auto 0;
+    padding-left: 2rem;
+    animation: movedown 1s linear;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes movedown{
+    0%{
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0px);
+        visibility: visible;
+    }
+}
+
+.navlinks{
+    display: flex;
+    animation: movedown 1s linear;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+.navlinks ul{
+    list-style-type: none;
+    display: inline;
+}
+
+.navlinks ul li{
+    float: left;
+}
+.navlinks ul li button{
+    font-size: 1.3rem;
+    background:linear-gradient(#ef5959, #efc259);
+    background-image: linear-gradient(to right, #ef5959  11%, #F09819  100%);
+    border-radius: 2rem;
+    border:0;
+    width:8rem;
+    padding: 1rem 0; 
+    margin-right: 2rem;    
+}
+
+.nav-items :first-child{
+    padding-right: 1rem;
+}
+
+@media (max-width: 530px) {
+    .navbar{
+        flex-wrap: wrap;
+    }
+    .navlinks{
+        visibility: hidden !important;
+    }
+}

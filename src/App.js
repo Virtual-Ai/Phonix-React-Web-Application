@@ -1,16 +1,17 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AccessibleNavigationAnnouncer from "./components/AccessibleNavigationAnnouncer";
+import "./App.css";
 
 const Layout = lazy(() => import("./containers/Layout"));
 const Login = lazy(() => import("./pages/Login"));
 const CreateAccount = lazy(() => import("./pages/CreateAccount"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
-const LandingPage = lazy(() => import("./pages/LandingPage"));
+const PhonixLandingPage = lazy(() => import("./pages/LandingPage/PhonixLandingPage"));
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Router>
         <AccessibleNavigationAnnouncer />
         <Switch>
@@ -18,10 +19,10 @@ function App() {
           <Route path="/create-account" component={CreateAccount} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <Route path="/app" component={Layout} />
-          <Route path="/" component={LandingPage} />
+          <Route path="/" component={PhonixLandingPage} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 

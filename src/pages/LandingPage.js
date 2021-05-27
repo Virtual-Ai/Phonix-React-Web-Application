@@ -2,8 +2,8 @@ import React from "react";
 import "../assets/css/landingpage.css";
 import { Link } from "react-router-dom";
 import bot3 from "../assets/img/bot3.png";
-import Header from "./Header";
-import HeroHome from "./HeroHome";
+// import Header from "./Header";
+// import HeroHome from "./HeroHome";
 
 function LandingPage() {
   return (
