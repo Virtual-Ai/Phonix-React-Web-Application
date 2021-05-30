@@ -15,6 +15,7 @@
     color: rgb(117, 2, 37);
     font-weight: bold;
     margin: auto auto auto 0;
+    margin-top: 1.5rem;
     padding-left: 2rem;
     animation: movedown 1s linear;
     animation-delay: 1s;
@@ -37,7 +38,12 @@
     animation: movedown 1s linear;
     animation-delay: 1s;
     visibility: hidden;
+    color: #fff;
     animation-fill-mode: forwards;
+}
+
+.navlinks ul li:hover{
+    color: #030100;
 }
 
 .navlinks ul{

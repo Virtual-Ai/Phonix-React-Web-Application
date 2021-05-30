@@ -67,9 +67,12 @@ ul{
     align-items: center;
     padding: 1rem;
     margin: 1rem;
-    width: inherit;
+    width: 70%;
     justify-content: center;
     text-align: center;
+}
+.card:hover{
+    color:#030100;
 }
 @keyframes moveright{
     0%{
@@ -213,6 +216,30 @@ ul{
         }
 }
   
+@media (max-width: 530px) {
+    .card{
+        visibility: hidden !important;
+    }
+    
+    .main-links{
+        animation: moveright 1s linear;
+        animation-delay: 1s;
+        visibility: hidden;
+        color: #fff;
+        animation-fill-mode: forwards;
+        font-size: 1.3rem;
+        background:linear-gradient(#ef5959, #efc259);
+        background-image: linear-gradient(to right, #ef5959  11%, #F09819  100%);
+        border-radius: 2rem;
+        border:0;
+        width:8rem;
+        padding: 1rem; 
+        margin: 2rem; 
+        animation-fill-mode: forwards;
+    }
+
+}
+
   @-webkit-keyframes up-down {
     0% {
       transform: translateY(10px);
@@ -231,3 +258,6 @@ ul{
     }
   }
   
+  .main-links{
+      visibility: hidden;
+  }
