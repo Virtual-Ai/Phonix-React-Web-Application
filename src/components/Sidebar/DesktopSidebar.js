@@ -11,12 +11,12 @@ function Icon({ icon, ...props }) {
 }
 
 function DesktopSidebar(props) {
-  const [a, openHandler] = useState(false)
+  const [isOpen, openHandler] = useState(false)
 
   const open = () => {
-    console.log(a)
-    openHandler(!a)
-    if (a) {
+    
+    openHandler(!isOpen)
+    if (isOpen) {
       routes.map((route) => {
         if (route.routes) {
         } else {
