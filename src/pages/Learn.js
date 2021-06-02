@@ -51,8 +51,22 @@ function Learn() {
   function getNext() {
 	//getNext(true)
 	//console.log("Clicked Next")
-	changeId(id + 1)
+	if(id + 1 >= topics.length){
+
+	}
+	else{
+		changeId(id + 1)
+	}
 }
+
+	function getPrevious(){
+		if(id - 1 < 0){
+
+		}
+		else{
+			changeId(id - 1)
+		}
+	}
 
 
 
@@ -60,7 +74,8 @@ function Learn() {
     <>
       <PageTitle>Learn</PageTitle>
 
-	  <RevisionModal id={id} topic={topics[id]["topic"]} content={topics[id]["content"]} isOpen={isModalOpen} onClose={closeModal} onNext={getNext}/>
+	  <RevisionModal id={id} no_of_cards={topics.length} topic={topics[id]["topic"]} content={topics[id]["content"]} isOpen={isModalOpen} 
+	  	onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
 
 
       <div className="grid gap-6 mb-8 md:grid-cols-3">
