@@ -9,6 +9,7 @@ import Image3 from '../assets/img/learn/girl22.png'
 import Image4 from '../assets/img/learn/boy11.png'
 import Image5 from '../assets/img/learn/sir.png'
 
+import RevisionModal from '../components/RevisionModal'
 
 import PageTitle from '../components/Typography/PageTitle'
 import { Card, CardBody } from '@windmill/react-ui'
@@ -21,9 +22,22 @@ import { Card, CardBody } from '@windmill/react-ui'
 // <Button iconRight={ModalsIcon} tag={Link} to="/learn/basic-grammar" size="large" 
 // 	         					style={{backgroundColor:'#FFF', color:'#f4bb14', padding:'0.8rem'}}> Start 
 
+  let topics = [
+	  {"topic": "Nouns", "content":"(Here goes the content)"},
+	  {"topic": "Verbs", "content":"(Here goes the content)"},
+	  {"topic": "Clause", "content":"(Here goes the content)"},
+  ]
+
+//   let id = 0;
+// function getElement(id){
+// 	return topics[id];
+// }
 
 function Learn() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  let [id, changeId] = useState(0)
+  //const [topics, getNextTopic] = useState(topics_list)
+  //const [content, getNextContent] = useState("(To be added content)")
 
   function openModal() {
     setIsModalOpen(true)
@@ -31,13 +45,38 @@ function Learn() {
 
   function closeModal() {
     setIsModalOpen(false)
+	changeId(0)
   }
+
+  function getNext() {
+	//getNext(true)
+	//console.log("Clicked Next")
+	if(id + 1 >= topics.length){
+
+	}
+	else{
+		changeId(id + 1)
+	}
+}
+
+	function getPrevious(){
+		if(id - 1 < 0){
+
+		}
+		else{
+			changeId(id - 1)
+		}
+	}
 
 
 
   return (
     <>
       <PageTitle>Learn</PageTitle>
+
+	  <RevisionModal id={id} no_of_cards={topics.length} topic={topics[id]["topic"]} content={topics[id]["content"]} isOpen={isModalOpen} 
+	  	onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
+
 
       <div className="grid gap-6 mb-8 md:grid-cols-3">
 
@@ -53,40 +92,6 @@ function Learn() {
 
 	        </CardBody>
 	      </Card>
-
-
-
-		<Modal isOpen={isModalOpen} onClose={closeModal}>
-
-	        <ModalHeader className='text-2xl font-balsamiq'> Quick Revision </ModalHeader>
-
-		        <ModalBody>
-		        	<h4 className='text-xl font-balsamiq'> Nouns </h4> 
-		        </ModalBody>
-
-		        <ModalFooter>
-		          <div className="hidden sm:block">
-		            <Button layout="outline" onClick={closeModal}>
-		              Cancel
-		            </Button>
-		          </div>
-		          <div className="hidden sm:block">
-		            <Button>Next</Button>
-		          </div>
-		          <div className="block w-full sm:hidden">
-		            <Button block size="large" layout="outline" onClick={closeModal}>
-		              Cancel
-		            </Button>
-		          </div>
-		          <div className="block w-full sm:hidden">
-		            <Button block size="large">
-		              Accept
-		            </Button>
-		          </div>
-		        </ModalFooter>
-
-      	</Modal>	 
-
 
 
 	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#89cff0" , position:"relative"}}>
