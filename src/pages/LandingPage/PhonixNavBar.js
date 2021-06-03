@@ -6,7 +6,6 @@ export const PhonixNavBar=()=>{
     
     return(
         <nav id="header" className="navbar">
-            <div className="brand"><Link to="/">PHONIX</Link></div>
             <div className="navlinks" id="nav-content">
                 <ul>
                     <li><Link to="/login"><button id="navAction" className="nav-item">Login</button></Link></li>
