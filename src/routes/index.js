@@ -15,12 +15,10 @@ const Chat = lazy(() => import('../pages/ChatBot'))
 const Play = lazy(() => import('../pages/Play'))
 const Learn = lazy(() => import('../pages/Learn'))
 
+const Quiz = lazy(() => import('../pages/quizLandingPage'))
 const Verbs = lazy(() => import('../pages/Quiz/Verbs'))
 const Nouns = lazy(() => import('../pages/Quiz/Nouns'))
-
 const Lcard1 = lazy(() => import('../pages/Learn/Learn1'))
-
-
 
 /**
  * ⚠ These are internal routes!
@@ -57,20 +55,17 @@ const routes = [
 
   {
     path: '/play/nouns', 
-    component: Nouns, 
+    component: Nouns,   
   },    
 
+  {
+    path: '/play/quiz', 
+    component: Quiz,   
+  },    
 
   {
     path: '/learn', 
     component: Learn, 
-  },  
-
-  // Learn Links
-
-  {
-    path: '/learn/basic-grammar', 
-    component: Lcard1, 
   },  
 
   {
@@ -105,6 +100,10 @@ const routes = [
     path: '/blank',
     component: Blank,
   },
+  {
+    path: '/learn/basic-grammar', 
+    component: Lcard1, 
+  }
 ]
 
 export default routes
