@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
 
+
 //import React from 'react'
 
 const RevisionModal = (props) => {
@@ -18,7 +19,6 @@ const RevisionModal = (props) => {
 
     
 
-
     return (
         <div>
             <Modal isOpen={props.isOpen} onClose={props.onClose} >
@@ -26,22 +26,25 @@ const RevisionModal = (props) => {
                 <ModalHeader className='text-2xl font-balsamiq'> Quick Revision </ModalHeader>
 
                 <ModalBody>
-                    <h4 className='text-xl font-balsamiq'>{`(` + String(props.id + 1) + `/` + String(props.no_of_cards) + ")\t"}  {props.topic} </h4> 
+                    <h4 className='text-xl font-balsamiq'>{props.topic}  {`(` + String(props.id + 1) + `/` + String(props.no_of_cards) + ")\t"}</h4> 
+                    <p className='text-lg'>{props.content}</p>
+                    <img src={require(`../assets/img/modals/${props.name.toLowerCase()}.png`)} />
+
                 </ModalBody>
 
                 <ModalFooter>
-                    <div className="hidden sm:block">
+                    {/*<div className="hidden sm:block">
                         <Button layout="outline" onClick={props.onClose}>
                             Cancel
                         </Button>
-                    </div>
+                    </div>*/}
                     <div className="hidden sm:block">
-                        <Button block size="large" onClick = {props.onPrevious}>
+                        <Button onClick = {props.onPrevious}>
                             Previous
                         </Button>
                     </div>
                     <div className="hidden sm:block">
-                        <Button block size="large" onClick = {props.onNext}>
+                        <Button onClick = {props.onNext}>
                             Next
                         </Button>
                     </div>
@@ -55,19 +58,16 @@ const RevisionModal = (props) => {
                             Next
                         </Button>
                     </div>
-                    <div className="block w-full sm:hidden">
+
+                    {/*<div className="block w-full sm:hidden">
                         <Button block size="large" layout="outline" onClick={props.onClose}>
                             Cancel
                         </Button>
-                    </div>
-                    {/* <div className="block w-full sm:hidden">
-                        <Button block size="large">
-                            Accept
-                        </Button>
-                    </div> */}
+                    </div>*/}
+
                 </ModalFooter>
 
-            </Modal>	 
+            </Modal>     
         </div>
     )
 }

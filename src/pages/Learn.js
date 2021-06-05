@@ -8,6 +8,7 @@ import Image2 from '../assets/img/learn/girlr.png'
 import Image3 from '../assets/img/learn/girl22.png'
 import Image4 from '../assets/img/learn/boy11.png'
 import Image5 from '../assets/img/learn/sir.png'
+import Image6 from '../assets/img/modals/earthn.png'
 
 import RevisionModal from '../components/RevisionModal'
 
@@ -23,9 +24,21 @@ import { Card, CardBody } from '@windmill/react-ui'
 // 	         					style={{backgroundColor:'#FFF', color:'#f4bb14', padding:'0.8rem'}}> Start 
 
   let topics = [
-	  {"topic": "Nouns", "content":"(Here goes the content)"},
-	  {"topic": "Verbs", "content":"(Here goes the content)"},
-	  {"topic": "Clause", "content":"(Here goes the content)"},
+	  { "topic": "Nouns",
+	    "content":"A noun is a word that names a person, a place, a thing or an idea. A noun can tell who or what.",
+	    "name": "nouns2" 
+
+	  },
+	  
+
+	  {	"topic": "Verbs", 
+	  	"content":"Verbs are words that show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
+	  	"name": "verbs"},
+
+
+	  { "topic": "Preposition", 
+	    "content":"Prepositions are words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
+	    "name": "Prepositions"},
   ]
 
 //   let id = 0;
@@ -74,8 +87,12 @@ function Learn() {
     <>
       <PageTitle>Learn</PageTitle>
 
-	  <RevisionModal id={id} no_of_cards={topics.length} topic={topics[id]["topic"]} content={topics[id]["content"]} isOpen={isModalOpen} 
-	  	onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
+	  <RevisionModal id={id} no_of_cards={topics.length} 
+	  topic={topics[id]["topic"]} 
+	  content={topics[id]["content"]} 
+	  isOpen={isModalOpen} 
+	  name={topics[id]["name"]}
+	  onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
 
 
       <div className="grid gap-6 mb-8 md:grid-cols-3">

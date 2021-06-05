@@ -1,13 +1,13 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AccessibleNavigationAnnouncer from "./components/AccessibleNavigationAnnouncer";
-import "./App.css";
+
 
 const Layout = lazy(() => import("./containers/Layout"));
 const Login = lazy(() => import("./pages/Login"));
 const CreateAccount = lazy(() => import("./pages/CreateAccount"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
-const PhonixLandingPage = lazy(() => import("./pages/LandingPage/PhonixLandingPage"));
+const PhonixLandingPage = lazy(() => import("./pages/Landing/land1"));
 
 function App() {
   return (
