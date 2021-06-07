@@ -28,6 +28,7 @@ function Cards() {
 	          	<h4 className="text-xl font-balsamiq"> Play with Words!</h4>
 	        </CardBody>
 	      </Card>
+
   </Link>
     </>
   )
