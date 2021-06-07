@@ -1,0 +1,103 @@
+.but-card1 {
+
+	background-color: #b38808;
+	color: #fff;
+}
+
+.but-card1:hover {
+
+	background-color: #8b614f;
+	color: #fff;
+}
+
+.but-card2 {
+
+	background-color: #a8491a;
+	color: #fff;
+}
+
+.but-card2:hover {
+
+	background-color: #923f17;
+	color: #fff;
+}
+
+.but-card3 {
+
+	background-color: #b76c0c;
+	color: #fff;
+}
+
+.but-card3:hover {
+
+	background-color: #875009;
+	color: #fff;
+}
+
+.but-card4 {
+
+	background-color: #65cdaa;
+	color: #fff;
+}
+
+.but-card4:hover {
+
+	background-color: #3fc195;
+	color: #fff;
+}
+
+
+
+.mb-card1 {
+	display: none;
+	right: -40px;
+    top: -41px;
+    max-height: 11rem;
+}
+
+
+@media (max-width:1454px) {
+
+	.cartoon-1{
+		display: none;
+	}
+
+	.mb-card1 {
+		display:block;
+		right: -40px;
+    	top: -41px;
+    	max-height: 11rem;
+	}
+}
+
+@media (max-width:763px) {
+
+	.cartoon-1{
+		display: inherit;
+
+	}
+	.mb-card1 {
+		display:none;
+		right: -40px;
+    	top: -41px;
+    	max-height: 11rem;
+	}	
+
+
+}
+
+@media (max-width:375px) {
+
+	.cartoon-1{
+		display: none;
+
+	}
+
+	.mb-card1 {
+		display:block;
+		right: -40px;
+    	top: -41px;
+    	max-height: 11rem;
+	}
+}
+

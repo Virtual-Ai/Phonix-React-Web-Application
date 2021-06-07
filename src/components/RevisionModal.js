@@ -38,26 +38,30 @@ const RevisionModal = (props) => {
                             Cancel
                         </Button>
                     </div>*/}
+
                     <div className="hidden sm:block">
-                        <Button onClick = {props.onPrevious}>
+                        <Button layout='outline' onClick = {props.onPrevious}>
                             Previous
                         </Button>
                     </div>
                     <div className="hidden sm:block">
-                        <Button onClick = {props.onNext}>
+                        <Button layout='outline' onClick = {props.onNext}>
                             Next
                         </Button>
                     </div>
+
+                <div className="grid gap-2 grid-cols-2">
                     <div className="block w-full sm:hidden">
-                        <Button block size="large" onClick = {props.onPrevious}>
+                        <Button block layout='outline' size="large" onClick = {props.onPrevious}>
                             Previous
                         </Button>
                     </div>
                     <div className="block w-full sm:hidden">
-                        <Button block size="large" onClick ={props.onNext}>
+                        <Button block layout='outline' size="large" onClick ={props.onNext}>
                             Next
                         </Button>
                     </div>
+                </div>
 
                     {/*<div className="block w-full sm:hidden">
                         <Button block size="large" layout="outline" onClick={props.onClose}>

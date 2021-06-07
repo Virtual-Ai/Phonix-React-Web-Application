@@ -7,11 +7,14 @@ import { Card, CardBody } from '@windmill/react-ui'
 import { Button } from '@windmill/react-ui'
 import './play-style.css';
 
+import arrow from '../icons/arrow3.png'
 
-import Image2 from '../assets/img/learn/girlr.png'
-import Image3 from '../assets/img/learn/girl22.png'
-import Image4 from '../assets/img/learn/boy11.png'
-import Image5 from '../assets/img/learn/sir.png'
+import ob1 from '../assets/img/play/ob1.png'
+import ob2 from '../assets/img/play/ob2.png'
+import ob3 from '../assets/img/play/ob3.png'
+
+import mbQuiz from '../assets/img/play/mb-pl-cards/mb-quiz.png';
+import mbDnd from '../assets/img/play/mb-pl-cards/mb-dnd.png';
 
 
 function Cards() {
@@ -20,17 +23,55 @@ function Cards() {
       <PageTitle>Play</PageTitle>
 
   <SectionTitle>What to play ?</SectionTitle>
-  <Link to = "/app/play/quiz">
-  <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#89cff0" , position:"relative"}}>
-	        <CardBody>
-	        	<img src={Image3} alt="Image" className="hideWhenSmall" style={{position:"absolute",height:"100%",right:"0"}}/>
-	          	<h4 className="text-3xl font-balsamiq text-white mt-8 font-bold"> QUIZ </h4>
-	          	<h4 className="text-xl font-balsamiq"> Play with Words!</h4>
-	        </CardBody>
-	      </Card>
+    <div className="grid gap-6 mb-8 md:grid-cols-4">
 
-  </Link>
-    </>
+      <Link to = "/app/play/quiz">
+            <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#e3613a" ,position:"relative",borderRadius:'0.9rem'}}>
+    	        <CardBody>
+    	        	  <img src={ob1} className="obs" alt="Image" style={{position:"absolute",height:"100%",left:"0",bottom:"0",maxHeight:'10.5rem',marginLeft:'0.2rem', marginBottom:'0.2rem'}}/>
+                  <img src={mbQuiz} className="mb-obs" alt="Image" style={{position:"absolute",height:"100%",left: '-52px', bottom: '-52px',maxHeight: '12.5rem'}}/>
+
+                  <h4 className="text-6xl font-chewy text-white text-right pl-cd-title" style={{}}>It's Quiz</h4>
+    	          	<h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">Time</h4>
+                  <h4 className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine" style={{color:'#f2c0b0'}}>Tap here to begin</h4>
+                  <div className="flex justify-end">
+                      <img src={arrow} alt="Image" style={{maxWidth:'2.5rem'}}/>
+                  </div>
+        
+
+    	          	{/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+    	        </CardBody>
+    	      </Card>
+      </Link>
+
+
+      <Link to = "/app/play/quiz">
+            <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#d54c68" ,position:"relative",borderRadius:'0.9rem'}}>
+              <CardBody>
+                  <img src={ob3} className="obs" alt="Image" style={{position:"absolute",height:"100%",left:"0",bottom:"0",maxHeight:'9.5rem',marginLeft:'0.2rem', marginBottom:'0.2rem'}}/>
+                  <img src={mbDnd} className="mb-obs" alt="Image" style={{position:"absolute",height:"100%",left: '-41px', bottom: '-41px',maxHeight: '12.5rem'}}/>
+
+
+
+                  <h4 className="text-6xl font-chewy text-white text-right pl-cd-title" style={{}}>Drag &</h4>
+                  <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">Drop</h4>
+                  <h4 className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine" style={{color:'#f2c0b0'}}>Tap here to begin</h4>
+                  <div className="flex justify-end">
+                      <img src={arrow} alt="Image" style={{maxWidth:'2.5rem'}}/>
+                  </div>
+        
+
+                  {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+              </CardBody>
+            </Card>
+      </Link>
+
+  
+
+
+
+    </div>
+  </>
   )
 }
 

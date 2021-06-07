@@ -1,8 +1,88 @@
-.cat-cards{
-    
+.pl-cd-title {
+    margin-bottom: -1.1rem;
 }
+
+.mb-obs {
+    display: none;
+}
+
 @media (max-width: 1100px) {
     .hideWhenSmall{
       display: none;
     }
   }
+
+
+@media (max-width:1454px) {
+    .obs {
+      display: none;
+    }
+
+    .mb-obs {
+        display: block;
+    }
+
+}
+
+@media (max-width: 1313px) {
+
+    .pl-cd-title {
+        font-size: 3rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .pl-cd-byline {
+        font-size: 2rem;
+    }
+
+    .mb-obs {
+        display: block;
+    }    
+}
+
+@media (max-width: 1112px) {
+
+    .pl-cd-title {
+        font-size: 2.5rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .pl-cd-byline {
+        font-size: 1.5rem;
+    }
+
+    .mb-obs {
+        display: block;
+    }    
+
+
+}
+
+
+@media (max-width: 767px) {
+
+    .pl-cd-title {
+        font-size: 4rem;
+        margin-bottom: -1.5rem;
+    }
+
+    .pl-cd-byline {
+        font-size: 3rem;
+    }
+
+    .obs {
+      display: block;
+      max-height: 11.5rem;
+
+    }
+
+    .pl-cd-btmLine {
+        margin-bottom: 1rem;    
+    
+    }
+
+    .mb-obs {
+        display: none;
+    }    
+
+}

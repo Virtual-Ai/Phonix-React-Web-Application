@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom'
 import { Button } from '@windmill/react-ui'
 import { ModalsIcon, EditIcon } from '../icons'
 import { Modal, ModalHeader, ModalBody, ModalFooter} from '@windmill/react-ui'
+import './learn-styles.css'
 
 import Image2 from '../assets/img/learn/girlr.png'
-import Image3 from '../assets/img/learn/girl22.png'
+import Image33 from '../assets/img/learn/man.png'
 import Image4 from '../assets/img/learn/boy11.png'
 import Image5 from '../assets/img/learn/sir.png'
-import Image6 from '../assets/img/modals/earthn.png'
+import Image6 from '../assets/img/learn/man2.png'
+
+import page from '../assets/img/learn/mb-cards/page.png'
+import puzzle from '../assets/img/learn/mb-cards/puzzle.png'
+import abacus from '../assets/img/learn/mb-cards/abacus.png'
+
 
 import RevisionModal from '../components/RevisionModal'
 
@@ -41,12 +47,15 @@ import { Card, CardBody } from '@windmill/react-ui'
 	    "name": "Prepositions"},
   ]
   
+
+
   let topics1 = [
 	{ "topic": "dvdsv",
 	  "content":"A nbdfbdfbfdoun is a word that names a person, a place, a thing or an idea. A noun can tell who or what.",
 	  "name": "nouns2" 
 
 	},
+	
 	{	"topic": "Vfdnfgnfgerbs", 
 		"content":"Verbs are words thagfgfnfgnt show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
 		"name": "verbs"},
@@ -61,6 +70,8 @@ import { Card, CardBody } from '@windmill/react-ui'
 	  "name": "Prepositions"},
 ]
 
+  
+
 //   let id = 0;
 // function getElement(id){
 // 	return topics[id];
@@ -70,6 +81,7 @@ function Learn() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   let [id, changeId] = useState(0)
   const [clickedButton, setClickedButton] = useState("0")
+
   //const [topics, getNextTopic] = useState(topics_list)
   //const [content, getNextContent] = useState("(To be added content)")
 
@@ -111,8 +123,9 @@ function Learn() {
 	}
 	else if (clickedButton === "1") {
 		data = topics1
-	}
+		console.log("data change")
 
+	}
 
 
 
@@ -120,24 +133,28 @@ function Learn() {
     <>
       <PageTitle>Learn</PageTitle>
 
-	  <RevisionModal 
-		id={id} 
-		no_of_cards={data.length} 
-		topic={data[id]["topic"]} 
-		content={data[id]["content"]} 
-		isOpen={isModalOpen} 
-		name={data[id]["name"]}
-		onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
+	  <RevisionModal id={id} no_of_cards={data.length} 
+			  topic={data[id]["topic"]} 
+			  content={data[id]["content"]} 
+			  isOpen={isModalOpen} 
+			  name={data[id]["name"]}
+			  onClose={closeModal} onNext={getNext} onPrevious={getPrevious}
+		/>
 
 
       <div className="grid gap-6 mb-8 md:grid-cols-3">
 
 	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#f4bb14" , position:"relative"}} >
 	        <CardBody>
-	        	<img src={Image2} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
-	          	<h4 className="text-3xl font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
-	         	<h4 className="text-xl font-balsamiq pb-4"> Let's Learn With</h4>	 
-	         	<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="large" className="bg-white text-blue-50" > 
+	        	<img src={Image2} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
+	        	<img src={abacus} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
+
+	          	<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
+	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+	         			Parts of Speech
+	         		</h4>	  
+
+	         	<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular" className="but-card1 font-bold"> 
 	         			Start 
 	         	</Button>
 
@@ -145,15 +162,18 @@ function Learn() {
 	      </Card>
 
 
-	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#89cff0" , position:"relative"}}>
+	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#df692f" , position:"relative"}} >
 	        <CardBody>
-	        	<img src={Image3} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
-	          	<h4 className="text-3xl font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
-	          	<h4 className="text-xl font-balsamiq"> Let's Learn With</h4>
+	        	<img src={Image33} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
+	        	<img src={puzzle} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
+	          	<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
+	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+	         			Rules for Tenses
+	         		</h4>	  
 
-				  <Button iconRight={ModalsIcon} onClick={() => openModal('1')} size="large" className="bg-white text-blue-50" > 
+	         	<Button iconRight={ModalsIcon} onClick={() => openModal('1')} size="regular" className="but-card2 font-bold"> 
 	         			Start 
-	         	 </Button>
+	         	</Button>
 
 	        </CardBody>
 	      </Card>
@@ -161,21 +181,33 @@ function Learn() {
 
 	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#f09420" , position:"relative"}}>
 	        <CardBody>
-	        	<img src={Image4} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
-	          	<h4 className="text-3xl  font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
-	          	<h4 className="text-xl font-balsamiq"> Let's Learn With</h4>	
-				  
-				  <Button iconRight={ModalsIcon} onClick={openModal} size="large" className="bg-white text-blue-50" > 
+	        	<img src={Image4} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
+	        	<img src={page} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
+	          	<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
+	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+	         			Sentence Formation
+	         		</h4>	  
+
+	         	<Button iconRight={ModalsIcon} onClick={openModal} size="regular" className="but-card3 font-bold"> 
 	         			Start 
-	         	 </Button>         	
+	         	</Button>
+
 	        </CardBody>
 	      </Card> 
 
-	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#6771dd" , position:"relative"}}>
+
+	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#9fe0ca" , position:"relative"}}>
 	        <CardBody>
-	        	<img src={Image5} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
-	          	<h4 className="text-3xl  font-balsamiq text-white  font-bold"> Basic Grammar </h4>
-	          	<h4 className="text-xl font-balsamiq" style={{marginBottom: "7.25rem"}}> Let's Learn With</h4>	         	
+	        	<img src={Image6} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
+	          	<h4 className="text-4xl font-chewy text-white mt-4">Basic Grammar </h4>
+	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+	         			Coming Soon...
+	         		</h4>	  
+
+	         	<Button iconRight={ModalsIcon} onClick={openModal} size="regular" className="but-card4 font-bold"> 
+	         			Start 
+	         	</Button>
+
 	        </CardBody>
 	      </Card>	    
 
