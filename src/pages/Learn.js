@@ -40,6 +40,26 @@ import { Card, CardBody } from '@windmill/react-ui'
 	    "content":"Prepositions are words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
 	    "name": "Prepositions"},
   ]
+  
+  let topics1 = [
+	{ "topic": "dvdsv",
+	  "content":"A nbdfbdfbfdoun is a word that names a person, a place, a thing or an idea. A noun can tell who or what.",
+	  "name": "nouns2" 
+
+	},
+	{	"topic": "Vfdnfgnfgerbs", 
+		"content":"Verbs are words thagfgfnfgnt show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
+		"name": "verbs"},
+
+
+	{ "topic": "Preposigfmgfmtion", 
+	  "content":"Prepositions arfm gfmfe words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
+	  "name": "Prepositions"},
+
+	{ "topic": "Preposigfmgfmtion", 
+	  "content":"Prepositions arfm gfmfe words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
+	  "name": "Prepositions"},
+]
 
 //   let id = 0;
 // function getElement(id){
@@ -49,10 +69,13 @@ import { Card, CardBody } from '@windmill/react-ui'
 function Learn() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   let [id, changeId] = useState(0)
+  const [clickedButton, setClickedButton] = useState("0")
   //const [topics, getNextTopic] = useState(topics_list)
   //const [content, getNextContent] = useState("(To be added content)")
 
-  function openModal() {
+  function openModal(s) {
+	  console.log("s", s);
+	setClickedButton(s)
     setIsModalOpen(true)
   }
 
@@ -64,7 +87,7 @@ function Learn() {
   function getNext() {
 	//getNext(true)
 	//console.log("Clicked Next")
-	if(id + 1 >= topics.length){
+	if(id + 1 >= data.length){
 
 	}
 	else{
@@ -81,18 +104,30 @@ function Learn() {
 		}
 	}
 
+	let data = topics
+
+	if (clickedButton === "0") {
+		data = topics
+	}
+	else if (clickedButton === "1") {
+		data = topics1
+	}
+
+
 
 
   return (
     <>
       <PageTitle>Learn</PageTitle>
 
-	  <RevisionModal id={id} no_of_cards={topics.length} 
-	  topic={topics[id]["topic"]} 
-	  content={topics[id]["content"]} 
-	  isOpen={isModalOpen} 
-	  name={topics[id]["name"]}
-	  onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
+	  <RevisionModal 
+		id={id} 
+		no_of_cards={data.length} 
+		topic={data[id]["topic"]} 
+		content={data[id]["content"]} 
+		isOpen={isModalOpen} 
+		name={data[id]["name"]}
+		onClose={closeModal} onNext={getNext} onPrevious={getPrevious}/>
 
 
       <div className="grid gap-6 mb-8 md:grid-cols-3">
@@ -101,9 +136,8 @@ function Learn() {
 	        <CardBody>
 	        	<img src={Image2} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
 	          	<h4 className="text-3xl font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
-	         	<h4 className="text-xl font-balsamiq pb-4"> Let's Learn With</h4>	  
-
-	         	<Button iconRight={ModalsIcon} onClick={openModal} size="large" className="bg-white text-blue-50" > 
+	         	<h4 className="text-xl font-balsamiq pb-4"> Let's Learn With</h4>	 
+	         	<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="large" className="bg-white text-blue-50" > 
 	         			Start 
 	         	</Button>
 
@@ -116,6 +150,11 @@ function Learn() {
 	        	<img src={Image3} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
 	          	<h4 className="text-3xl font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
 	          	<h4 className="text-xl font-balsamiq"> Let's Learn With</h4>
+
+				  <Button iconRight={ModalsIcon} onClick={() => openModal('1')} size="large" className="bg-white text-blue-50" > 
+	         			Start 
+	         	 </Button>
+
 	        </CardBody>
 	      </Card>
 
@@ -124,7 +163,11 @@ function Learn() {
 	        <CardBody>
 	        	<img src={Image4} alt="Image" style={{position:"absolute",height:"100%",right:"0"}}/>
 	          	<h4 className="text-3xl  font-balsamiq text-white mt-8 font-bold"> Basic Grammar </h4>
-	          	<h4 className="text-xl font-balsamiq"> Let's Learn With</h4>	         	
+	          	<h4 className="text-xl font-balsamiq"> Let's Learn With</h4>	
+				  
+				  <Button iconRight={ModalsIcon} onClick={openModal} size="large" className="bg-white text-blue-50" > 
+	         			Start 
+	         	 </Button>         	
 	        </CardBody>
 	      </Card> 
 
