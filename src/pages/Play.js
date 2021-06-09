@@ -86,7 +86,7 @@ function Cards() {
                     </Card>
                 </Link>
 
-                <Link to="/app/play/quiz">
+                <Link to="/app/play/dnd">
                     <Card
                         colored
                         className="mb-8 shadow-md"
