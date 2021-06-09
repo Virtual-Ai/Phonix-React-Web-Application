@@ -1,24 +1,28 @@
-import { lazy } from 'react'
+import { lazy } from "react";
 
 // use lazy for better code splitting, a.k.a. load faster
-const Dashboard = lazy(() => import('../pages/Dashboard'))
-const Forms = lazy(() => import('../pages/Forms'))
-const Cards = lazy(() => import('../pages/Cards'))
-const Charts = lazy(() => import('../pages/Charts'))
-const Buttons = lazy(() => import('../pages/Buttons'))
-const Modals = lazy(() => import('../pages/Modals'))
-const Tables = lazy(() => import('../pages/Tables'))
-const Page404 = lazy(() => import('../pages/404'))
-const Blank = lazy(() => import('../pages/Blank'))
+const Dashboard = lazy(() => import("../pages/Dashboard"));
+const Forms = lazy(() => import("../pages/Forms"));
+const Cards = lazy(() => import("../pages/Cards"));
+const Charts = lazy(() => import("../pages/Charts"));
+const Buttons = lazy(() => import("../pages/Buttons"));
+const Modals = lazy(() => import("../pages/Modals"));
+const Tables = lazy(() => import("../pages/Tables"));
+const Page404 = lazy(() => import("../pages/404"));
+const Blank = lazy(() => import("../pages/Blank"));
 
-const Chat = lazy(() => import('../pages/ChatBot'))
-const Play = lazy(() => import('../pages/Play'))
-const Learn = lazy(() => import('../pages/Learn'))
+const Chat = lazy(() => import("../pages/ChatBot"));
+const Play = lazy(() => import("../pages/Play"));
+const Learn = lazy(() => import("../pages/Learn"));
 
-const Quiz = lazy(() => import('../pages/quizLandingPage'))
-const Verbs = lazy(() => import('../pages/Quiz/Verbs'))
-const Nouns = lazy(() => import('../pages/Quiz/Nouns'))
-const Lcard1 = lazy(() => import('../pages/Learn/Learn1'))
+const MTP = lazy(() => import("../pages/mtp/index"));
+const SentenceBuilder = lazy(() => import("../pages/sent_build/SentenceBuilder"));
+
+
+const Quiz = lazy(() => import("../pages/quizLandingPage"));
+const Verbs = lazy(() => import("../pages/Quiz/Verbs"));
+const Nouns = lazy(() => import("../pages/Quiz/Nouns"));
+const Lcard1 = lazy(() => import("../pages/Learn/Learn1"));
 
 /**
  * ⚠ These are internal routes!
@@ -32,78 +36,90 @@ const Lcard1 = lazy(() => import('../pages/Learn/Learn1'))
  */
 const routes = [
   {
-    path: '/dashboard', // the url
+    path: "/dashboard", // the url
     component: Dashboard, // view rendered
   },
 
   {
-    path: '/chatbot', 
-    component: Chat, 
+    path: "/chatbot",
+    component: Chat,
   },
 
   {
-    path: '/play', 
-    component: Play, 
+    path: "/play",
+    component: Play,
   },
 
-  // Quiz Links 
+
+
+  // Quiz Links
 
   {
-    path: '/play/verbs', 
-    component: Verbs, 
-  },  
+    path: "/play/verbs",
+    component: Verbs,
+  },
 
   {
-    path: '/play/nouns', 
-    component: Nouns,   
-  },    
+    path: "/play/nouns",
+    component: Nouns,
+  },
 
   {
-    path: '/play/quiz', 
-    component: Quiz,   
-  },    
+    path: "/play/quiz",
+    component: Quiz,
+  },
 
   {
-    path: '/learn', 
-    component: Learn, 
-  },  
+    path: "/play/mtp",
+    component: MTP,
+  },
+  {
+    path: "/play/sentencebuilder",
+    component: SentenceBuilder,
+  },
+
 
   {
-    path: '/forms',
+    path: "/learn",
+    component: Learn,
+  },
+
+  {
+    path: "/forms",
     component: Forms,
   },
   {
-    path: '/cards',
+    path: "/cards",
     component: Cards,
   },
   {
-    path: '/charts',
+    path: "/charts",
     component: Charts,
   },
   {
-    path: '/buttons',
+    path: "/buttons",
     component: Buttons,
   },
   {
-    path: '/modals',
+    path: "/modals",
     component: Modals,
   },
   {
-    path: '/tables',
+    path: "/tables",
     component: Tables,
   },
   {
-    path: '/404',
+    path: "/404",
     component: Page404,
   },
   {
-    path: '/blank',
+    path: "/blank",
     component: Blank,
   },
   {
-    path: '/learn/basic-grammar', 
-    component: Lcard1, 
-  }
-]
+    path: "/learn/basic-grammar",
+    component: Lcard1,
+  },
+];
 
-export default routes
+export default routes;
