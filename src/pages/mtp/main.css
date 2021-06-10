@@ -62,3 +62,13 @@
     text-align: center;
     margin: 25px
 }
+
+@media (max-width: 649px) {
+    .col2 {
+        margin: 10px;
+    }
+
+    .row {
+        margin: 0px;
+    }
+}

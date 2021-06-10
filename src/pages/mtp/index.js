@@ -3,9 +3,28 @@ import {DragDropContext} from "react-beautiful-dnd";
 import initialData from "./data";
 import Draggable from "./draggable";
 import "./main.css";
+import UIfx from "uifx";
+import correctAudio from "../Quiz/assets/audio/correct.mp3";
+import wrongAudio from "../Quiz/assets/audio/wrong.wav";
 
 class MTP extends Component {
     state = initialData;
+
+     correctA = new UIfx(
+        correctAudio,
+        {
+            volume: 0.4, // number between 0.0 ~ 1.0
+            throttleMs: 100
+        }
+    )
+
+     wrongA = new UIfx(
+        wrongAudio,
+        {
+            volume: 0.4, // number between 0.0 ~ 1.0
+            throttleMs: 100
+        }
+    )
 
     onDragStart = (result) => {
         console.log(result.draggableId);
@@ -47,6 +66,9 @@ class MTP extends Component {
             <line x1=${x + 60} y1=${y + 50} x2=${x1} y2=${
                         y1 + 50
                     } class=${draggableId} style="stroke:rgb(255,0,0);stroke-width:2" /> `;
+                    this.correctA.play()
+                }else{
+                    this.wrongA.play()
                 }
             }
         }
