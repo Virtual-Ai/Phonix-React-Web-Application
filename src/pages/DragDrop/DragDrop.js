@@ -1,37 +1,37 @@
-import React, { useState } from 'react'
-import { Button } from '@windmill/react-ui'
-
-import temp from '../../assets/img/table.jpeg'
-import { ToastContainer, toast } from 'react-toastify'
+import React, {useState} from 'react'
+import {Button} from '@windmill/react-ui'
+import {toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { NextIcon } from '../../icons'
+import {NextIcon} from '../../icons'
 import UIfx from "uifx";
 import correctAudio from '../Quiz/assets/audio/correct.mp3'
 import wrongAudio from '../Quiz/assets/audio/wrong.wav'
+import {dataType} from './data'
 
-const data = [
-    {
-        svg: temp,
-        question: 'Book is  ________  the table.',
-        options: ['on', 'with', 'over', 'at'],
-        correct: 'on',
-    },
-    {
-        svg: require('../../assets/img/svg1.png'),
-        question: 'Book is sa ________  the table.',
-        options: ['onds', 'withas', 'overasas', 'atas'],
-        correct: 'on',
-    },
-]
+
 let q = 0
 let id = ''
 let replaceto
 let replacefrom
 let dragElement = document.createElement('span')
 const DragDrop = () => {
+
+    const type = window.location.href.split("?")[1]
+    console.log(type)
+    let data = dataType.preposition
+    let name = "Prepositions"
+    if (type === "preposition") {
+        data = dataType.preposition
+        name = "Prepositions"
+    } else if (type === "noun") {
+        data = dataType.noun
+        name = "Nouns"
+    }
+
     const [Question, questionHandler] = useState(
         data[0].question.split('________'),
     )
+
 
     const correctA = new UIfx(
         correctAudio,
@@ -50,14 +50,14 @@ const DragDrop = () => {
     )
     const [answer, answerHandler] = useState(data[0].correct)
 
-    const CorrectAnswer = () =>{
+    const CorrectAnswer = () => {
         toast.success('✅ 🥳 Yayy! Great Going! Keep doing well! ', {
             position: toast.POSITION.TOP_CENTER,
         })
         correctA.play()
     }
 
-    const WrongAnswer = () =>{
+    const WrongAnswer = () => {
         toast.error('✗ Wrong answer!', {
             position: toast.POSITION.TOP_CENTER,
         })
@@ -121,7 +121,7 @@ const DragDrop = () => {
         <div className="font-kids mt-8">
             <div
                 className="bg-orange-200 p-12 pb-2"
-                style={{ borderRadius: '1.5rem' }}
+                style={{borderRadius: '1.5rem'}}
             >
                 <div
                     className="md:text-5xl"
@@ -133,13 +133,12 @@ const DragDrop = () => {
                         // fontSize: 'xxx-large',
                     }}
                 >
-                    Place Preposition
+                    {name}
                 </div>
-
                 <div className="md:flex">
                     <div
                         className="bg-blue-400  p-5 md:text-3xl mb-2 text-center"
-                        style={{ borderRadius: '1.5rem' /*fontSize: 'xx-large'*/ }}
+                        style={{borderRadius: '1.5rem' /*fontSize: 'xx-large'*/}}
                     >
                         <img
                             src={data[q].svg}
@@ -155,7 +154,7 @@ const DragDrop = () => {
                         <div
                             id="div1"
                             className="inline-block border-solid border-0 border-b-2 ml-2 mr-2 min-w-20"
-                            style={{ height: '33px' }}
+                            style={{height: '33px'}}
                             onDrop={(event) => drop(event)}
                             onDragOver={(event) => allowDrop(event)}
                         />
@@ -193,7 +192,7 @@ const DragDrop = () => {
                         })}
                     </div>
                 </div>
-                <div style={{ textAlign: 'right' }}>
+                <div style={{textAlign: 'right'}}>
                     <Button
                         className="text-2xl"
                         iconRight={NextIcon}
@@ -203,7 +202,7 @@ const DragDrop = () => {
                     </Button>
                 </div>
             </div>
-            <ToastContainer />
+            <ToastContainer/>
         </div>
     )
 }

@@ -21,7 +21,6 @@ function Cards() {
     return (
         <>
             <PageTitle>Play</PageTitle>
-
             <SectionTitle>What to play ?</SectionTitle>
             <div className="grid gap-6 mb-8 md:grid-cols-4">
                 <Link to="/app/play/quiz">
@@ -61,7 +60,6 @@ function Cards() {
                                     maxHeight: "12.5rem",
                                 }}
                             />
-
                             <h4
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
@@ -78,14 +76,14 @@ function Cards() {
                                 Tap here to begin
                             </h4>
                             <div className="flex justify-end">
-                                <img src={arrow} alt="Image" style={{maxWidth: "2.5rem"}}/>
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
                             </div>
-
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>
                 </Link>
-
                 <Link to="/app/play/dnd">
                     <Card
                         colored
@@ -123,7 +121,6 @@ function Cards() {
                                     maxHeight: "12.5rem",
                                 }}
                             />
-
                             <h4
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
@@ -140,14 +137,14 @@ function Cards() {
                                 Tap here to begin
                             </h4>
                             <div className="flex justify-end">
-                                <img src={arrow} alt="Image" style={{maxWidth: "2.5rem"}}/>
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
                             </div>
-
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>
                 </Link>
-
                 <Link to="/app/play/sentencebuilder">
                     <Card
                         colored
@@ -173,25 +170,19 @@ function Cards() {
                                     marginBottom: "0.2rem",
                                 }}
                             />
-                            <img
-                                src={mbSent}
-                                className="mb-obs"
-                                alt="Image"
-                                style={{
-                                    position: "absolute",
-                                    height: "100%",
-                                    left: "-60px",
-                                    bottom: "-52px",
-                                    maxHeight: "12.5rem",
-                                }}
+                            <img src={mbSent}
+                                 className="mb-obs"
+                                 alt="Image"
+                                 style={{
+                                     position: "absolute",
+                                     height: "100%",
+                                     left: "-60px",
+                                     bottom: "-52px",
+                                     maxHeight: "12.5rem",
+                                 }}
                             />
-
-                            <h4
-                                className="text-6xl font-chewy text-white text-right pl-cd-title"
-                                style={{}}
-                            >
-                                Sentence
-                            </h4>
+                            <h4 className="text-6xl font-chewy text-white text-right pl-cd-title"
+                                style={{}}>Sentence</h4>
                             <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
                                 Builder
                             </h4>
@@ -202,14 +193,14 @@ function Cards() {
                                 Tap here to begin
                             </h4>
                             <div className="flex justify-end">
-                                <img src={arrow} alt="Image" style={{maxWidth: "2.5rem"}}/>
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
                             </div>
-
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>
                 </Link>
-
                 <Link to="/app/play/mtp">
                     <Card
                         colored
@@ -247,7 +238,6 @@ function Cards() {
                                     maxHeight: "12.5rem",
                                 }}
                             />
-
                             <h4
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
@@ -264,9 +254,10 @@ function Cards() {
                                 Tap here to begin
                             </h4>
                             <div className="flex justify-end">
-                                <img src={arrow} alt="Image" style={{maxWidth: "2.5rem"}}/>
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
                             </div>
-
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>

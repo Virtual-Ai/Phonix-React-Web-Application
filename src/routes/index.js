@@ -17,7 +17,9 @@ const Learn = lazy(() => import("../pages/Learn"));
 
 const MTP = lazy(() => import("../pages/mtp/index"));
 const SentenceBuilder = lazy(() => import("../pages/sent_build/SentenceBuilder"));
+const Dnd = lazy(() => import("../pages/DragDrop/DND"));
 const DragDrop = lazy(() => import("../pages/DragDrop/DragDrop"));
+
 
 
 
@@ -78,6 +80,11 @@ const routes = [
 
   {
     path: "/play/dnd",
+    component: Dnd,
+  },
+
+  {
+    path: "/play/dnd/index",
     component: DragDrop,
   },
 
