@@ -80,10 +80,13 @@ export default class Sentence extends Component {
             this.correctA.play();
             document.getElementById(this.props.id).style.backgroundColor =
                 'yellowgreen'
+            document.getElementById(this.props.id+"1").style.display="none"
         } else {
             if (this.state.rows.length === this.props.question.split(' ').length) {
                 this.wrongA.play()
                 document.getElementById(this.props.id).style.backgroundColor = 'red'
+                document.getElementById(this.props.id+"1").style.display="none"
+
             } else if (this.state.rows.length !== 0) {
                 document.getElementById(this.props.id).style.backgroundColor =
                     'transparent'
@@ -114,9 +117,9 @@ export default class Sentence extends Component {
                         </div>
                         <div
                             ref={this.addDraggable}
-                            className="inline-flex h-32 tablet:h-auto p-8 tablet:p-4"
+                            className="drag-elements inline-flex h-32 tablet:h-auto p-8 tablet:p-4"
                             data-type="list"
-                            id={'drag-elements'}
+                            id={this.props.id + "1"}
                         >
                             {this.state.items.map((item) => {
                                 return (

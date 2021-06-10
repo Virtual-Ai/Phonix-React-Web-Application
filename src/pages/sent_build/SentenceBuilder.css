@@ -1,4 +1,4 @@
-#drag-elements {
+.drag-elements {
     display: table;
     touch-action: none;
     background-color: #e0d3f7;
@@ -10,7 +10,7 @@
     width: max-content;
 }
 
-#drag-elements > div {
+.drag-elements > div {
     text-align: center;
     float: left;
     /* margin: 0 1em 1em 0; */
@@ -21,14 +21,14 @@
     transition: all 0.5s ease;
 }
 
-#drag-elements > div:active {
+.drag-elements > div:active {
     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
     animation: wiggle 0.3s 0s infinite ease-in;
     opacity: 0.6;
     border: 2px solid #000;
 }
 
-#drag-elements > div:hover {
+.drag-elements > div:hover {
     border: 2px solid gray;
     background-color: #e5e5e5;
 }
