@@ -4,6 +4,8 @@ import { NavLink, Route } from 'react-router-dom'
 import * as Icons from '../../icons'
 // import SidebarSubmenu from './SidebarSubmenu'
 import { MenuIcon } from '../../icons'
+import './Sidebar.css'
+
 
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon]
@@ -42,7 +44,7 @@ function DesktopSidebar(props) {
   return (
     <aside
       id="sideBar"
-      className="z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block"
+      className=" backg z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block"
     >
       <div>
         <div className="py-4 text-gray-500 dark:text-gray-400">
