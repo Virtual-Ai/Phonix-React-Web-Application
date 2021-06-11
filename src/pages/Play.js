@@ -83,6 +83,9 @@ function Cards() {
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>
+
+
+
                 </Link>
                 <Link to="/app/play/dnd">
                     <Card
@@ -144,6 +147,8 @@ function Cards() {
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
                         </CardBody>
                     </Card>
+
+                    
                 </Link>
                 <Link to="/app/play/sentencebuilder">
                     <Card
