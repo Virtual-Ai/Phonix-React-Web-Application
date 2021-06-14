@@ -22,9 +22,9 @@ const DNDCheckModal = (props) => {
                                          src={require("./assets/reload.png")}
                                          width="200px" alt=""/>}
                             </div>
-                            <div style={{fontSize: "xx-large", margin: "auto", padding: "20px", textAlign: "center"}}>
-                                {props.check === false ? <p className="font-lemon">That was wrong, Try again</p> :
-                                    <p className="font-lemon">Yayy! Keep going</p>}
+                            <div style={{fontSize: "xx-large", margin: "auto", padding: "20px", textAlign: "center", color:"#5ce1e6"}}>
+                                {props.check === false ? <p className="font-chewy">That was wrong, Try again</p> :
+                                    <p className="font-chewy">Yayy! Keep going</p>}
                             </div>
                         </div>
                     </ModalBody>

@@ -247,10 +247,10 @@ function Cards() {
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
                             >
-                                Matching
+                                Sorting
                             </h4>
                             <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
-                                Pairs
+                                Tenses
                             </h4>
                             <h4
                                 className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"

@@ -6,6 +6,7 @@ import wrongAudio from '../Quiz/assets/audio/wrong.wav'
 import {dataType} from './data'
 import DNDModal from "./DNDModal";
 import DNDCheckModal from "./DNDCheckModal";
+import "./dnd-styles.css"
 
 
 let q = 0
@@ -139,7 +140,7 @@ const DragDrop = () => {
     }
 
     return (
-        <div className="tablet:text-2xl font-kids mt-8">
+        <div className="tablet:text-2xl font-chewy mt-8 child-dnd-main" style={{color:"#5ce1e6"}}>
             {isModalOpen === true ? <DNDModal isOpen={isModalOpen} onClose={closeModal}/> : <>
                 <div
                     className="tablet:p-6 md:p-12 mt-6"
@@ -148,7 +149,7 @@ const DragDrop = () => {
                     <div className="md:flex">
                         <DNDCheckModal closeModal={() => closeCheckModal()} next={() => nextQuestion()} check={isCorrect} isOpen={isCheckModalOpen} onClose={closeCheckModal}/>
                         <div
-                            className="p-5 md:text-3xl mb-2 text-center"
+                            className="box1-mb p-5 md:text-3xl mb-2 text-center"
                             style={{
                                 borderRadius: '1.5rem',
                                 backgroundColor: "#c8fcfd",
@@ -156,6 +157,7 @@ const DragDrop = () => {
                             }}
                         >
                             <img
+                                className="box1-mb-img"
                                 src={data[q].svg}
                                 alt=""
                                 width="400"
@@ -178,7 +180,7 @@ const DragDrop = () => {
                         {console.log(q)}
                         <div
                             id="re"
-                            className="md:text-3xl "
+                            className="md:text-3xl opt-mb"
                             style={{
                                 margin: 'auto',
                                 backgroundColor: "#c8fcfd",
@@ -195,7 +197,7 @@ const DragDrop = () => {
                                 <tr>
                                     <td>
                                         <div
-                                            className="m-1 p-1 md:w-40"
+                                            className="m-1 p-1 md:w-40 opt-in-mb"
                                             id={'drag' + "0"}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
@@ -213,7 +215,7 @@ const DragDrop = () => {
                                     </td>
                                     <td>
                                         <div
-                                            className="m-1 p-1 md:w-40"
+                                            className="m-1 p-1 md:w-40 opt-in-mb"
                                             id={'drag' + "1"}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
@@ -233,7 +235,7 @@ const DragDrop = () => {
                                 <tr>
                                     <td>
                                         <div
-                                            className="m-1 p-1 md:w-40"
+                                            className="m-1 p-1 md:w-40 opt-in-mb"
                                             id={'drag' + "2"}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
@@ -251,7 +253,7 @@ const DragDrop = () => {
                                     </td>
                                     <td>
                                         <div
-                                            className="m-1 p-1 md:w-40"
+                                            className="m-1 p-1 md:w-40 opt-in-mb"
                                             id={'drag' + "3"}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}

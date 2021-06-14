@@ -38,7 +38,7 @@ class Dnd extends Component {
                         </CardBody>
                     </Card>
                 </Link>
-            </div>
+                </div>
             </>
         );
     }

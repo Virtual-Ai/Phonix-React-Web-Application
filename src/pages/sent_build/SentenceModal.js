@@ -10,14 +10,14 @@ const SentenceModal = (props) => {
     return (
         <div>
             <div>
-                <Modal style={{backgroundColor: "#c8fcfd", fontFamily: "Lemon",}} isOpen={props.isOpen} onClose={props.onClose}>
-                    <ModalHeader style={{color: "blue"}} className="text-2xl text-center">
+                <Modal style={{backgroundColor: "#fae5be"}} isOpen={props.isOpen} onClose={props.onClose}>
+                    <ModalHeader style={{color: "#f5ba85"}} className="text-2xl font-balsamiq text-center">
                         {' '}
                         How to play ?{' '}
                     </ModalHeader>
 
                     <ModalBody>
-                        <p style={{color: "salmon"}} className="text-center text-4xl">Drag the words in the empty box to create a meaningful sentence</p>
+                        <p style={{color: "#ff914d"}} className="text-center font-chewy text-4xl">Drag the words in the empty box to create a meaningful sentence</p>
                     </ModalBody>
                 </Modal>
             </div>

@@ -10,14 +10,14 @@ const DNDModal = (props) => {
     return (
         <div>
             <div>
-                <Modal style={{backgroundColor: "#c8fcfd", fontFamily: "Lemon",}} isOpen={props.isOpen} onClose={props.onClose}>
-                    <ModalHeader style={{color: "blue"}} className="text-2xl text-center">
+                <Modal style={{backgroundColor: "#c8fcfd"}} isOpen={props.isOpen} onClose={props.onClose}>
+                    <ModalHeader style={{color: "#92eff2"}} className="text-2xl font-balsamiq text-center">
                         {' '}
                         How to play ?{' '}
                     </ModalHeader>
 
                     <ModalBody>
-                        <p style={{color: "salmon"}} className="text-center text-4xl">Fill in the blanks by dragging a word to it</p>
+                        <p style={{color: "#5ce1e6"}} className="text-center font-chewy text-4xl">Fill in the blanks by dragging a word to it.</p>
                     </ModalBody>
                 </Modal>
             </div>

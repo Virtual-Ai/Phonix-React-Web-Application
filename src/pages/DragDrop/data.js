@@ -1,25 +1,25 @@
 export const dataType = {
     preposition: [
         {
-            svg: require("./assets/table.png"),
-            question: 'Book is  ________  the table.',
-            options: ['on', 'with', 'over', 'at'],
-            correct: 'on',
+            svg: require("./assets/cat.png"),
+            question: 'The cat is  ________  the box.',
+            options: ['in', 'under', 'over', 'above'],
+            correct: 'in',
         },
         {
-            svg: require('./assets/couch.png'),
+            svg: require('./assets/couch4.png'),
             question: 'Reena is sitting ________ the couch.',
             options: ['from', 'on', 'to', 'in'],
             correct: 'on',
         },
         {
-            svg: require('./assets/study.png'),
-            question: 'I have been learning chinese ________ two years.',
+            svg: require('./assets/study2.png'),
+            question: 'I have been studying ________ two years.',
             options: ['by', 'of', 'from', 'for'],
             correct: 'for',
         },
         {
-            svg: require('./assets/hat.png'),
+            svg: require('./assets/hat2.png'),
             question: ' Is peter married ________ Ellen?',
             options: ['with', 'on', 'to', 'in'],
             correct: 'to',
