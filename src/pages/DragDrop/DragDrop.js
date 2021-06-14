@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
-import {Button} from '@windmill/react-ui'
-import {toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import {NextIcon} from '../../icons'
 import UIfx from "uifx";
 import correctAudio from '../Quiz/assets/audio/correct.mp3'
 import wrongAudio from '../Quiz/assets/audio/wrong.wav'
 import {dataType} from './data'
+import DNDModal from "./DNDModal";
+import DNDCheckModal from "./DNDCheckModal";
 
 
 let q = 0
@@ -14,22 +13,35 @@ let id = ''
 let replaceto
 let replacefrom
 let dragElement = document.createElement('span')
+
 const DragDrop = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(true)
+    const [isCheckModalOpen, setIsCheckModalOpen] = useState(false)
+    const [isCorrect, setIsCorrect] = useState(false)
+
+
+    const closeModal = () => {
+        setIsModalOpen(false)
+    }
+
+
+    const closeCheckModal = () => {
+        setIsCheckModalOpen(false)
+    }
 
     const type = window.location.href.split("?")[1]
     console.log(type)
     let data = dataType.preposition
-    let name = "Prepositions"
+
     if (type === "preposition") {
         data = dataType.preposition
-        name = "Prepositions"
     } else if (type === "noun") {
         data = dataType.noun
-        name = "Nouns"
     }
 
     const [Question, questionHandler] = useState(
-        data[0].question.split('________'),
+        data[q].question.split('________'),
     )
 
 
@@ -51,16 +63,10 @@ const DragDrop = () => {
     const [answer, answerHandler] = useState(data[0].correct)
 
     const CorrectAnswer = () => {
-        toast.success('✅ 🥳 Yayy! Great Going! Keep doing well! ', {
-            position: toast.POSITION.TOP_CENTER,
-        })
         correctA.play()
     }
 
     const WrongAnswer = () => {
-        toast.error('✗ Wrong answer!', {
-            position: toast.POSITION.TOP_CENTER,
-        })
         wrongA.play()
     }
 
@@ -87,14 +93,17 @@ const DragDrop = () => {
         var dragContent = document.createTextNode(replaceto.textContent)
 
         dragElement.appendChild(dragContent)
-
         ev.target.parentNode.replaceChild(dragElement, ev.target)
 
         // console.log(replacefrom, replaceto, data)
         console.log(dragContent, answer)
         if (dragElement.innerHTML === answer) {
+            setIsCheckModalOpen(true)
+            setIsCorrect(true)
             CorrectAnswer()
         } else {
+            setIsCheckModalOpen(true)
+            setIsCorrect(false)
             WrongAnswer()
         }
 
@@ -106,11 +115,23 @@ const DragDrop = () => {
     const nextQuestion = () => {
         console.log(q)
         if (q < data.length - 1) {
-            q++
+            if (dragElement.innerHTML === answer){
+                q++
+            }
+            else {}
             if (id) {
-                id.replaceChild(replacefrom, dragElement)
+                try {
+                    id.replaceChild(replacefrom, dragElement)
+                } catch (e) {
+                }
             }
         } else {
+            if (id) {
+                try {
+                    id.replaceChild(replacefrom, dragElement)
+                } catch (e) {
+                }
+            }
         }
 
         questionHandler(data[q].question.split('________'))
@@ -118,81 +139,140 @@ const DragDrop = () => {
     }
 
     return (
-        <div className="font-kids mt-8">
-            <div
-                className="bg-orange-200 p-12 pb-2"
-                style={{borderRadius: '1.5rem'}}
-            >
+        <div className="tablet:text-2xl font-kids mt-8">
+            {isModalOpen === true ? <DNDModal isOpen={isModalOpen} onClose={closeModal}/> : <>
                 <div
-                    className="md:text-5xl"
-                    style={{
-                        border: '1px dashed',
-                        textAlign: 'center',
-                        marginBottom: '25px',
-                        borderRadius: '1.5rem',
-                        // fontSize: 'xxx-large',
-                    }}
+                    className="tablet:p-6 md:p-12 mt-6"
+                    style={{borderRadius: '1.5rem', backgroundColor: "#9efafc"}}
                 >
-                    {name}
-                </div>
-                <div className="md:flex">
-                    <div
-                        className="bg-blue-400  p-5 md:text-3xl mb-2 text-center"
-                        style={{borderRadius: '1.5rem' /*fontSize: 'xx-large'*/}}
-                    >
-                        <img
-                            src={data[q].svg}
-                            alt=""
-                            width="400"
+                    <div className="md:flex">
+                        <DNDCheckModal closeModal={() => closeCheckModal()} next={() => nextQuestion()} check={isCorrect} isOpen={isCheckModalOpen} onClose={closeCheckModal}/>
+                        <div
+                            className="p-5 md:text-3xl mb-2 text-center"
                             style={{
                                 borderRadius: '1.5rem',
-                                margin: '0 auto',
-                                marginBottom: '20px',
+                                backgroundColor: "#c8fcfd",
+                                /*fontSize: 'xx-large'*/
                             }}
-                        />
-                        {Question[0]}
+                        >
+                            <img
+                                src={data[q].svg}
+                                alt=""
+                                width="400"
+                                style={{
+                                    borderRadius: '1.5rem',
+                                    margin: '0 auto',
+                                    marginBottom: '20px',
+                                }}
+                            />
+                            {Question[0]}
+                            <div
+                                id="div1"
+                                className="inline-block border-solid border-black border-0 border-b-2 w-32"
+                                style={{height: '52px'}}
+                                onDrop={(event) => drop(event)}
+                                onDragOver={(event) => allowDrop(event)}
+                            />
+                            {Question[1]}
+                        </div>
+                        {console.log(q)}
                         <div
-                            id="div1"
-                            className="inline-block border-solid border-0 border-b-2 ml-2 mr-2 min-w-20"
-                            style={{height: '33px'}}
-                            onDrop={(event) => drop(event)}
-                            onDragOver={(event) => allowDrop(event)}
-                        />
-                        {Question[1]}
-                    </div>
-                    {console.log(q)}
-                    <div
-                        id="re"
-                        className="grid md:text-3xl"
-                        style={{
-                            margin: '0 auto',
+                            id="re"
+                            className="md:text-3xl "
+                            style={{
+                                margin: 'auto',
+                                backgroundColor: "#c8fcfd",
+                                padding: "20px",
+                                borderRadius: '1.5rem',
 
-                            // fontSize: 'xx-large',
-                        }}
-                    >
-                        {data[q].options.map((option, index) => {
-                            return (
-                                <span
-                                    className="bg-orange-400 m-1 p-1 md:w-40"
-                                    id={'drag' + index}
-                                    draggable="true"
-                                    onDragStart={(ev) => drag(ev)}
-                                    key={option}
-                                    style={{
-                                        padding: '10px',
-                                        height: 'max-content',
-                                        textAlign: 'center',
-                                        borderRadius: '1.5rem',
-                                        // width: '150px',
-                                    }}
-                                >
-                  {option}
-                </span>
-                            )
-                        })}
+                                height: "max-content"
+
+                                // fontSize: 'xx-large',
+                            }}
+                        >
+                            <table style={{width: "100%"}}>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div
+                                            className="m-1 p-1 md:w-40"
+                                            id={'drag' + "0"}
+                                            draggable="true"
+                                            onDragStart={(ev) => drag(ev)}
+                                            style={{
+                                                padding: '32px',
+                                                margin: '15px',
+                                                textAlign: 'center',
+                                                borderRadius: '1.5rem',
+                                                backgroundColor: "#9efafc"
+                                                // width: '150px',
+                                            }}
+                                        >
+                                            {data[q].options[0]}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div
+                                            className="m-1 p-1 md:w-40"
+                                            id={'drag' + "1"}
+                                            draggable="true"
+                                            onDragStart={(ev) => drag(ev)}
+                                            style={{
+                                                padding: '32px',
+                                                margin: '15px',
+                                                textAlign: 'center',
+                                                borderRadius: '1.5rem',
+                                                backgroundColor: "#9efafc"
+                                                // width: '150px',
+                                            }}
+                                        >
+                                            {data[q].options[1]}
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div
+                                            className="m-1 p-1 md:w-40"
+                                            id={'drag' + "2"}
+                                            draggable="true"
+                                            onDragStart={(ev) => drag(ev)}
+                                            style={{
+                                                padding: '32px',
+                                                margin: '15px',
+                                                textAlign: 'center',
+                                                borderRadius: '1.5rem',
+                                                backgroundColor: "#9efafc"
+                                                // width: '150px',
+                                            }}
+                                        >
+                                            {data[q].options[2]}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div
+                                            className="m-1 p-1 md:w-40"
+                                            id={'drag' + "3"}
+                                            draggable="true"
+                                            onDragStart={(ev) => drag(ev)}
+                                            style={{
+                                                padding: '32px',
+                                                margin: '15px',
+                                                textAlign: 'center',
+                                                borderRadius: '1.5rem',
+                                                backgroundColor: "#9efafc"
+                                                // width: '150px',
+                                            }}
+                                        >
+                                            {data[q].options[3]}
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <div style={{textAlign: 'right'}}>
+                    {/*                <div style={{textAlign: 'right'}}>
                     <Button
                         className="text-2xl"
                         iconRight={NextIcon}
@@ -200,9 +280,10 @@ const DragDrop = () => {
                     >
                         Next
                     </Button>
+                </div>*/}
                 </div>
-            </div>
-            <ToastContainer/>
+            </>
+            }
         </div>
     )
 }

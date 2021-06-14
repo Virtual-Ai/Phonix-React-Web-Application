@@ -10,6 +10,7 @@ module.exports = windmill({
                 'balsamiq': ["Balsamiq Sans", 'cursive'],
                 'chewy': ["Chewy", "cursive"],
                 'kids': ['Love Ya Like A Sister'],
+                'lemon': ['Lemon']
 
             },
             boxShadow: {
