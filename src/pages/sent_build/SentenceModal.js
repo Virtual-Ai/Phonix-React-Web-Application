@@ -17,7 +17,7 @@ const SentenceModal = (props) => {
                     </ModalHeader>
 
                     <ModalBody>
-                        <p style={{color: "#ff914d"}} className="text-center font-chewy text-4xl">Drag the words in the empty box to create a meaningful sentence</p>
+                        <p style={{color: "#ff914d"}} className="text-center font-chewy text-4xl">Drag the words in the empty box to form a meaningful sentence</p>
                     </ModalBody>
                 </Modal>
             </div>

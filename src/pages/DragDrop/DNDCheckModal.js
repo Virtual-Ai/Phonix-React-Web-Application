@@ -7,7 +7,7 @@ const DNDCheckModal = (props) => {
             <div>
                 <Modal style={{backgroundColor: "#c8fcfd"}} isOpen={props.isOpen} onClose={props.onClose}>
                     <ModalBody>
-                        <div className="flex">
+                        <div className="flex" style={{alignItems:"center"}}>
                             <div style={{borderRadius: "2rem"}}>
                                 {props.check === true ?
                                     <img onClick={() => {
