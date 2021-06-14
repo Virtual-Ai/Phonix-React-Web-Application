@@ -144,7 +144,7 @@ class SentenceBuilder extends Component {
             JSON.stringify(data[this.state.counter].split(' ')),
         )
         return (
-            <div className="m-6">
+            <div className="m-6" style={{height: "100%"}}>
                 {this.state.modal === true ? <SentenceModal isOpen={this.state.modal} onClose={this.closeModal}/> :
 
                     <div className="" style={{backgroundColor: "#fad18e", borderRadius: "20px"}}>
@@ -156,12 +156,7 @@ class SentenceBuilder extends Component {
                             </div>
                             <div className="">
                                 {' '}
-                                <div style={{
-                                    padding: "20px",
-                                    backgroundColor: "#fce5be",
-                                    width: "60rem",
-                                    borderRadius: "20px"
-                                }}>
+                                <div id="P">
                                     <div
                                         ref={this.addDraggable}
                                         data-type="rows"

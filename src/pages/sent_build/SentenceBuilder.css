@@ -43,7 +43,7 @@
     min-height: 50px;
     margin: 0 auto;
     margin-bottom: 10px;
-    font-family: Lemon;
+    font-family: chewy;
 
     /* padding: 2em; */
     display: table;
@@ -63,6 +63,8 @@
     background: #f7f7f7;
     transition: all 0.5s ease;
 }
+
+
 
 .answer > div:active {
     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
@@ -138,4 +140,27 @@
     opacity: 0.5;
     -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
     filter: alpha(opacity=50);
+}
+
+#P {
+    padding: 20px;
+    background-color: #fce5be;
+    width: 60rem;
+    border-radius: 20px;
+}
+
+@media (max-width: 650px) {
+    #Q {
+        width: auto;
+    }
+
+    #P {
+        width: 20rem;
+
+    }
+    #rod2 {
+        position: relative;
+        left: 67%
+    }
+
 }
