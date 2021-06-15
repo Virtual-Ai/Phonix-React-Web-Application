@@ -338,7 +338,7 @@ function Cards() {
                 </Link>     
 
 
-                <Link to="/app/play/mtp">
+                <Link to="/app/play/tense">
                     <Card
                         colored
                         className="mb-8 shadow-md"

@@ -203,12 +203,13 @@
   .answer > div {
     transition: all 0.5s;
     text-align: center;
+    font-size: 1.1em;
     float: left;
     margin-right: 0.5em;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     border: 2px solid skyblue;
-    background: #f7f7f7;
+    background: #ffd28e;
     transition: all 0.5s ease;
     color: #cb6526;
   }
