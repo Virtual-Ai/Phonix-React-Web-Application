@@ -9,7 +9,7 @@
 .box {
     background-color: #D7F8A7;
 }
-.drag-elements {
+.sort-options {
     display: table;
     touch-action: none;
     font-family: Lemon;
@@ -25,7 +25,7 @@
     width: auto;
 }
 
-.drag-elements > div {
+.sort-options > div {
     text-align: center;
     float: left;
     margin: 0 0.7em 0;
@@ -36,19 +36,28 @@
     transition: all 0.5s ease;
 }
 
-.drag-elements > div:active {
+.sort-options > div:active {
     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
     animation: wiggle 0.3s 0s infinite ease-in;
     opacity: 0.6;
     border: 2px solid #000;
 }
 
-.drag-elements > div:hover {
+.sort-options > div:hover {
     border: 2px solid gray;
     background-color: #ffb36c;
 }
 
-.answer {
+.ans {
+    background-color: #D7F8A7;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tense {
     border-radius: 5px;
     min-height: 50px;
     margin: 0 auto;
@@ -62,7 +71,7 @@
     width: max-content;
 }
 
-.answer > div {
+.tense > div {
     transition: all 0.5s;
     text-align: center;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -72,7 +81,7 @@
     transition: all 0.5s ease;
 }
 
-.answer > div:active {
+.tense > div:active {
     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
     animation: wiggle 0.3s 0s infinite ease-in;
     opacity: 0.6;
@@ -172,7 +181,7 @@
 }
 
 @media (max-width: 650px) {
-    .drag-elements > div {
+    .sort-options > div {
         text-align: center;
         float: left;
         margin: 0.2em 0.2em 0;
@@ -183,6 +192,5 @@
         transition: all 0.5s ease;
         width: 121px;
     }
-
 
 }

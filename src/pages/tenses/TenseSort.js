@@ -93,10 +93,16 @@ class TenseSort extends Component {
 
         const Result = () => {
             if (this.check()){
-                return <div>Correct</div>
+                return <div className="flex">
+                    <img width="50px" src={require("./assets/check.png")}/>
+                    <p style={{padding: "7px"}}>Correct</p>
+                </div>
             }
             else{
-                return <div>Wrong</div>
+                return <div className="flex">
+                    <img width="50px" src={require("./assets/false.svg")}/>
+                    <p style={{padding: "7px"}}>Wrong</p>
+                </div>
             }
         }
 
@@ -118,13 +124,13 @@ class TenseSort extends Component {
                                     <div
                                         ref={this.addDraggable}
                                         data-type="rows"
-                                        className="answer h-32 tablet:h-auto p-8 tablet:p-4"
+                                        className="tense h-32 tablet:h-auto p-8 tablet:p-4"
                                         id={"Q"}
                                     >
                                         {this.state.rows.map((item) => {
                                             return (
                                                 <div
-                                                    className="fade-out mb-2 p-4 tablet:p-px"
+                                                    className="fade-out mb-2 p-4"
                                                     data-field={item}
                                                     key={item}
                                                 >
@@ -145,13 +151,13 @@ class TenseSort extends Component {
                                     <div
                                         ref={this.addDraggable}
                                         data-type="present"
-                                        className="answer h-32 tablet:h-auto p-8 tablet:p-4"
+                                        className="tense h-32 tablet:h-auto p-8 tablet:p-4"
                                         id={"Q"}
                                     >
                                         {this.state.present.map((item) => {
                                             return (
                                                 <div
-                                                    className="fade-out mb-2 p-4 tablet:p-px"
+                                                    className="fade-out mb-2 p-4"
                                                     data-field={item}
                                                     key={item}
                                                 >
@@ -200,7 +206,7 @@ class TenseSort extends Component {
                             <div
                                 ref={this.addDraggable}
                                 data-type="list"
-                                className="flex drag-elements"
+                                className="flex sort-options"
                                 id={"Q"}
                             >
                                 {this.state.items.map((item) => {
@@ -221,11 +227,10 @@ class TenseSort extends Component {
                 <div style={{display: "none"}} className="result flex text-center max-w-max  p-3 text-2xl tablet:text-xl">
                     <div className="flex-grow">
                         <div
-                            className="flex drag-elements"
+                            className="flex ans"
                             id={"Q"}
                         >
                             <Result />
-
                         </div>
                     </div>
                 </div>
