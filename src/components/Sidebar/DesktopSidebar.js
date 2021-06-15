@@ -6,7 +6,6 @@ import * as Icons from '../../icons'
 import { MenuIcon } from '../../icons'
 import './Sidebar.css'
 
-
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon]
   return <Icon {...props} />
@@ -16,7 +15,6 @@ function DesktopSidebar(props) {
   const [isOpen, openHandler] = useState(false)
 
   const open = () => {
-    
     openHandler(!isOpen)
     if (isOpen) {
       routes.map((route) => {
@@ -27,7 +25,7 @@ function DesktopSidebar(props) {
       })
       document.getElementById('name').innerHTML = 'Phonix'
       document.getElementById('sideBar').className =
-        'z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block'
+        ' backg z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block'
     } else {
       routes.map((route) => {
         if (route.routes) {
@@ -37,7 +35,7 @@ function DesktopSidebar(props) {
       })
       document.getElementById('name').innerHTML = ''
       document.getElementById('sideBar').className =
-        'z-30 flex-shrink-0 hidden overflow-y-auto bg-white dark:bg-gray-800 lg:block'
+        ' backg z-30 flex-shrink-0 hidden w-min overflow-y-auto bg-white dark:bg-gray-800 lg:block'
     }
   }
 
@@ -54,12 +52,12 @@ function DesktopSidebar(props) {
               onClick={open}
               aria-label="Menu"
             >
-              <MenuIcon className="w-6 h-6 text-white" aria-hidden="false" />
+              <MenuIcon className="w-10 h-10 text-white" aria-hidden="false" />
             </button>
             <div>
               <a
                 id="name"
-                className="ft ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+                className="ft ml-1 text-lg font-bold text-gray-800 dark:text-gray-200"
                 href="/"
               >
                 Phonix
@@ -97,7 +95,7 @@ function DesktopSidebar(props) {
               ),
             )}
           </ul>
-          <img src={require("./assets/mb-quiz.png")} />
+          <img src={require('./assets/mb-quiz.png')} />
         </div>
       </div>
     </aside>
