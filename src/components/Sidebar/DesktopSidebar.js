@@ -54,13 +54,13 @@ function DesktopSidebar(props) {
               onClick={open}
               aria-label="Menu"
             >
-              <MenuIcon className="w-6 h-6" aria-hidden="false" />
+              <MenuIcon className="w-6 h-6 text-white" aria-hidden="false" />
             </button>
             <div>
               <a
                 id="name"
-                className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-                href="/app"
+                className="ft ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+                href="/"
               >
                 Phonix
               </a>
@@ -74,7 +74,7 @@ function DesktopSidebar(props) {
                   <NavLink
                     exact
                     to={route.path}
-                    className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    className="card-con inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                     activeClassName="text-gray-800 dark:text-gray-100"
                   >
                     <Route path={route.path} exact={route.exact}>
@@ -89,7 +89,7 @@ function DesktopSidebar(props) {
                       icon={route.icon}
                       fill="currentColor"
                     />
-                    <span id={route.name} className="ml-4">
+                    <span id={route.name} className="ml-4 text-white">
                       {route.name}
                     </span>
                   </NavLink>
@@ -97,6 +97,7 @@ function DesktopSidebar(props) {
               ),
             )}
           </ul>
+          <img src={require("./assets/mb-quiz.png")} />
         </div>
       </div>
     </aside>
