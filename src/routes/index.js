@@ -23,11 +23,16 @@ const DragDrop = lazy(() => import("../pages/DragDrop/DragDrop"));
 const Tense = lazy(() => import("../pages/tenses/TenseSort"));
 
 
-
-
 const Quiz = lazy(() => import("../pages/quizLandingPage"));
 const Verbs = lazy(() => import("../pages/Quiz/Verbs"));
 const Nouns = lazy(() => import("../pages/Quiz/Nouns"));
+const Adverbs = lazy(() => import("../pages/Quiz/Adverbs"));
+const Adjectives = lazy(() => import("../pages/Quiz/Adjectives"));
+const Pronouns = lazy(() => import("../pages/Quiz/Pronouns"));
+const Tenses = lazy(() => import("../pages/Quiz/Tenses"));
+
+
+
 const Lcard1 = lazy(() => import("../pages/Learn/Learn1"));
 
 /**
@@ -69,6 +74,23 @@ const routes = [
     path: "/play/nouns",
     component: Nouns,
   },
+  {
+    path: "/play/adverbs",
+    component: Adverbs,
+  },
+  {
+    path: "/play/adjectives",
+    component: Adjectives,
+  },
+  {
+    path: "/play/pronouns",
+    component: Pronouns,
+  },
+  {
+    path: "/play/tenses",
+    component: Tenses,
+  },
+
 
   {
     path: "/play/quiz",
