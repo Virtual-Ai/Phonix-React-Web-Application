@@ -28,3 +28,6 @@
 .card-con:hover{
     color: #9eabe4;
 }
+.w-min {
+  width: min-content;
+}
