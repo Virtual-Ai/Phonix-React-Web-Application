@@ -208,6 +208,29 @@ width: 400px;
     }
 }
 
+
+/*-----Responsive Fixes--------*/
+
+
+@media (max-width: 768px) {
+    .m1{
+        margin: 0.5rem ;
+    }
+
+    .app {
+      max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 412px) {
+
+  .text-600-30px {
+        font-size: 25px !important;
+      }
+}
+
 /*   
   button {
     width: 100%;
