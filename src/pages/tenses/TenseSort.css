@@ -19,7 +19,7 @@
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 30px;
-    color: rgb(255, 145, 77);
+    color: #008037;
     padding: 2em;
     align-self: center;
     width: auto;
@@ -45,7 +45,7 @@
 
 .sort-options > div:hover {
     border: 2px solid gray;
-    background-color: #ffb36c;
+    background-color: rgb(201, 226, 101);
 }
 
 .ans {
@@ -63,6 +63,7 @@
     margin: 0 auto;
     margin-bottom: 10px;
     font-family: Lemon;
+    color: #008037;
 
     /* padding: 2em; */
     display: table;
@@ -76,8 +77,8 @@
     text-align: center;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    border: 2px solid skyblue;
-    background: #f7f7f7;
+    border: 3px solid #37EB5C;
+    background: transparent;
     transition: all 0.5s ease;
 }
 
