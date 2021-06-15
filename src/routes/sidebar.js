@@ -13,12 +13,6 @@ const routes = [
   // },
 
   {
-    path: '/app/chatbot', // the url
-    icon: 'ChatIcon', // the component being exported from icons/index.js
-    name: 'Chatbot', // name that appear in Sidebar
-  },
-
-  {
     path: '/app/play', // the url
     icon: 'PeopleIcon', // the component being exported from icons/index.js
     name: 'Play', // name that appear in Sidebar
@@ -28,6 +22,11 @@ const routes = [
     path: '/app/learn', // the url
     icon: 'FormsIcon', // the component being exported from icons/index.js
     name: 'Learn', // name that appear in Sidebar
+  },
+  {
+    path: '/app/chatbot', // the url
+    icon: 'ChatIcon', // the component being exported from icons/index.js
+    name: 'Chat', // name that appear in Sidebar
   },
 
   // {
