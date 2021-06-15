@@ -65,7 +65,6 @@
 .answer > div {
     transition: all 0.5s;
     text-align: center;
-    display: none;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     border: 2px solid skyblue;
@@ -147,4 +146,43 @@
     opacity: 0.5;
     -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
     filter: alpha(opacity=50);
+}
+.fade-out {
+    -webkit-animation: fadeinout 2s linear forwards;
+    animation: fadeinout 2s linear forwards;
+    opacity: 0;
+}
+@keyframes fadeinout {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        height: auto;
+        opacity: 0.5;
+        padding: initial;
+    }
+    100% {
+        opacity: 0;
+        height: 0px;
+        padding: 0px;
+        border: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    .drag-elements > div {
+        text-align: center;
+        float: left;
+        margin: 0.2em 0.2em 0;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        border: 3px dashed #37EB5C;
+        background: transparent;
+        transition: all 0.5s ease;
+        width: 45%;
+    }
+
+
 }

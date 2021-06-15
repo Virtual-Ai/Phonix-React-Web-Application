@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./TenseSort.css"
 import Dragula from 'dragula'
 import Timer from "react-compound-timer";
-
+import { Button } from '@windmill/react-ui'
 
 const data = {
     Past : ["Played", "Taught", "Drove"],
@@ -124,7 +124,7 @@ class TenseSort extends Component {
                                         {this.state.rows.map((item) => {
                                             return (
                                                 <div
-                                                    className="mb-2 p-4 tablet:p-px"
+                                                    className="fade-out mb-2 p-4 tablet:p-px"
                                                     data-field={item}
                                                     key={item}
                                                 >
@@ -151,7 +151,7 @@ class TenseSort extends Component {
                                         {this.state.present.map((item) => {
                                             return (
                                                 <div
-                                                    className="mb-2 p-4 tablet:p-px"
+                                                    className="fade-out mb-2 p-4 tablet:p-px"
                                                     data-field={item}
                                                     key={item}
                                                 >
@@ -178,12 +178,17 @@ class TenseSort extends Component {
                             },
                         ]}
                     >
-                        {({  stop , getTime }) => (
+                        {({  stop , start }) => (
                             <React.Fragment>
                                 <div className="text-3xl font-lemon">
                                     <Timer.Minutes />:
                                     <Timer.Seconds />sec
                                 </div>
+                                <div className="flex">
+                                    <Button className="mx-6" onClick={stop}>Stop</Button>
+                                    <Button className="mx-6" onClick={start}>Resume</Button>
+                                </div>
+
                             </React.Fragment>
                         )}
                     </Timer>
@@ -201,7 +206,7 @@ class TenseSort extends Component {
                                 {this.state.items.map((item) => {
                                     return (
                                         <div
-                                            className="flex-grow ml-2 p-4 tablet:p-px"
+                                            className="flex-grow ml-2 p-4 tablet:p-4"
                                             data-field={item}
                                             key={item}
                                         >
