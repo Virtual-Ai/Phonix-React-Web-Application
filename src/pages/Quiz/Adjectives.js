@@ -34,161 +34,161 @@ const skipNextA = new UIfx(buttonAudio, {
 const questions = [
   {
     id: 0,
-    question: "Choose the sentence with the right word order",
+    question: "You should be very careful. Snowboarding is a __________ hobby.",
     answers: [
       {
-        answerText: "Tom a lot of people invited.",
-        isCorrect: false,
-        imgSrc: A,
-      },
-      {
-        answerText: "A lot of people Tom invited.",
-        isCorrect: false,
-        imgSrc: B,
-      },
-      {
-        answerText: "Tom invited a lot of people.",
+        answerText: "dangerous",
         isCorrect: true,
-        imgSrc: C,
+        imgSrc: A
       },
       {
-        answerText: "Tom invited of people a lot.",
+        answerText: "boring",
         isCorrect: false,
-        imgSrc: D,
+        imgSrc: B
+      },
+      {
+        answerText: "aweful",
+        isCorrect: false,
+        imgSrc: C
+      },
+      {
+        answerText: "sacry",
+        isCorrect: false,
+        imgSrc: D
       },
     ],
     explanation:
-      "We usually use a certain word order: Subject - Predicate - Object. In this sentence 'Tom' is a subject, 'invited' is a predicate and 'a lot of people' is an object.",
+      "The adjective 'dangerous' is a characteristic of something risky, of something that can cause injury.",
 
-    topic: 0,
+    topic: 10,
   },
   {
     id: 1,
-    question: "Have you got _ pen?",
+    question: "Rick wants to marry Cindy. He gave her a beautiful _____ ring. (The ring made of gold)",
     answers: [
-      { answerText: "—", isCorrect: false, imgSrc: A },
-      { answerText: "a", isCorrect: true, imgSrc: B },
-      { answerText: "an", isCorrect: false, imgSrc: C },
-      { answerText: "the", isCorrect: false, imgSrc: D },
+      { answerText: "goldful", isCorrect: false, imgSrc: A },
+      { answerText: "goldy", isCorrect: false, imgSrc: B },
+      { answerText: "golden", isCorrect: false, imgSrc: C },
+      { answerText: "gold", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "We use the article 'a' with singular countable nouns when we talk about them in general.",
+      "'Gold' means 'made of gold', while 'golden' means - 'the color of gold'.",
 
-    topic: 1,
+    topic: 10,
   },
   {
     id: 2,
-    question: "Tom _______ (to read) a newspaper now.",
+    question: "Sally is _________ than Carol.",
     answers: [
-      { answerText: "reads", isCorrect: false, imgSrc: A },
-      { answerText: "is reading", isCorrect: true, imgSrc: B },
-      { answerText: "read", isCorrect: false, imgSrc: C },
-      { answerText: "has read", isCorrect: false, imgSrc: D },
+      { answerText: "short", isCorrect: false, imgSrc: A },
+      { answerText: "shorter", isCorrect: true, imgSrc: B },
+      { answerText: "shortly", isCorrect: false, imgSrc: C },
+      { answerText: "the shortest", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "The adverb 'now' means that the action is taking place at the moment of speaking.  In this case we should use the Present Continuous Tense: am/is/are + Verb-ing.",
+      "We use comparative adjectives to compare two people/things. When we use a comparative adjective in front of a noun we add ‘than’. To make a comparative form of short (one syllable) adjectives we add –er.",
 
-    topic: 2,
+    topic: 10,
   },
   {
     id: 3,
-    question: "The Romans _______ (to come) to Britain in 54 BC.",
+    question: "I think she is __________________ girl in our school.",
     answers: [
-      { answerText: "came", isCorrect: true, imgSrc: A },
-      { answerText: "were coming", isCorrect: false, imgSrc: B },
-      { answerText: "comed", isCorrect: false, imgSrc: C },
-      { answerText: "had come", isCorrect: false, imgSrc: D },
+      { answerText: "beautifuller", isCorrect: false, imgSrc: A },
+      { answerText: "more beautiful", isCorrect: false, imgSrc: B },
+      { answerText: "the most beautiful", isCorrect: true, imgSrc: C },
+      { answerText: "the beautifullest", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "If an action happened at a definite time in the past we use the Past Simple Tense. If there is a regular verb in a sentence we add '-ed'. Irregular verbs should be memorized. Here: COME-CAME-COME",
+      "We use superlative adjectives when we compare one person/one thing with several others. For most adjectives with two or more syllables we use ‘the most’ + adjective for formation of the superlative form. There are some exceptions, e.g. friendly – friendlier / the friendliest, gentle – gentler / the gentlest, funny – funnier / the funniest.",
 
-    topic: 3,
+    topic: 10,
   },
   {
     id: 4,
     question:
-      "Bill __________ (to visit) his parents tomorrow. He has got an appointment with them.",
+      "I think that BMW is a good car. But my brother Joe thinks that AUDI is __________ .",
     answers: [
-      { answerText: "is visiting", isCorrect: false, imgSrc: A },
-      { answerText: "will have visited", isCorrect: false, imgSrc: B },
-      { answerText: "will visit", isCorrect: true, imgSrc: C },
-      { answerText: "visits", isCorrect: false, imgSrc: D },
+      { answerText: "good", isCorrect: false, imgSrc: A },
+      { answerText: "better", isCorrect: true, imgSrc: B },
+      { answerText: "gooder", isCorrect: false, imgSrc: C },
+      { answerText: "the best", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "We use ‘I am doing’ (present continuous) when we say what we have arranged to do. While ‘I am going to do something’ means ‘I've decided to do it, but perhaps not arranged to do it.",
+      "When we compare two things or two people we use the comparative form of adjectives. The adjective 'good' has an irregular comparative form: GOOD – BETTER: GOOD - BETTER",
 
-    topic: 4,
+    topic: 10,
   },
   {
     id: 5,
-    question: "Tom, look! The mail ______________ (to deliver).",
+    question: "Paul has bought a _______ _________ _________ _________ (round/wooden/brown/new) table.",
     answers: [
-      { answerText: "is delivered", isCorrect: true, imgSrc: A },
-      { answerText: "delivers", isCorrect: false, imgSrc: B },
-      { answerText: "delivered", isCorrect: false, imgSrc: C },
-      { answerText: "is delivering", isCorrect: false, imgSrc: D },
+      { answerText: "new brown round wooden", isCorrect: false, imgSrc: A },
+      { answerText: "round new brown wooden", isCorrect: false, imgSrc: B },
+      { answerText: "new round brown wooden", isCorrect: true, imgSrc: C },
+      { answerText: "new wooden brown round", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "Sometimes we don't know who carries out the action and also it can be obvious or unimportant to us. In this case we use the Passive Voice.",
+      "There is a certain word order in sentences with two or more adjectives: OPINION-SIZE-AGE-SHAPE-COLOUR-ORIGIN-MATERIAL-TYPE. Here: a new (age) round (shape) brown (colour) wooden (material) table.",
 
-    topic: 5,
+    topic: 10,
   },
   {
     id: 6,
     question:
-      "My brother is only 6, but he _____________ already play the piano.",
+      "Mark speaks ________ German.",
     answers: [
-      { answerText: "has to", isCorrect: false, imgSrc: A },
-      { answerText: "must", isCorrect: false, imgSrc: B },
-      { answerText: "may", isCorrect: false, imgSrc: C },
-      { answerText: "can", isCorrect: true, imgSrc: D },
+      { answerText: "fluently", isCorrect: false, imgSrc: A },
+      { answerText: "fluent", isCorrect: true, imgSrc: B },
+      { answerText: "fluentily", isCorrect: false, imgSrc: C },
+      { answerText: "fluenty", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "The modal verb 'can' is used when we speak about someone's ability to do something.",
+    "The test sentence ‘Mark speaks German __________ .’ is about what way Mark speaks German. Adverbs tell us in what way someone does something. Adverbs describe how, where, or when an action took place. They may also express the viewpoint of the speaker about the action, or several other functions.In most cases, an adverb is formed by adding -ly to an adjective: cheap – cheaply, slow – slowly. ANSWER 2 –‘fluent’ is an adjective, that’s why we can’t choose it in this test example. To form an adverb from this adjective we add suffix ‘–ly’ to the root morpheme ‘fluent’: fluent + ly = fluently. Thus, we choose ANSWER 1 - the adverb ‘fluently’ that is an adverb of manner, and adverbs of manner usually go in end position: She ate quickly. They sometimes go in mid position if the adverb is not the most important part of the clause or if the object is very long: She quickly ate her dinner and ran out.Different types of adverbs go in different places: at the front, in the middle or at the end of a clause. In the test sentence we are given the gap to fill in at the end of the sentence.ANSWERS 3 and 4 are the variants of incorrect spelling.",
 
-    topic: 6,
+    topic: 10,
   },
   {
     id: 7,
     question:
-      "At first you have to _______________ (to complete a form) the application form.",
+      "I think his behavior is ________ .",
     answers: [
-      { answerText: "try on", isCorrect: false, imgSrc: A },
-      { answerText: "fill in", isCorrect: true, imgSrc: B },
-      { answerText: "come on", isCorrect: false, imgSrc: C },
-      { answerText: "take off", isCorrect: false, imgSrc: D },
+      { answerText: "antinormal", isCorrect: false, imgSrc: A },
+      { answerText: "innormal", isCorrect: false, imgSrc: B },
+      { answerText: "unnormal", isCorrect: false, imgSrc: C },
+      { answerText: "abnormal", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "Phrasal verbs are verbs that consist of a verb and a particle and/or a preposition. Phrasal verbs are typical of spoken English or informal writing, e.g. letters to friends and articles in popular journalism. They cannot be understood based upon the meanings of the individual parts in isolation, thus, their meanings are unpredictable. The phrasal verb 'to fill in' means 'to complete a form by providing needed information'.",
+      "Prefixes are letters which we add to the beginning of a word to make a new word with a different meaning.Prefixes can create a new word opposite in meaning to the word the prefix is attached to: possible –impossible, able – unable, like - dislike. The most common negative prefixes in English are in-, un-, non-, de-, dis-, a-, anti-, im-, il-, and ir-.The adjective ‘abnormal’ is formed by adding the negative prefix ab- to the adjective ‘normal’ and means ‘different from what is normal or usual, in a way which is strange or dangerous’ (an abnormal amount of snow; abnormal behavior). The origin of this adjective is French: the alteration of French anormal that comes from Medieval Latin anormalis that comes in its turn from Latin a- + Late Latin normalis (normal).By this formation we have an antonym pair: normal – abnormal. Don’t be confused with the adjective ‘subnormal’ that means ‘below the normal’ (a subnormal amount of rain; a subnormal person).",
 
-    topic: 7,
+    topic: 10,
   },
   {
     id: 8,
     question:
-      "Choose two forms of the verb 'to be' according to the order: Past Simple - Past Participle",
+      "Kate has a beautiful _______ (made of gold) ring.",
     answers: [
-      { answerText: "was/were - been", isCorrect: false, imgSrc: A },
-      { answerText: "was - was", isCorrect: true, imgSrc: B },
-      { answerText: "been - been", isCorrect: false, imgSrc: C },
-      { answerText: "been - was", isCorrect: false, imgSrc: D },
+      { answerText: "goldish", isCorrect: false, imgSrc: A },
+      { answerText: "goldy", isCorrect: false, imgSrc: B },
+      { answerText: "golden", isCorrect: false, imgSrc: C },
+      { answerText: "gold", isCorrect: true, imgSrc: D },
     ],
-    explanation: "TO BE - WAS/WERE - BEEN",
+    explanation: "\"Gold\" means made of gold.",
 
-    topic: 8,
+    topic: 10,
   },
   {
     id: 9,
-    question: "Your brother is so rude. I don't like ____ .",
+    question: "Jane bought a nice _________ skirt.",
     answers: [
-      { answerText: "him", isCorrect: true, imgSrc: A },
-      { answerText: "he", isCorrect: false, imgSrc: B },
-      { answerText: "his", isCorrect: false, imgSrc: C },
-      { answerText: "himself", isCorrect: false, imgSrc: D },
+      { answerText: "netally", isCorrect: false, imgSrc: A },
+      { answerText: "metal", isCorrect: false, imgSrc: B },
+      { answerText: "metalous", isCorrect: false, imgSrc: C },
+      { answerText: "metallic", isCorrect: true, imgSrc: D },
     ],
-    explanation: "If a pronoun is an object we use its object form: He - Him",
+    explanation: "The words ‘metally’ and ‘metalous’ are nonce-words. The word ‘metal’ is a noun. The adjective ‘metallic’ has some meanings: (1) ‘consisting of or containing metal’, (2) ‘used about colours that are shiny like a silver metal’. And we understand that the colour of the skirt that Jane bought was shiny like a silver metal.Therefore, we are to choose ANSWER 3 (metallic).",
 
-    topic: 9,
+    topic: 10,
   },
 ];
 
