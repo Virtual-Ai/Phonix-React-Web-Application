@@ -39,6 +39,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
     "react-slick": "^0.15.4",
+    "react-switch": "^6.0.0",
     "react-toastify": "^7.0.4",
     "react-transition-group": "4.4.1",
     "reset-css": "^5.0.1",
