@@ -87,7 +87,7 @@ function DesktopSidebar(props) {
                       icon={route.icon}
                       fill="currentColor"
                     />
-                    <span id={route.name} className="ml-4 text-white">
+                    <span id={route.name} className="ml-4" style={{color:"#a0a0a0"}}>
                       {route.name}
                     </span>
                   </NavLink>

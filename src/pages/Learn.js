@@ -19,6 +19,7 @@ import abacus from '../assets/img/learn/mb-cards/abacus.png'
 import RevisionModal from '../components/RevisionModal'
 
 import PageTitle from '../components/Typography/PageTitle'
+import SectionTitle from '../components/Typography/SectionTitle'
 import { Card, CardBody } from '@windmill/react-ui'
 
 // <Card colored className="mb-8 shadow-md bg-bcard" style={{backgroundImage:`url(${Image2})` , 
@@ -131,7 +132,7 @@ function Learn() {
 
   return (
     <>
-      <PageTitle>Learn</PageTitle>
+      <SectionTitle>What to Learn ?</SectionTitle>
 
 	  <RevisionModal id={id} no_of_cards={data.length} 
 			  topic={data[id]["topic"]} 

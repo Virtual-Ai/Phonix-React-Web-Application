@@ -13,7 +13,7 @@ class Dnd extends Component {
     render() {
         return (
             <>
-            <PageTitle>Drag and Drop</PageTitle>
+            {/*<PageTitle>Drag and Drop</PageTitle>*/}
             <SectionTitle>Which one ?</SectionTitle>
                 <div className="grid gap-6 mb-8 md:grid-cols-4">
                 <Link to="/app/play/dnd/index?preposition">

@@ -22,7 +22,7 @@ import arrow from '../icons/arrow3.png'
 function Cards() {
   return (
     <>
-    <PageTitle>Quiz</PageTitle>
+    {/*<PageTitle>Quiz</PageTitle>*/}
 		<SectionTitle className="font-chewy" >Which one ?</SectionTitle>
 
       <div className="grid gap-6 mb-3 md:grid-cols-5 custom-grid">
