@@ -24,7 +24,7 @@ import mbSent from "../assets/img/play/mb-pl-cards/mb-sent.png";
 function Cards() {
     return (
         <>
-            <PageTitle>Play</PageTitle>
+            {/*<PageTitle className="font-chewy">Play</PageTitle>*/}
             <SectionTitle>What to play ?</SectionTitle>
             <div className="grid gap-6 mb-8 md:grid-cols-4">
 

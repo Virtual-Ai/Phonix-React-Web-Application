@@ -34,151 +34,6 @@ const skipNextA = new UIfx(buttonAudio, {
 const questions = [
   {
     id: 0,
-    question: "Choose the sentence with the right word order",
-    answers: [
-      {
-        answerText: "Tom a lot of people invited.",
-        isCorrect: false,
-        imgSrc: A,
-      },
-      {
-        answerText: "A lot of people Tom invited.",
-        isCorrect: false,
-        imgSrc: B,
-      },
-      {
-        answerText: "Tom invited a lot of people.",
-        isCorrect: true,
-        imgSrc: C,
-      },
-      {
-        answerText: "Tom invited of people a lot.",
-        isCorrect: false,
-        imgSrc: D,
-      },
-    ],
-    explanation:
-      "We usually use a certain word order: Subject - Predicate - Object. In this sentence 'Tom' is a subject, 'invited' is a predicate and 'a lot of people' is an object.",
-
-    topic: 0,
-  },
-  {
-    id: 1,
-    question: "Have you got _ pen?",
-    answers: [
-      { answerText: "—", isCorrect: false, imgSrc: A },
-      { answerText: "a", isCorrect: true, imgSrc: B },
-      { answerText: "an", isCorrect: false, imgSrc: C },
-      { answerText: "the", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "We use the article 'a' with singular countable nouns when we talk about them in general.",
-
-    topic: 1,
-  },
-  {
-    id: 2,
-    question: "Tom _______ (to read) a newspaper now.",
-    answers: [
-      { answerText: "reads", isCorrect: false, imgSrc: A },
-      { answerText: "is reading", isCorrect: true, imgSrc: B },
-      { answerText: "read", isCorrect: false, imgSrc: C },
-      { answerText: "has read", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "The adverb 'now' means that the action is taking place at the moment of speaking.  In this case we should use the Present Continuous Tense: am/is/are + Verb-ing.",
-
-    topic: 2,
-  },
-  {
-    id: 3,
-    question: "The Romans _______ (to come) to Britain in 54 BC.",
-    answers: [
-      { answerText: "came", isCorrect: true, imgSrc: A },
-      { answerText: "were coming", isCorrect: false, imgSrc: B },
-      { answerText: "comed", isCorrect: false, imgSrc: C },
-      { answerText: "had come", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "If an action happened at a definite time in the past we use the Past Simple Tense. If there is a regular verb in a sentence we add '-ed'. Irregular verbs should be memorized. Here: COME-CAME-COME",
-
-    topic: 3,
-  },
-  {
-    id: 4,
-    question:
-      "Bill __________ (to visit) his parents tomorrow. He has got an appointment with them.",
-    answers: [
-      { answerText: "is visiting", isCorrect: false, imgSrc: A },
-      { answerText: "will have visited", isCorrect: false, imgSrc: B },
-      { answerText: "will visit", isCorrect: true, imgSrc: C },
-      { answerText: "visits", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "We use ‘I am doing’ (present continuous) when we say what we have arranged to do. While ‘I am going to do something’ means ‘I've decided to do it, but perhaps not arranged to do it.",
-
-    topic: 4,
-  },
-  {
-    id: 5,
-    question: "Tom, look! The mail ______________ (to deliver).",
-    answers: [
-      { answerText: "is delivered", isCorrect: true, imgSrc: A },
-      { answerText: "delivers", isCorrect: false, imgSrc: B },
-      { answerText: "delivered", isCorrect: false, imgSrc: C },
-      { answerText: "is delivering", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "Sometimes we don't know who carries out the action and also it can be obvious or unimportant to us. In this case we use the Passive Voice.",
-
-    topic: 5,
-  },
-  {
-    id: 6,
-    question:
-      "My brother is only 6, but he _____________ already play the piano.",
-    answers: [
-      { answerText: "has to", isCorrect: false, imgSrc: A },
-      { answerText: "must", isCorrect: false, imgSrc: B },
-      { answerText: "may", isCorrect: false, imgSrc: C },
-      { answerText: "can", isCorrect: true, imgSrc: D },
-    ],
-    explanation:
-      "The modal verb 'can' is used when we speak about someone's ability to do something.",
-
-    topic: 6,
-  },
-  {
-    id: 7,
-    question:
-      "At first you have to _______________ (to complete a form) the application form.",
-    answers: [
-      { answerText: "try on", isCorrect: false, imgSrc: A },
-      { answerText: "fill in", isCorrect: true, imgSrc: B },
-      { answerText: "come on", isCorrect: false, imgSrc: C },
-      { answerText: "take off", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "Phrasal verbs are verbs that consist of a verb and a particle and/or a preposition. Phrasal verbs are typical of spoken English or informal writing, e.g. letters to friends and articles in popular journalism. They cannot be understood based upon the meanings of the individual parts in isolation, thus, their meanings are unpredictable. The phrasal verb 'to fill in' means 'to complete a form by providing needed information'.",
-
-    topic: 7,
-  },
-  {
-    id: 8,
-    question:
-      "Choose two forms of the verb 'to be' according to the order: Past Simple - Past Participle",
-    answers: [
-      { answerText: "was/were - been", isCorrect: false, imgSrc: A },
-      { answerText: "was - was", isCorrect: true, imgSrc: B },
-      { answerText: "been - been", isCorrect: false, imgSrc: C },
-      { answerText: "been - was", isCorrect: false, imgSrc: D },
-    ],
-    explanation: "TO BE - WAS/WERE - BEEN",
-
-    topic: 8,
-  },
-  {
-    id: 9,
     question: "Your brother is so rude. I don't like ____ .",
     answers: [
       { answerText: "him", isCorrect: true, imgSrc: A },
@@ -186,7 +41,136 @@ const questions = [
       { answerText: "his", isCorrect: false, imgSrc: C },
       { answerText: "himself", isCorrect: false, imgSrc: D },
     ],
-    explanation: "If a pronoun is an object we use its object form: He - Him",
+    explanation:
+      "If a pronoun is an object we use its object form: He - Him",
+
+    topic: 9,
+  },
+  {
+    id: 1,
+    question: "May I take __________ umbrella??",
+    answers: [
+      { answerText: "you're", isCorrect: false, imgSrc: A },
+      { answerText: "yours", isCorrect: false, imgSrc: B },
+      { answerText: "you", isCorrect: false, imgSrc: C },
+      { answerText: "your", isCorrect: true, imgSrc: D },
+    ],
+    explanation:
+      "We use possessive adjectives to show that something belongs to somebody. Possessive adjectives are always followed by a noun.'Your' is the right form of the personal pronoun 'you'.",
+
+    topic: 9,
+  },
+  {
+    id: 2,
+    question: "Whose car is this? - This car is ______ .",
+    answers: [
+      { answerText: "our's", isCorrect: false, imgSrc: A },
+      { answerText: "we", isCorrect: false, imgSrc: B },
+      { answerText: "our", isCorrect: false, imgSrc: C },
+      { answerText: "ours", isCorrect: true, imgSrc: D },
+    ],
+    explanation:
+      "We use possessive pronouns to show that something belongs to somebody. Possessive pronouns replace a possessive adjective and a noun, thus, they are not followed by a noun. 'Ours' is the right form of the personal pronoun 'we'.",
+
+    topic: 9,
+  },
+  {
+    id: 3,
+    question: "This is Jane's book. The book is _____ .",
+    answers: [
+      { answerText: "hers", isCorrect: true, imgSrc: A },
+      { answerText: "she", isCorrect: false, imgSrc: B },
+      { answerText: "her", isCorrect: false, imgSrc: C },
+      { answerText: "her's", isCorrect: false, imgSrc: D },
+    ],
+    explanation:
+      "If it is clear who/what we are talking about, we can use possessive pronouns. And we use possessive pronouns instead of a possessive adjective + noun.The corresponding form of the possessive pronoun for the subject pronoun ‘she’ is ‘hers’.",
+
+    topic: 9,
+  },
+  {
+    id: 4,
+    question:
+      "Who are these people? I don't remember ______ .",
+    answers: [
+      { answerText: "they", isCorrect: false, imgSrc: A },
+      { answerText: "their", isCorrect: false, imgSrc: B },
+      { answerText: "them", isCorrect: true, imgSrc: C },
+      { answerText: "themselves", isCorrect: false, imgSrc: D },
+    ],
+    explanation:
+      "We use subject pronouns ‘I’, ‘you’, ‘he’, ‘she’, ‘we’, ‘they’ for people, and we use them before the verb (the predicate) in sentences. The corresponding object pronouns ‘me’, ‘you’, ‘her’, ‘him’, ‘us’ and ‘them’ are used after the verb in sentences. In the test question ‘Who are these people?’ instead of the noun ‘people’ we can use a subject pronoun ‘they’ – ‘Who are they?’, therefore, in the test answer we should use the object pronoun ‘them’ that corresponds with the subject pronoun ‘they’.",
+
+    topic: 9,
+  },
+  {
+    id: 5,
+    question: "What a wonderful pillow! Have you done it by ________ ?",
+    answers: [
+      { answerText: "you", isCorrect: false, imgSrc: A },
+      { answerText: "your", isCorrect: false, imgSrc: B },
+      { answerText: "yours", isCorrect: false, imgSrc: C },
+      { answerText: "yourself", isCorrect: true, imgSrc: D },
+    ],
+    explanation:
+      "Yourself’ (singular form) and ‘yourselves’ (plural form) are reflexive pronouns, being the reflexive forms of ‘you’. Reflexive pronouns end in -self or –selves: myself, yourself, herself, himself, itself,ourselves, themselves They refer back to the subject forms of personal pronouns. We often use reflexive pronouns with the preposition ‘by’ to mean ‘alone’ or ‘without any help’: Why don’t you go by yourself?; The children made the entire meal by themselves.; He lived by himself in an enormous house.; She walked home by herself.; The children got dressed by themselves.; I prepared the whole meal by myself.‘Oneself’ is the ​reflexive ​form of the ​pronoun 'one' when it refers to ​people in ​general or to the person ​speaking, it is also used in this phrase ‘(all) by oneself’.",
+
+    topic: 9,
+  },
+  {
+    id: 6,
+    question:
+      "Jerry didn't do _________ wrong.",
+    answers: [
+      { answerText: "something", isCorrect: false, imgSrc: A },
+      { answerText: "nothing", isCorrect: false, imgSrc: B },
+      { answerText: "anything", isCorrect: true, imgSrc: C },
+      { answerText: "everything", isCorrect: false, imgSrc: D },
+    ],
+    explanation:
+      "Something, anybody, everyone, etc. are indefinite pronouns. We use -body, -one, -thing, -where to refer to people, places and things in a general way without saying exactly who or what they are. All the indefinite pronouns that are given in the test ANSWERS end in –thing (something, nothing, anything, everything), thus, they all refer to things.Indefinite pronouns using some are used in affirmative sentences to describe an indefinite quantity, the indefinite pronouns with every are used in affirmative sentences to describe a complete quantity. And the pronouns with no are used affirmative sentences to describe an absence. Indefinite pronouns with no are often used in affirmative sentences with a negative meaning, but these are nevertheless not negative sentences because they are lacking the word not. Any and the indefinite pronouns formed with it can also be used in affirmative sentences with a meaning that is close to every: whichever person, whichever place, whichever thing, etc.Negative sentences can only be formed with the indefinite pronouns that include any. The test sentence is a negative one: Jerry didn't do….. wrong. Thus, we can choose only ANSWER 3: anything.",
+
+    topic: 9,
+  },
+  {
+    id: 7,
+    question:
+      "The classroom is empty. I can see ______ here.",
+    answers: [
+      { answerText: "somebody", isCorrect: false, imgSrc: A },
+      { answerText: "anybody", isCorrect: false, imgSrc: B },
+      { answerText: "everybody", isCorrect: false, imgSrc: C },
+      { answerText: "nobody", isCorrect: true, imgSrc: D },
+    ],
+    explanation:
+      "Somebody, anyone, everybody, everything, etc. are indefinite pronouns. All the given in the test ANSWERS refer to people, because they have the ending –body. In the first sentence of the test we are informed that ‘The classroom is empty.’. And we understand that there is nobody in the classroom. But the next test sentence, where we should fill the gap, has no negative particle ‘not’: ‘I can see ______ here.’ Therefore,we choose ANSWER 4 – to use ‘nobody’ to refer to an absence of people. We do not use another negative in a clause with ‘nobody’: Nobody came.; Nothing happened.If the second sentence had the negative particle ‘not’: I cannot see ______ here.’, we would choose ANSWER 2 (anybody). We should know that ‘nobody’ is stronger and more definite than ‘not … anybody’: ‘I can see nobody.’ is stronger than ‘I cannot see anybody.).",
+
+    topic: 9,
+  },
+  {
+    id: 8,
+    question:
+      "Sarah spoke to Brad Pitt _____ .",
+    answers: [
+      { answerText: "themselves", isCorrect: false, imgSrc: A },
+      { answerText: "itself", isCorrect: false, imgSrc: B },
+      { answerText: "himself", isCorrect: true, imgSrc: C },
+      { answerText: "yourself", isCorrect: false, imgSrc: D },
+    ],
+    explanation: "When the subject or the object in a sentence refer to the same person or thing we use a reflexive pronoun. Reflexive pronouns (myself, himself, ourselves etc) end in -self (singular form) or –selves (plural form). They refer back to the subject forms of personal pronouns.Reflexive pronouns can be used with nouns to mean ‘me (or you/him/her etc) and nobody else’ to emphasize a particular person/persons or animal/animals (male or female): Did you talk to the hostess herself or just to one of her assistants?; Do you want to meet George himself, or could his sister help you?;It is the party leaders themselves who make the decisions. In the sentence ‘I spoke to Angelina Jolie herself!’, the speaker emphasizes that he or she spoke to Angelina Jolie personally NOT somebody else.In the test sentence ‘Sarah spoke to Brad Pitt _____ .’ the particular man is emphasized – Brad Pitt.Sarah spoke to Brad Pitt personally NOT somebody else. Thus, we need the reflexive pronoun ‘himself’ –ANSWER 3.",
+
+    topic: 9,
+  },
+  {
+    id: 9,
+    question: "Sandra had to send an email to the headmaster _______ .",
+    answers: [
+      { answerText: "him", isCorrect: false, imgSrc: A },
+      { answerText: "itself", isCorrect: false, imgSrc: B },
+      { answerText: "yourself", isCorrect: false, imgSrc: C },
+      { answerText: "himself", isCorrect: true, imgSrc: D },
+    ],
+    explanation: "When the subject or the object in a sentence refer to the same person or thing we use a reflexive pronoun. Reflexive pronouns(myself, himself, ourselves etc) end in -self (singular form) or –selves (plural form). They refer back to the subject forms of personal pronouns. Reflexive pronouns can be used with nouns to mean ‘me (or you/him/her etc) and nobody else’ to emphasize a particular person/persons or animal/animals (male or female): Did you talk to the hostess herself or just to one of her assistants?; Do you want to meet George himself, or could his sister help you?; It is the party leaders themselves who make the decisions. In the sentence ‘I spoke to Angelina Jolie herself!’, the speaker emphasizes that he or she spoke to Angelina Jolie personally NOT somebody else.In this sentence the particular man is emphasized – the headmaster. The word ‘headmaster’ means ‘a male headteacher’. Sandra had to send an email to the headmaster personally NOT somebody else. Thus, we need the reflexive pronoun ‘himself’ – ANSWER 4.",
 
     topic: 9,
   },

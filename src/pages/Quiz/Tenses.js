@@ -34,56 +34,28 @@ const skipNextA = new UIfx(buttonAudio, {
 const questions = [
   {
     id: 0,
-    question: "Choose the sentence with the right word order",
-    answers: [
-      {
-        answerText: "Tom a lot of people invited.",
-        isCorrect: false,
-        imgSrc: A,
-      },
-      {
-        answerText: "A lot of people Tom invited.",
-        isCorrect: false,
-        imgSrc: B,
-      },
-      {
-        answerText: "Tom invited a lot of people.",
-        isCorrect: true,
-        imgSrc: C,
-      },
-      {
-        answerText: "Tom invited of people a lot.",
-        isCorrect: false,
-        imgSrc: D,
-      },
-    ],
-    explanation:
-      "We usually use a certain word order: Subject - Predicate - Object. In this sentence 'Tom' is a subject, 'invited' is a predicate and 'a lot of people' is an object.",
-
-    topic: 0,
-  },
-  {
-    id: 1,
-    question: "Have you got _ pen?",
-    answers: [
-      { answerText: "—", isCorrect: false, imgSrc: A },
-      { answerText: "a", isCorrect: true, imgSrc: B },
-      { answerText: "an", isCorrect: false, imgSrc: C },
-      { answerText: "the", isCorrect: false, imgSrc: D },
-    ],
-    explanation:
-      "We use the article 'a' with singular countable nouns when we talk about them in general.",
-
-    topic: 1,
-  },
-  {
-    id: 2,
     question: "Tom _______ (to read) a newspaper now.",
     answers: [
-      { answerText: "reads", isCorrect: false, imgSrc: A },
-      { answerText: "is reading", isCorrect: true, imgSrc: B },
-      { answerText: "read", isCorrect: false, imgSrc: C },
-      { answerText: "has read", isCorrect: false, imgSrc: D },
+      {
+        answerText: "reads",
+        isCorrect: false,
+        imgSrc: A
+      },
+      {
+        answerText: "is reading",
+        isCorrect: true,
+        imgSrc: B
+      },
+      {
+        answerText: "read",
+        isCorrect: false,
+        imgSrc: C
+      },
+      {
+        answerText: "has read",
+        isCorrect: false,
+        imgSrc: D
+      },
     ],
     explanation:
       "The adverb 'now' means that the action is taking place at the moment of speaking.  In this case we should use the Present Continuous Tense: am/is/are + Verb-ing.",
@@ -91,12 +63,12 @@ const questions = [
     topic: 2,
   },
   {
-    id: 3,
+    id: 1,
     question: "The Romans _______ (to come) to Britain in 54 BC.",
     answers: [
       { answerText: "came", isCorrect: true, imgSrc: A },
       { answerText: "were coming", isCorrect: false, imgSrc: B },
-      { answerText: "comed", isCorrect: false, imgSrc: C },
+      { answerText: "come", isCorrect: false, imgSrc: C },
       { answerText: "had come", isCorrect: false, imgSrc: D },
     ],
     explanation:
@@ -105,93 +77,120 @@ const questions = [
     topic: 3,
   },
   {
-    id: 4,
-    question:
-      "Bill __________ (to visit) his parents tomorrow. He has got an appointment with them.",
+    id: 2,
+    question: "Bill __________ (to visit) his parents tomorrow. He has got an appointment with them.",
     answers: [
-      { answerText: "is visiting", isCorrect: false, imgSrc: A },
+      { answerText: "is visiting", isCorrect: true, imgSrc: A },
       { answerText: "will have visited", isCorrect: false, imgSrc: B },
-      { answerText: "will visit", isCorrect: true, imgSrc: C },
+      { answerText: "will visit", isCorrect: false, imgSrc: C },
       { answerText: "visits", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "We use ‘I am doing’ (present continuous) when we say what we have arranged to do. While ‘I am going to do something’ means ‘I've decided to do it, but perhaps not arranged to do it.",
+      "We use comparative adjectives to compare two people/things. When we use a comparative adjective in front of a noun we add ‘than’. To make a comparative form of short (one syllable) adjectives we add –er.",
 
     topic: 4,
   },
   {
-    id: 5,
-    question: "Tom, look! The mail ______________ (to deliver).",
+    id: 3,
+    question: "Jill _________ (to work) in a hospital.",
     answers: [
-      { answerText: "is delivered", isCorrect: true, imgSrc: A },
-      { answerText: "delivers", isCorrect: false, imgSrc: B },
-      { answerText: "delivered", isCorrect: false, imgSrc: C },
-      { answerText: "is delivering", isCorrect: false, imgSrc: D },
+      { answerText: "is working", isCorrect: false, imgSrc: A },
+      { answerText: "works", isCorrect: true, imgSrc: B },
+      { answerText: "work", isCorrect: false, imgSrc: C },
+      { answerText: "has worked", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "Sometimes we don't know who carries out the action and also it can be obvious or unimportant to us. In this case we use the Passive Voice.",
+      "When we talk about things in general, permanent situations and states or things which happen sometimes, we use the Present Simple Tense: he/she/it + Verb + -s(es)",
 
-    topic: 5,
+    topic: 2,
+  },
+  {
+    id: 4,
+    question:
+      "We were strolling in the park when suddenly it _________ (to thunder).",
+    answers: [
+      { answerText: "was thundering", isCorrect: false, imgSrc: A },
+      { answerText: "had thundered", isCorrect: false, imgSrc: B },
+      { answerText: "thundered", isCorrect: true, imgSrc: C },
+      { answerText: "thunders", isCorrect: false, imgSrc: D },
+    ],
+    explanation:
+      "The first action was in progress when suddenly the second one happened in the middle of the first action. For the action that was in progress we use the Past Continuous Tense, the action that occurred in the middle of the first one we should use the Past Simple Tense.",
+
+    topic: 3,
+  },
+  {
+    id: 5,
+    question: "Jim has invited us to his birthday party. He _________ (to be) 27 next week.",
+    answers: [
+      { answerText: "shall be", isCorrect: false, imgSrc: A },
+      { answerText: "will be", isCorrect: true, imgSrc: B },
+      { answerText: "is going to be", isCorrect: false, imgSrc: C },
+      { answerText: "is", isCorrect: false, imgSrc: D },
+    ],
+    explanation:
+      "We use the Future Simple Tense when we talk about actions which will certainly happen in the future and which we cannot control.",
+
+    topic: 4,
   },
   {
     id: 6,
     question:
-      "My brother is only 6, but he _____________ already play the piano.",
+      "Oh no! We are too late! Nobody opens the door. They ________ (to go/already) out.",
     answers: [
-      { answerText: "has to", isCorrect: false, imgSrc: A },
-      { answerText: "must", isCorrect: false, imgSrc: B },
-      { answerText: "may", isCorrect: false, imgSrc: C },
-      { answerText: "can", isCorrect: true, imgSrc: D },
+      { answerText: "played", isCorrect: false, imgSrc: A },
+      { answerText: "was playing", isCorrect: false, imgSrc: B },
+      { answerText: "were playing", isCorrect: true, imgSrc: C },
+      { answerText: "having played", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "The modal verb 'can' is used when we speak about someone's ability to do something.",
+    "We use the Past Continuous Tense when we talk about two or more simultaneous actions that were going on at a given moment in the past. The plural past form of the irregular verb 'to be' is 'were'.",
 
-    topic: 6,
+    topic: 3,
   },
   {
     id: 7,
     question:
-      "At first you have to _______________ (to complete a form) the application form.",
+      "It's a wonderful evening. I really don't think it ____________ (to rain) tomorrow.",
     answers: [
-      { answerText: "try on", isCorrect: false, imgSrc: A },
-      { answerText: "fill in", isCorrect: true, imgSrc: B },
-      { answerText: "come on", isCorrect: false, imgSrc: C },
-      { answerText: "take off", isCorrect: false, imgSrc: D },
+      { answerText: "is going to rain", isCorrect: false, imgSrc: A },
+      { answerText: "shall rain", isCorrect: false, imgSrc: B },
+      { answerText: "rains", isCorrect: false, imgSrc: C },
+      { answerText: "will rain", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "Phrasal verbs are verbs that consist of a verb and a particle and/or a preposition. Phrasal verbs are typical of spoken English or informal writing, e.g. letters to friends and articles in popular journalism. They cannot be understood based upon the meanings of the individual parts in isolation, thus, their meanings are unpredictable. The phrasal verb 'to fill in' means 'to complete a form by providing needed information'.",
+      "We often use will ('ll) with '(I) don't think' or '(I) think' for predictions based on our own personal opinion or knowledge: I don't think the exam will be very difficult.",
 
-    topic: 7,
+    topic: 4,
   },
   {
     id: 8,
     question:
-      "Choose two forms of the verb 'to be' according to the order: Past Simple - Past Participle",
+      "Sarah _________ (to cook) thirty pancakes today.",
     answers: [
-      { answerText: "was/were - been", isCorrect: false, imgSrc: A },
-      { answerText: "was - was", isCorrect: true, imgSrc: B },
-      { answerText: "been - been", isCorrect: false, imgSrc: C },
-      { answerText: "been - was", isCorrect: false, imgSrc: D },
+      { answerText: "cook", isCorrect: false, imgSrc: A },
+      { answerText: "is cooking", isCorrect: false, imgSrc: B },
+      { answerText: "cooks", isCorrect: false, imgSrc: C },
+      { answerText: "has cooked", isCorrect: true, imgSrc: D },
     ],
-    explanation: "TO BE - WAS/WERE - BEEN",
+    explanation: "We can use the present perfect to talk about a past action that has a result in the present. Sarah cooked thirty pancakes earlier, and we are going to eat them now (as a result), or they are on the table and we can see them on the plates.",
 
-    topic: 8,
+    topic: 2,
   },
   {
     id: 9,
-    question: "Your brother is so rude. I don't like ____ .",
+    question: "I was writing a letter while my husband _____________ (to cook).",
     answers: [
-      { answerText: "him", isCorrect: true, imgSrc: A },
-      { answerText: "he", isCorrect: false, imgSrc: B },
-      { answerText: "his", isCorrect: false, imgSrc: C },
-      { answerText: "himself", isCorrect: false, imgSrc: D },
+      { answerText: "cooked", isCorrect: false, imgSrc: A },
+      { answerText: "was cooking", isCorrect: false, imgSrc: B },
+      { answerText: "cooks", isCorrect: false, imgSrc: C },
+      { answerText: "has cooked", isCorrect: true, imgSrc: D },
     ],
-    explanation: "If a pronoun is an object we use its object form: He - Him",
+    explanation: "We use the Past Continuous Tense when we talk about two or more simultaneous actions in the past. We use the present continuous for two actions/situations happening at the same time. And we can use either 'when' or 'while' before the past continuous. 'While' means 'during the ​time that', or 'at the same ​time as'.",
 
-    topic: 9,
+    topic: 3,
   },
 ];
-
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);

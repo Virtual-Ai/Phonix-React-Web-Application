@@ -22,7 +22,7 @@ import arrow from '../icons/arrow3.png'
 function Cards() {
   return (
     <>
-    <PageTitle>Quiz</PageTitle>
+    {/*<PageTitle>Quiz</PageTitle>*/}
 		<SectionTitle className="font-chewy" >Which one ?</SectionTitle>
 
       <div className="grid gap-6 mb-3 md:grid-cols-5 custom-grid">
@@ -69,7 +69,7 @@ function Cards() {
 	     	</Card>
 		</Link>
 
-    <Link to="/app/play/verbs">
+    <Link to="/app/play/adjectives">
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor:"#db672e" , position:"relative",borderRadius:'0.9rem'}}>
 	        <CardBody>
 							<img src={ob1_qz} alt="Image" className="qz-card" style={{position:"absolute",height:"100%",left:"-17px",bottom:"0",maxHeight:'15.5rem'}}/>
@@ -83,7 +83,7 @@ function Cards() {
 		</Link>
            
 
-    <Link to="/app/play/verbs">
+    <Link to="/app/play/pronouns">
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor:"#7ed957" , position:"relative",borderRadius:'0.9rem'}}>
 	        <CardBody>
 		        	<img src={ob1_qz} alt="Image" className="qz-card" style={{position:"absolute",height:"100%",left:"-17px",bottom:"0",maxHeight:'15.5rem'}}/>
@@ -99,7 +99,7 @@ function Cards() {
 		</div>
 
 		<div className="grid gap-6 mb-8 md:grid-cols-4">
-		    <Link to="/app/play/verbs">
+		    <Link to="/app/play/tenses">
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor:"#68d4f9" , position:"relative",borderRadius:'0.9rem'}}>
 	        <CardBody>
 		        	<img src={ob1_qz} alt="Image" className="qz-card" style={{position:"absolute",height:"100%",left:"-17px",bottom:"0",maxHeight:'15.5rem'}}/>
@@ -107,7 +107,7 @@ function Cards() {
 
 		          <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'-1.3rem'}}>Tenses</h4>
 		          <h4 className="text-4xl font-chewy text-white text-right">Quiz</h4>
-	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#e0f5fc'}}>Practice</h4>
+	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#e0f5fc'}}>10 Questions</h4>
 
 	        </CardBody>
 	     	</Card>

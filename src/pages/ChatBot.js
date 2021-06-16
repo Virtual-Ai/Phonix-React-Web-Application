@@ -8,10 +8,10 @@ import './chatbot-styles.css'
 const otherFontTheme = {
   background: '#f5f8fb',
   fontFamily: 'Balsamiq Sans',
-  headerBgColor: '#ff914d',
+  headerBgColor: '#a2d2e4',
   headerFontColor: '#fff',
   headerFontSize: '20px',
-  botBubbleColor: '#ff914d',
+  botBubbleColor: '#a2d2e4',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
@@ -54,7 +54,7 @@ function Chat() {
           speechSynthesis={{ enable: true, lang: 'en' }}
           recognitionEnable={true}
           width="700px"
-          headerTitle="Phonix"
+          headerTitle="Phonix Chat"
           enableSmoothScroll={true}
         />
       </div>
