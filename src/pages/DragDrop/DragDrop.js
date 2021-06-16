@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useMemo} from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import UIfx from "uifx";
 import correctAudio from '../Quiz/assets/audio/correct.mp3'
@@ -14,6 +14,7 @@ let id = ''
 let replaceto
 let replacefrom
 let dragElement = document.createElement('span')
+let data = dataType.preposition
 
 const DragDrop = () => {
 
@@ -31,15 +32,22 @@ const DragDrop = () => {
         setIsCheckModalOpen(false)
     }
 
-    const type = window.location.href.split("?")[1]
-    console.log(type)
-    let data = dataType.preposition
+    useMemo(() => {
+        console.log('This is useMemo')
+        const type = window.location.href.split("?")[1]
+        console.log(type)
 
-    if (type === "preposition") {
-        data = dataType.preposition
-    } else if (type === "noun") {
-        data = dataType.noun
-    }
+
+        if (type === "preposition") {
+            data = dataType.preposition
+            q=0
+        } else if (type === "noun") {
+            data = dataType.noun
+            q=0
+        }
+
+    }, []);
+
 
     const [Question, questionHandler] = useState(
         data[q].question.split('________'),

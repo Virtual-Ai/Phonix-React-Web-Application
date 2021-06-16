@@ -3,6 +3,9 @@ import "./TenseSort.css"
 import Dragula from 'dragula'
 import Timer from "react-compound-timer";
 import { Button } from '@windmill/react-ui'
+import UIfx from "uifx";
+import correctAudio from "../Quiz/assets/audio/correct.mp3";
+import wrongAudio from "../Quiz/assets/audio/wrong.wav";
 
 const data = {
     Past : ["Played", "Taught", "Drove"],
@@ -27,6 +30,16 @@ class TenseSort extends Component {
         this.dragula = new Dragula([])
         this.dragula.on('drop', this.handleDrop)
     }
+
+    correctA = new UIfx(correctAudio, {
+        volume: 0.4, // number between 0.0 ~ 1.0
+        throttleMs: 100,
+    })
+
+    wrongA = new UIfx(wrongAudio, {
+        volume: 0.4, // number between 0.0 ~ 1.0
+        throttleMs: 100,
+    })
 
     shuffle(array) {
         let currentIndex = array.length,
@@ -93,12 +106,14 @@ class TenseSort extends Component {
 
         const Result = () => {
             if (this.check()){
+                // this.correctA.play()
                 return <div className="flex">
                     <img width="50px" src={require("./assets/check.png")}/>
                     <p style={{padding: "7px"}}>Correct</p>
                 </div>
             }
             else{
+                // this.wrongA.play()
                 return <div className="flex">
                     <img width="50px" src={require("./assets/false.svg")}/>
                     <p style={{padding: "7px"}}>Wrong</p>
