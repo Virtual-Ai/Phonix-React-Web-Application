@@ -17,7 +17,7 @@ class HindiLearn extends Component {
         super(props);
         this.state = {
             isModalOpen: false,
-            id : 0,
+                id : 0,
             clickedButton : "1"
         }
     }
@@ -79,13 +79,18 @@ class HindiLearn extends Component {
                     content={this.DangerousDiv(this.data[this.state.id]["details"])}
                     isOpen={this.state.isModalOpen}
                     onClose={this.closeModal}  onNext={this.getNext} onPrevious={this.getPrevious}/>
+
                 <div className="grid gap-6 mb-8 md:grid-cols-3">
                     <Card colored className="mb-8 shadow-md" style={{backgroundColor: "#f4bb14", position: "relative"}}>
                         <CardBody>
                             <img src={Image2} alt="" className="cartoon-1"
                                  style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
                             <img src={abacus} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-                            <h4 className="text-4xl font-chewy text-white mt-4"> {this.DangerousDiv(cat1[0].title)} </h4>
+                            <h4 className="text-4xl font-asar text-white mt-4 font-bold"> {this.DangerousDiv(cat1[0].main)} </h4>
+                            <h4 className="text-xl font-asar pb-3 font-bold"
+                                style={{color: "#5b4942", fontWeight: "700"}}>
+                                {this.DangerousDiv(cat1[0].sub)}
+                            </h4>
                             <Button iconRight={ModalsIcon} onClick={() => {
                                 this.openModal("1")
                             }} size="regular"
@@ -99,11 +104,15 @@ class HindiLearn extends Component {
                             <img src={Image33} alt="" className="cartoon-1"
                                  style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
                             <img src={puzzle} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-                            <h4 className="text-4xl font-chewy text-white mt-4"> {this.DangerousDiv(cat1[1].title)} </h4>
+                            <h4 className="text-4xl font-asar text-white mt-4 font-bold"> {this.DangerousDiv(cat1[1].main)} </h4>
+                            <h4 className="text-xl font-asar pb-3 font-bold"
+                                style={{color: "#5b4942", fontWeight: "700"}}>
+                                {this.DangerousDiv(cat1[1].sub)}
+                            </h4>
                             <Button iconRight={ModalsIcon} onClick={() => {
                                 this.openModal("2")
                             }} size="regular"
-                                    className="but-card1 font-bold">
+                                    className="but-card2 font-bold">
                                 Start
                             </Button>
                         </CardBody>
@@ -113,12 +122,16 @@ class HindiLearn extends Component {
                             <img src={Image4} alt="" className="cartoon-1"
                                  style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
                             <img src={page} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-                            <h4 className="text-4xl font-chewy text-white mt-4"> {this.DangerousDiv(cat1[2].title)} </h4>
+                            <h4 className="text-4xl font-asar font-bold text-white mt-4"> {this.DangerousDiv(cat1[2].main)} </h4>
+                            <h4 className="text-xl font-asar pb-3 font-bold"
+                                style={{color: "#5b4942", fontWeight: "700"}}>
+                                {this.DangerousDiv(cat1[2].sub)}
+                            </h4>
 
                             <Button iconRight={ModalsIcon} onClick={() => {
                                 this.openModal("3")
                             }} size="regular"
-                                    className="but-card1 font-bold">
+                                    className="but-card3 font-bold">
                                 Start
                             </Button>
                         </CardBody>
@@ -127,12 +140,16 @@ class HindiLearn extends Component {
                         <CardBody>
                             <img src={Image6} alt="" className="cartoon-1"
                                  style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
-                            <h4 className="text-4xl font-chewy text-white mt-4"> {this.DangerousDiv(cat1[3].title)} </h4>
+                            <h4 className="text-4xl font-asar font-bold text-white mt-4"> {this.DangerousDiv(cat1[3].main)} </h4>
+                            <h4 className="text-xl font-asar pb-3 font-bold"
+                                style={{color: "#5b4942", fontWeight: "700"}}>
+                                {this.DangerousDiv(cat1[3].sub)}
+                            </h4>
 
                             <Button iconRight={ModalsIcon} onClick={() => {
                                 this.openModal("4")
                             }} size="regular"
-                                    className="but-card1 font-bold">
+                                    className="but-card4 font-bold">
                                 Start
                             </Button>
                         </CardBody>
