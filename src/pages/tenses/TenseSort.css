@@ -12,7 +12,7 @@
 .sort-options {
     display: table;
     touch-action: none;
-    font-family: Lemon;
+    font-family: 'Balsamiq Sans';
     background-color: #D7F8A7;
     border-radius: 10px;
     min-height: 50px;
@@ -62,7 +62,7 @@
     min-height: 50px;
     margin: 0 auto;
     margin-bottom: 10px;
-    font-family: Lemon;
+    font-family: 'Balsamiq Sans';
     color: #008037;
 
     /* padding: 2em; */

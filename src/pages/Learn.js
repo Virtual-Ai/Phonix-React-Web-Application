@@ -145,12 +145,14 @@ function Learn() {
 			</div>
 			<div style={{padding: "30px"}} className="flex-grow">
 				<div className="flex justify-end">
-					<p style={{padding: "3px"}}>HI</p>
+					<p className="font-asar text-md" style={{padding: "3px"}}>हि</p>
 					<Switch
 						checked={handleChange}
 						onChange={handleChangeL}
+						offColor="#f19c6c"
+						offHandleColor="#f6c58e"
 						onColor="#86d3ff"
-						onHandleColor="#2693e6"
+						onHandleColor="#9bdde2"
 						handleDiameter={30}
 						uncheckedIcon={false}
 						checkedIcon={false}

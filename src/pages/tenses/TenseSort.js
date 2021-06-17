@@ -134,7 +134,7 @@ class TenseSort extends Component {
                     <div style={{flexBasis : "100%"}} className="flex-grow">
                         <div className="box bg-transparent tablet:m-1 m-12 px-6 py-3" style={{borderRadius: "15px"}}>
                             <div>
-                                <p className="text-3xl tablet:text-xl" style={{color: "#37EB5C",fontFamily: "lemon"}}>Past</p>
+                                <p className="text-3xl tablet:text-xl font-bold" style={{color: "#37EB5C",fontFamily: "Balsamiq Sans"}}>Past</p>
                                 <div>
                                     <div
                                         ref={this.addDraggable}
@@ -161,7 +161,7 @@ class TenseSort extends Component {
                     <div style={{flexBasis : "100%"}} className="flex-grow">
                         <div className="box bg-transparent tablet:m-1 m-12 px-6 py-3" style={{borderRadius: "15px"}}>
                             <div>
-                                <p className="text-3xl tablet:text-xl" style={{color: "#37EB5C",fontFamily: "lemon"}}>Present</p>
+                                <p className="text-3xl tablet:text-xl font-bold" style={{color: "#37EB5C",fontFamily: "Balsamiq Sans"}}>Present</p>
                                 <div>
                                     <div
                                         ref={this.addDraggable}
