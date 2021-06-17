@@ -37,38 +37,89 @@ import { Card, CardBody } from '@windmill/react-ui'
 	  },
 	  
 
+	  {  "topic": "Pronouns",
+	  	 "content": "A pronoun is a word that is used instead of a noun.",
+		 "name": "pronouns"
+	  },
+
+	  {  "topic": "Adjectives",
+	  	 "content": "An adjective is a word used for adding something to the meaning of a Noun or Pronoun.",
+	  	 "name": "adjectives"
+	  },
+
+
 	  {	"topic": "Verbs", 
-	  	"content":"Verbs are words that show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
+	  	"content": "Verbs are words that show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
 	  	"name": "verbs"},
 
+	  { "topic": "Adverbs",
+	    "content": "An adverb is a word that qualifies anything except a Noun or a Pronoun. Adverbs usually end with '-ly'.",
+		"name": "adverbs"
+	  },
 
 	  { "topic": "Preposition", 
 	    "content":"Prepositions are words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
 	    "name": "Prepositions"},
+
+	  {
+		"topic": "Conjunction",
+		"content": "A conjunction is a word used to join words or sentences.",
+		"name": "conjunctions"
+	  },
+
+	  { "topic": "Interjection",
+	  	"content": "A interjection is a word which expresses some sudden feeling.",
+		"name": "interjections"
+	  },
   ]
   
 
 
   let topics1 = [
-	{ "topic": "dvdsv",
-	  "content":"A nbdfbdfbfdoun is a word that names a person, a place, a thing or an idea. A noun can tell who or what.",
-	  "name": "nouns2" 
-
+	{ "topic": "Simple Present Tense",
+	  "content": "Simple Present Tense denotes an action in the present time, or some form of truth.",
+	  "name": "simple_present" 
 	},
-	
-	{	"topic": "Vfdnfgnfgerbs", 
-		"content":"Verbs are words thagfgfnfgnt show actions, motions, doing, or states of being. They can also demonstrate how someone feels.",
-		"name": "verbs"},
-
-
-	{ "topic": "Preposigfmgfmtion", 
-	  "content":"Prepositions arfm gfmfe words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
-	  "name": "Prepositions"},
-
-	{ "topic": "Preposigfmgfmtion", 
-	  "content":"Prepositions arfm gfmfe words that tell you where something is located or positioned compared to something else.It also tells you when something happened.",
-	  "name": "Prepositions"},
+	{ "topic": "Simple Past Tense",
+	  "content": "Simple Past Tense denotes an action completed in the past or a past habit.",
+	  "name": "simple_past"
+	},
+	{
+	  "topic": "Simple Future Tense",
+	  "content": "Simple Future Tense is used when an action will be done or will happen in the future.",
+	  "name": "simple_future"
+	},	
 ]
+
+  let topics3 = [
+	  {  "topic": "Present Continuous Tense",
+		 "content": "Present Continuous Tense is used when an action is continued.",
+		 "name": "continuous_present"
+	  },
+	  {  "topic": "Past Continuous Tense",
+	  	 "content": "Past Continuous Tense is used when the action was continued for some time in the past.",
+		 "name": "continuous_past"
+
+	  },
+	  {  "topic": "Future Continuous Tense",
+	  	 "content": "Future Continuous Tense is used when an action is thought to be going on in the future.",
+		 "name": "continuous_future"
+	  },
+	  {   "topic": "Present Perfect Tense",
+	      "content": "Present Perfect Tense is used when the work has been done but its effect lasts.",
+		  "name": "perfect_present"
+	  },
+	  {
+		  "topic": "Past Perfect Tense",
+		  "content": "Past Perfect Tense is used when an action is completed in the past.",
+		  "name": "perfect_past"
+	  },
+	  {
+		  "topic": "Future Perfect Tense",
+		  "content": "Future Perfect Tense is used to indicate the completion of an action by a certain time in the future.",
+		  "name": "perfect_future"
+	  }
+  ]
 
   
 
@@ -124,7 +175,9 @@ function Learn() {
 	else if (clickedButton === "1") {
 		data = topics1
 		console.log("data change")
-
+	}
+	else if (clickedButton === "3"){
+		data = topics3
 	}
 
 
@@ -168,7 +221,7 @@ function Learn() {
 	        	<img src={puzzle} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
 	          	<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
 	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
-	         			Rules for Tenses
+	         			Simple Tenses
 	         		</h4>	  
 
 	         	<Button iconRight={ModalsIcon} onClick={() => openModal('1')} size="regular" className="but-card2 font-bold"> 
@@ -199,12 +252,13 @@ function Learn() {
 	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#9fe0ca" , position:"relative"}}>
 	        <CardBody>
 	        	<img src={Image6} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
-	          	<h4 className="text-4xl font-chewy text-white mt-4">Basic Grammar </h4>
+				<img src={puzzle} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
+	          	<h4 className="text-4xl font-chewy text-white mt-4">Medial Grammar </h4>
 	         		<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
-	         			Coming Soon...
+	         			Tenses Part 2
 	         		</h4>	  
 
-	         	<Button iconRight={ModalsIcon} onClick={openModal} size="regular" className="but-card4 font-bold"> 
+	         	<Button iconRight={ModalsIcon} onClick={() => openModal('3')} size="regular" className="but-card4 font-bold"> 
 	         			Start 
 	         	</Button>
 
