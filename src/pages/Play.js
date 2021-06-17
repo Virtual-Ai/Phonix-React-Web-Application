@@ -11,6 +11,10 @@ import ob1 from "../assets/img/play/ob1.png";
 import ob3 from "../assets/img/play/ob3.png";
 import ob4 from "../assets/img/play/ob4.png";
 import ob5 from "../assets/img/play/ob5.png";
+import ob6 from "../assets/img/play/ob6.png";
+import ob2 from "../assets/img/play/ob2.png";
+import ob7 from "../assets/img/play/ob7.png";
+import ob8 from "../assets/img/play/ob8.png";
 
 import mbQuiz from "../assets/img/play/mb-pl-cards/mb-quiz.png";
 import mbDnd from "../assets/img/play/mb-pl-cards/mb-dnd.png";
@@ -20,9 +24,11 @@ import mbSent from "../assets/img/play/mb-pl-cards/mb-sent.png";
 function Cards() {
     return (
         <>
-            <PageTitle>Play</PageTitle>
+            {/*<PageTitle className="font-chewy">Play</PageTitle>*/}
             <SectionTitle>What to play ?</SectionTitle>
             <div className="grid gap-6 mb-8 md:grid-cols-4">
+
+
                 <Link to="/app/play/quiz">
                     <Card
                         colored
@@ -84,6 +90,7 @@ function Cards() {
                         </CardBody>
                     </Card>
                 </Link>
+
                 <Link to="/app/play/dnd">
                     <Card
                         colored
@@ -145,6 +152,8 @@ function Cards() {
                         </CardBody>
                     </Card>
                 </Link>
+
+
                 <Link to="/app/play/sentencebuilder">
                     <Card
                         colored
@@ -201,7 +210,135 @@ function Cards() {
                         </CardBody>
                     </Card>
                 </Link>
+
+
                 <Link to="/app/play/mtp">
+                    <Card
+                        colored
+                        className="mb-8 shadow-md"
+                        style={{
+                            backgroundColor: "#e09431",
+                            position: "relative",
+                            borderRadius: "0.9rem",
+                        }}
+                    >
+                        <CardBody>
+                            <img
+                                src={ob6}
+                                className="obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "0",
+                                    bottom: "0",
+                                    maxHeight: "10.5rem",
+                                    marginLeft: "0.2rem",
+                                    marginBottom: "0.2rem",
+                                }}
+                            />
+                            <img
+                                src={mbMatch}
+                                className="mb-obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "-52px",
+                                    bottom: "-52px",
+                                    maxHeight: "12.5rem",
+                                }}
+                            />
+                            <h4
+                                className="text-6xl font-chewy text-white text-right pl-cd-title"
+                                style={{}}
+                            >
+                                Identify
+                            </h4>
+                            <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
+                                Speech
+                            </h4>
+                            <h4
+                                className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
+                                style={{color: "#fbf0d0"}}
+                            >
+                                Coming Soon...
+                            </h4>
+                            <div className="flex justify-end">
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
+                            </div>
+                            {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+                        </CardBody>
+                    </Card>
+                </Link>
+
+
+                <Link to="/app/play/mtp">
+                    <Card
+                        colored
+                        className="mb-8 shadow-md"
+                        style={{
+                            backgroundColor: "#7adaba",
+                            position: "relative",
+                            borderRadius: "0.9rem",
+                        }}
+                    >
+                        <CardBody>
+                            <img
+                                src={ob7}
+                                className="obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "0",
+                                    bottom: "0",
+                                    maxHeight: "10.5rem",
+                                    marginLeft: "0.2rem",
+                                    marginBottom: "0.2rem",
+                                }}
+                            />
+                            <img
+                                src={mbMatch}
+                                className="mb-obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "-52px",
+                                    bottom: "-52px",
+                                    maxHeight: "12.5rem",
+                                }}
+                            />
+                            <h4
+                                className="text-6xl font-chewy text-white text-right pl-cd-title"
+                                style={{}}
+                            >
+                                Grammar
+                            </h4>
+                            <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
+                                Maze
+                            </h4>
+                            <h4
+                                className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
+                                style={{color: "#fbf0d0"}}
+                            >
+                                Coming Soon...
+                            </h4>
+                            <div className="flex justify-end">
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
+                            </div>
+                            {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+                        </CardBody>
+                    </Card>
+                </Link>     
+
+
+                <Link to="/app/play/tense">
                     <Card
                         colored
                         className="mb-8 shadow-md"
@@ -242,10 +379,10 @@ function Cards() {
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
                             >
-                                Matching
+                                Sorting
                             </h4>
                             <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
-                                Pairs
+                                Tenses
                             </h4>
                             <h4
                                 className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
@@ -262,6 +399,134 @@ function Cards() {
                         </CardBody>
                     </Card>
                 </Link>
+
+
+                <Link to="/app/play/mtp">
+                    <Card
+                        colored
+                        className="mb-8 shadow-md"
+                        style={{
+                            backgroundColor: "#b270c6",
+                            position: "relative",
+                            borderRadius: "0.9rem",
+                        }}
+                    >
+                        <CardBody>
+                            <img
+                                src={ob2}
+                                className="obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "0",
+                                    bottom: "0",
+                                    maxHeight: "10.5rem",
+                                    marginLeft: "0.2rem",
+                                    marginBottom: "0.2rem",
+                                }}
+                            />
+                            <img
+                                src={mbMatch}
+                                className="mb-obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "-52px",
+                                    bottom: "-52px",
+                                    maxHeight: "12.5rem",
+                                }}
+                            />
+                            <h4
+                                className="text-6xl font-chewy text-white text-right pl-cd-title"
+                                style={{}}
+                            >
+                                Correct
+                            </h4>
+                            <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
+                                It
+                            </h4>
+                            <h4
+                                className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
+                                style={{color: "#d5c5e7"}}
+                            >
+                                Coming Soon...
+                            </h4>
+                            <div className="flex justify-end">
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
+                            </div>
+                            {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+                        </CardBody>
+                    </Card>
+                </Link>             
+
+
+                <Link to="/app/play/mtp">
+                    <Card
+                        colored
+                        className="mb-8 shadow-md"
+                        style={{
+                            backgroundColor: "#49bf44",
+                            position: "relative",
+                            borderRadius: "0.9rem",
+                        }}
+                    >
+                        <CardBody>
+                            <img
+                                src={ob8}
+                                className="obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "0",
+                                    bottom: "0",
+                                    maxHeight: "10.5rem",
+                                    marginLeft: "0.2rem",
+                                    marginBottom: "0.2rem",
+                                }}
+                            />
+                            <img
+                                src={mbMatch}
+                                className="mb-obs"
+                                alt="Image"
+                                style={{
+                                    position: "absolute",
+                                    height: "100%",
+                                    left: "-52px",
+                                    bottom: "-52px",
+                                    maxHeight: "12.5rem",
+                                }}
+                            />
+                            <h4
+                                className="text-6xl font-chewy text-white text-right pl-cd-title"
+                                style={{}}
+                            >
+                                Spot the
+                            </h4>
+                            <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
+                                word
+                            </h4>
+                            <h4
+                                className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
+                                style={{color: "#fff"}}
+                            >
+                                Coming Soon...
+                            </h4>
+                            <div className="flex justify-end">
+                                <img src={arrow}
+                                     alt="Image"
+                                     style={{maxWidth: "2.5rem"}}/>
+                            </div>
+                            {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
+                        </CardBody>
+                    </Card>
+                </Link>                   
+
+
             </div>
         </>
     );

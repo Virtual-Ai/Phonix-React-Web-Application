@@ -4,6 +4,7 @@ import { NavLink, Route } from 'react-router-dom'
 import * as Icons from '../../icons'
 // import SidebarSubmenu from './SidebarSubmenu'
 import { MenuIcon } from '../../icons'
+import './Sidebar.css'
 
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon]
@@ -14,7 +15,6 @@ function DesktopSidebar(props) {
   const [isOpen, openHandler] = useState(false)
 
   const open = () => {
-    
     openHandler(!isOpen)
     if (isOpen) {
       routes.map((route) => {
@@ -25,7 +25,7 @@ function DesktopSidebar(props) {
       })
       document.getElementById('name').innerHTML = 'Phonix'
       document.getElementById('sideBar').className =
-        'z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block'
+        ' backg z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block'
     } else {
       routes.map((route) => {
         if (route.routes) {
@@ -35,14 +35,14 @@ function DesktopSidebar(props) {
       })
       document.getElementById('name').innerHTML = ''
       document.getElementById('sideBar').className =
-        'z-30 flex-shrink-0 hidden overflow-y-auto bg-white dark:bg-gray-800 lg:block'
+        ' backg z-30 flex-shrink-0 hidden w-min overflow-y-auto bg-white dark:bg-gray-800 lg:block'
     }
   }
 
   return (
     <aside
       id="sideBar"
-      className="z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block"
+      className=" backg z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block"
     >
       <div>
         <div className="py-4 text-gray-500 dark:text-gray-400">
@@ -52,13 +52,13 @@ function DesktopSidebar(props) {
               onClick={open}
               aria-label="Menu"
             >
-              <MenuIcon className="w-6 h-6" aria-hidden="false" />
+              <MenuIcon className="w-10 h-10 text-white" aria-hidden="false" />
             </button>
             <div>
               <a
                 id="name"
-                className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-                href="/app"
+                className="ft ml-1 text-lg font-bold text-gray-800 dark:text-gray-200"
+                href="/"
               >
                 Phonix
               </a>
@@ -72,7 +72,7 @@ function DesktopSidebar(props) {
                   <NavLink
                     exact
                     to={route.path}
-                    className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    className="card-con inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                     activeClassName="text-gray-800 dark:text-gray-100"
                   >
                     <Route path={route.path} exact={route.exact}>
@@ -87,7 +87,7 @@ function DesktopSidebar(props) {
                       icon={route.icon}
                       fill="currentColor"
                     />
-                    <span id={route.name} className="ml-4">
+                    <span id={route.name} className="ml-4" style={{color:"#a0a0a0"}}>
                       {route.name}
                     </span>
                   </NavLink>
@@ -95,6 +95,7 @@ function DesktopSidebar(props) {
               ),
             )}
           </ul>
+          <img src={require('./assets/mb-quiz.png')} />
         </div>
       </div>
     </aside>

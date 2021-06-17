@@ -10,7 +10,7 @@ import wrongAudio from "../Quiz/assets/audio/wrong.wav";
 class MTP extends Component {
     state = initialData;
 
-     correctA = new UIfx(
+    correctA = new UIfx(
         correctAudio,
         {
             volume: 0.4, // number between 0.0 ~ 1.0
@@ -18,7 +18,7 @@ class MTP extends Component {
         }
     )
 
-     wrongA = new UIfx(
+    wrongA = new UIfx(
         wrongAudio,
         {
             volume: 0.4, // number between 0.0 ~ 1.0
@@ -63,11 +63,11 @@ class MTP extends Component {
 
                 if (result.draggableId[0] === result.destination.droppableId[0]) {
                     document.getElementsByClassName("line")[0].innerHTML += `
-            <line x1=${x + 60} y1=${y + 50} x2=${x1} y2=${
+            <line x1="${x + 60}" y1="${y + 50}" x2="${x1}" y2="${
                         y1 + 50
-                    } class=${draggableId} style="stroke:rgb(255,0,0);stroke-width:2" /> `;
+                    }" class="${draggableId}" style="stroke:rgb(255,0,0);stroke-width:2" /> `;
                     this.correctA.play()
-                }else{
+                } else {
                     this.wrongA.play()
                 }
             }
