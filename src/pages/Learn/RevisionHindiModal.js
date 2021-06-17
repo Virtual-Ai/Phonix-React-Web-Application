@@ -3,19 +3,20 @@ import "./RevisionHindiModal.css"
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
 
 
-//import React from 'react'
 
 const RevisionHindiModal = (props) => {
 
     return (
         <div>
-            <Modal style={{overflow: "auto" , height: "80%" }} isOpen={props.isOpen} onClose={props.onClose} >
+            <Modal style={{overflow: "auto" , height: "" }} isOpen={props.isOpen} onClose={props.onClose} >
 
-                <ModalHeader className='text-2xl font-balsamiq'> {props.title} </ModalHeader>
+                <ModalHeader className='text-2xl'> {props.title} </ModalHeader>
 
                 <ModalBody>
-                    <h4 className='text-xl font-balsamiq'>{props.topic}  {`(` + String(props.id + 1) + `/` + String(props.no_of_cards) + ")\t"}</h4>
+                    <h4 className='text-2xl font-balsamiq'>{props.topic}  {`(` + String(props.id + 1) + `/` + String(props.no_of_cards) + ")\t"}</h4>
                     <p className='text-lg'>{props.content}</p>
+                    <img src={require(`./assets/${props.img}.png`)} />
+
                 </ModalBody>
 
                 <ModalFooter>
