@@ -230,7 +230,7 @@ function Learn() {
 		/>
 
 
-      <div className="grid gap-6 mb-8 md:grid-cols-3">
+      	{/* <div className="grid gap-6 mb-8 md:grid-cols-3">
 
 	      <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#f4bb14" , position:"relative"}} >
 	        <CardBody>
@@ -300,7 +300,7 @@ function Learn() {
 	        </CardBody>
 	      </Card>	    
 
-	  </div>
+	  </div> 	 */}
 		{handleChange === true ? <div className="grid gap-6 mb-8 md:grid-cols-3">
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#f4bb14", position: "relative"}}>
 					<CardBody>
@@ -350,19 +350,19 @@ function Learn() {
 						</Button>
 					</CardBody>
 				</Card>
-				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#9fe0ca", position: "relative"}}>
+				<Card colored className="mb-8 shadow-md" style={{backgroundColor:"#9fe0ca" , position:"relative"}}>
 					<CardBody>
-						<img src={Image6} alt="" className="cartoon-1"
-							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4">Basic Grammar </h4>
-						<h4 className="text-xl font-balsamiq pb-3 font-bold"
-							style={{color: "#5b4942", fontWeight: "700"}}>
-							Coming Soon...
-						</h4>
-						<Button iconRight={ModalsIcon} onClick={openModal} size="regular"
-								className="but-card4 font-bold">
-							Start
+						<img src={Image6} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
+						<img src={puzzle} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
+						<h4 className="text-4xl font-chewy text-white mt-4">Medial Grammar </h4>
+							<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+								Tenses Part 2
+							</h4>	  
+
+						<Button iconRight={ModalsIcon} onClick={() => openModal('3')} size="regular" className="but-card4 font-bold"> 
+								Start 
 						</Button>
+
 					</CardBody>
 				</Card>
 			</div> :
