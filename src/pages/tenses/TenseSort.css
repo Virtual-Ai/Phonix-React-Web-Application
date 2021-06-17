@@ -28,9 +28,8 @@
 .sort-options > div {
     text-align: center;
     float: left;
-    margin: 0 0.7em 0;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    margin: 0.2em 0.7em 0;
+    border-radius: 0px;
     border: 3px dashed #37EB5C;
     background: transparent;
     transition: all 0.5s ease;
@@ -186,12 +185,20 @@
         text-align: center;
         float: left;
         margin: 0.2em 0.2em 0;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        border-radius: 0px;
         border: 3px dashed #37EB5C;
         background: transparent;
         transition: all 0.5s ease;
         width: 121px;
+    }
+
+    .sort-options {
+        display: grid;
+
+    }
+
+    .clockimg {
+        width: 54px;
     }
 
 }

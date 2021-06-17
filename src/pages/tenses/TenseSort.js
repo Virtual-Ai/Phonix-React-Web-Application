@@ -188,9 +188,9 @@ class TenseSort extends Component {
                 </div>
 
                 <div style={{justifyContent: "center" , backgroundColor: "rgb(201, 226, 101)", flexDirection: "column" , alignItems: "center"}} className="flex">
-                    <img style={{display:""}} width = "100px" src={require("./assets/clock.svg")}/>
+                    <img className="clockimg" style={{display:""}} width = "100px" src={require("./assets/Clock.png")}/>
                     <Timer
-                        initialTime={20000}
+                        initialTime={40000}
                         direction="backward"
                         checkpoints={[
                             {
@@ -201,7 +201,7 @@ class TenseSort extends Component {
                     >
                         {({  stop , start }) => (
                             <React.Fragment>
-                                <div className="text-3xl font-lemon">
+                                <div className="text-3xl font-balsamiq" style={{color:"#7ed957"}}>
                                     <Timer.Minutes />:
                                     <Timer.Seconds />sec
                                 </div>
