@@ -122,11 +122,15 @@ class TenseSort extends Component {
         }
 
         console.log(this.state.timeState)
-        if(this.state.timeState === false){
+        if(this.state.timeState === false || this.check()){
             document.getElementById("outer-drag").style.display = "none"
             document.getElementsByClassName("result")[0].style.display = "unset"
-
         }
+        if(this.check() === false && this.state.rows.length + this.state.present.length === 6){
+            document.getElementById("outer-drag").style.display = "none"
+            document.getElementsByClassName("result")[0].style.display = "unset"
+        }
+
 
         return (
             <div className="main">
