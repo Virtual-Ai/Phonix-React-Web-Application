@@ -200,6 +200,8 @@ const DragDrop = () => {
                                 // fontSize: 'xx-large',
                             }}
                         >
+                        <h1 className="font-chewy text-center text-5xl tbText"> Drag & Drop </h1>
+
                             <table style={{width: "100%"}}>
                                 <tbody>
                                 <tr>

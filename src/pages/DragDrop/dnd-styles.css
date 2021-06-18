@@ -41,6 +41,10 @@
         margin: 15px !important;
     }
 
+    .tbText {
+        display: none;
+    }
+
 
 }
 
