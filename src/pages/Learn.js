@@ -11,6 +11,8 @@ import Image33 from '../assets/img/learn/man.png'
 import Image4 from '../assets/img/learn/boy11.png'
 import Image5 from '../assets/img/learn/sir.png'
 import Image6 from '../assets/img/learn/man2.png'
+import Image7 from '../assets/img/learn/man3.png'
+
 
 import page from '../assets/img/learn/mb-cards/page.png'
 import puzzle from '../assets/img/learn/mb-cards/puzzle.png'
@@ -301,6 +303,7 @@ function Learn() {
 	      </Card>	    
 
 	  </div> 	 */}
+
 		{handleChange === true ? <div className="grid gap-6 mb-8 md:grid-cols-3">
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#f4bb14", position: "relative"}}>
 					<CardBody>
@@ -316,8 +319,10 @@ function Learn() {
 								className="but-card1 font-bold">
 							Start
 						</Button>
-					</CardBody>
+					</CardBody>					
 				</Card>
+
+
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#df692f", position: "relative"}}>
 					<CardBody>
 						<img src={Image33} alt="" className="cartoon-1"
@@ -334,6 +339,9 @@ function Learn() {
 						</Button>
 					</CardBody>
 				</Card>
+
+
+
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#f09420", position: "relative"}}>
 					<CardBody>
 						<img src={Image4} alt="" className="cartoon-1"
@@ -350,6 +358,9 @@ function Learn() {
 						</Button>
 					</CardBody>
 				</Card>
+
+
+
 				<Card colored className="mb-8 shadow-md" style={{backgroundColor:"#9fe0ca" , position:"relative"}}>
 					<CardBody>
 						<img src={Image6} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
@@ -362,9 +373,29 @@ function Learn() {
 						<Button iconRight={ModalsIcon} onClick={() => openModal('3')} size="regular" className="but-card4 font-bold"> 
 								Start 
 						</Button>
-
 					</CardBody>
 				</Card>
+
+
+
+				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#91a9d1", position: "relative"}}>
+					<CardBody>
+						<img src={Image7} alt="" className="cartoon-1"
+							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
+						<img src={abacus} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
+						<h4 className="text-4xl font-chewy text-white mt-4"> Medial Grammar </h4>
+						<h4 className="text-xl font-balsamiq pb-3 font-bold"
+							style={{color: "#5b4942", fontWeight: "700"}}>
+							Parts of Speech
+						</h4>
+						<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular"
+								className="but-card1 font-bold">
+							Start
+						</Button>
+					</CardBody>					
+				</Card>
+
+
 			</div> :
 			<HindiLearn/>
 		}
