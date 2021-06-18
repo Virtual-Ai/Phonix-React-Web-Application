@@ -389,7 +389,7 @@ function Learn() {
 							Parts of Speech
 						</h4>
 						<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular"
-								className="but-card1 font-bold">
+								className="but-card5 font-bold">
 							Start
 						</Button>
 					</CardBody>					
