@@ -30,7 +30,7 @@ class TextStep extends Component {
     const data =
       "cmd=grammar_check&format=json&text=" +
       previousValue +
-      ".&slang=en_US&customerid=VbZm2VLmCE6t0gF";
+      ".&slang=en_US&customerid=lSafIBZ5Hf4diyI";
     try {
       fetch("https://svc.webspellchecker.net/spellcheck31/script/ssrv.fcgi?", {
         method: "POST",
