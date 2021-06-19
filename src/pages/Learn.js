@@ -96,6 +96,25 @@ import { Card, CardBody } from '@windmill/react-ui'
 	},	
 ]
 
+	let topics2 = [
+		{
+			"topic": "A Sentence",
+			"content": "A word or a group of words having a clear meaning in a given context is called a sentence.",
+			"name": "sentence"
+		},
+		{
+			"topic": "Sentence Formation (Single-worded)",
+			"content": "A sentence can have a single word, as long as it has a clear meaning.",
+			"name": "one_word_sentence"
+		},
+		{
+			"topic": "Sentence Formation (Multi-worded)",
+			"content": `A sentence with multiple words can be divided into two parts: Subject and Predicate. The part which names 
+			            the person or thing is subject. And, the part telling something about the subject is predicate.`,
+			"name": "multi_word_sentence"
+		},
+	]
+
   let topics3 = [
 	  {  "topic": "Present Continuous Tense",
 		 "content": "Present Continuous Tense is used when an action is continued.",
@@ -126,6 +145,23 @@ import { Card, CardBody } from '@windmill/react-ui'
 	  }
   ]
 
+  let topics4 = [
+	  {
+		"topic": "Group of words",
+		"content": "A sentence can also contain group of words of two types: Phrase and Clause.",
+		"name": "grp_of_words"
+	  },
+	  {
+		  "topic": "Phrases",
+		  "content": "A Phrase is a group of words which does not contain a finite verb.",
+		  "name": "phrases"
+	  },
+	  {
+		  "topic": "Clauses",
+		  "content": "A Clause is a group of words that contains a finite verb expressed or understood",
+		  "name": "clauses"
+	  },
+  ]
   
 
 //   let id = 0;
@@ -186,8 +222,14 @@ function Learn() {
 		data = topics1
 		console.log("data change")
 	}
+	else if (clickedButton === "2"){
+		data = topics2
+	}
 	else if (clickedButton === "3"){
 		data = topics3
+	}
+	else if (clickedButton === "4"){
+		data = topics4
 	}
 
 
@@ -352,7 +394,7 @@ function Learn() {
 							style={{color: "#5b4942", fontWeight: "700"}}>
 							Sentence Formation
 						</h4>
-						<Button iconRight={ModalsIcon} onClick={openModal} size="regular"
+						<Button iconRight={ModalsIcon} onClick={() => openModal('2')} size="regular"
 								className="but-card3 font-bold">
 							Start
 						</Button>
@@ -386,9 +428,9 @@ function Learn() {
 						<h4 className="text-4xl font-chewy text-white mt-4"> Medial Grammar </h4>
 						<h4 className="text-xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
-							Parts of Speech
+							Sentence Formation Part 2
 						</h4>
-						<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular"
+						<Button iconRight={ModalsIcon} onClick={() => openModal('4')} size="regular"
 								className="but-card5 font-bold">
 							Start
 						</Button>
