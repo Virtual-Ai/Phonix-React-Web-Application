@@ -6,6 +6,18 @@
     background-color: rgb(201, 226, 101);
 }
 
+.but1 {
+    background-color: #7ed957;
+    color: #358137;
+}
+
+
+.but1:hover {
+    background-color: #6ec748;
+    color: #358137;
+}
+
+
 .box {
     background-color: #D7F8A7;
 }

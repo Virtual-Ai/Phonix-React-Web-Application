@@ -44,12 +44,14 @@ class SentenceBuilder extends Component {
   })
 
   onNextClick = async () => {
-    await this.setState({
-      counter: this.state.counter + 1,
-      items: this.shuffle(data[this.state.counter + 1].split(' ')),
-      rows: [],
-    })
-    document.getElementById('Q').style.backgroundColor = 'transparent'
+    if (this.state.counter < data.length - 1) {
+      await this.setState({
+        counter: this.state.counter + 1,
+        items: this.shuffle(data[this.state.counter + 1].split(' ')),
+        rows: [],
+      })
+      document.getElementById('Q').style.backgroundColor = 'transparent'
+    }
   }
 
   onPreviousClick = async () => {

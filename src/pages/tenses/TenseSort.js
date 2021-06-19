@@ -210,8 +210,8 @@ class TenseSort extends Component {
                                     <Timer.Seconds />sec
                                 </div>
                                 <div className="flex">
-                                    <Button className="mx-6" onClick={stop}>Stop</Button>
-                                    <Button className="mx-6" onClick={start}>Resume</Button>
+                                    <Button className="mx-6 but1" onClick={stop}>Stop</Button>
+                                    <Button className="mx-6 but1" onClick={start}>Resume</Button>
                                 </div>
 
                             </React.Fragment>

@@ -12,6 +12,7 @@ import Image4 from '../assets/img/learn/boy11.png'
 import Image5 from '../assets/img/learn/sir.png'
 import Image6 from '../assets/img/learn/man2.png'
 import Image7 from '../assets/img/learn/man3.png'
+import Image8 from '../assets/img/learn/boy2.png'
 
 
 import page from '../assets/img/learn/mb-cards/page.png'
@@ -352,8 +353,8 @@ function Learn() {
 						<img src={Image2} alt="" className="cartoon-1"
 							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
 						<img src={abacus} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
-						<h4 className="text-xl font-balsamiq pb-3 font-bold"
+						<h4 className="text-2xl font-chewy text-white mt-4"> Basic Grammar </h4>
+						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
 							Parts of Speech
 						</h4>
@@ -370,8 +371,8 @@ function Learn() {
 						<img src={Image33} alt="" className="cartoon-1"
 							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
 						<img src={puzzle} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
-						<h4 className="text-xl font-balsamiq pb-3 font-bold"
+						<h4 className="text-2xl font-chewy text-white mt-4"> Basic Grammar </h4>
+						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
 							Rules for Tenses
 						</h4>
@@ -389,10 +390,10 @@ function Learn() {
 						<img src={Image4} alt="" className="cartoon-1"
 							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
 						<img src={page} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4"> Basic Grammar </h4>
-						<h4 className="text-xl font-balsamiq pb-3 font-bold"
+						<h4 className="text-2xl font-chewy text-white mt-4"> Basic Grammar </h4>
+						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
-							Sentence Formation
+							Sentences
 						</h4>
 						<Button iconRight={ModalsIcon} onClick={() => openModal('2')} size="regular"
 								className="but-card3 font-bold">
@@ -407,8 +408,8 @@ function Learn() {
 					<CardBody>
 						<img src={Image6} alt="" className="cartoon-1" style={{position:"absolute",height:"100%",right:"0",top:'0'}}/>
 						<img src={puzzle} alt="" className="mb-card1" style={{position:"absolute",height:"100%"}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4">Medial Grammar </h4>
-							<h4 className="text-xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
+						<h4 className="text-2xl font-chewy text-white mt-4">Medial Grammar </h4>
+							<h4 className="text-3xl font-balsamiq pb-3 font-bold" style={{color:"#5b4942",fontWeight:"700"}}>
 								Tenses Part 2
 							</h4>	  
 
@@ -425,8 +426,8 @@ function Learn() {
 						<img src={Image7} alt="" className="cartoon-1"
 							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
 						<img src={abacus} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
-						<h4 className="text-4xl font-chewy text-white mt-4"> Medial Grammar </h4>
-						<h4 className="text-xl font-balsamiq pb-3 font-bold"
+						<h4 className="text-2xl font-chewy text-white mt-4"> Medial Grammar </h4>
+						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
 							Sentence Formation Part 2
 						</h4>
@@ -436,6 +437,24 @@ function Learn() {
 						</Button>
 					</CardBody>					
 				</Card>
+
+
+				<Card colored className="mb-8 shadow-md" style={{backgroundColor: "#b2d84c", position: "relative"}}>
+					<CardBody>
+						<img src={Image8} alt="" className="cartoon-1"
+							 style={{position: "absolute", height: "100%", right: "0", top: '0'}}/>
+						<img src={abacus} alt="" className="mb-card1" style={{position: "absolute", height: "100%"}}/>
+						<h4 className="text-2xl font-chewy text-white mt-4"> Medial Grammar </h4>
+						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
+							style={{color: "#5b4942", fontWeight: "700"}}>
+							Phrase & Clause
+						</h4>
+						<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular"
+								className="but-card6 font-bold">
+							Start
+						</Button>
+					</CardBody>					
+				</Card>				
 
 
 			</div> :

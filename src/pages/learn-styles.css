@@ -6,7 +6,7 @@
 
 .but-card1:hover {
 
-	background-color: #8b614f;
+	background-color: #795d0a;
 	color: #fff;
 }
 
@@ -58,6 +58,21 @@
 	background-color: #485468;
 	color: #fff;
 }
+
+
+.but-card6 {
+
+	background-color: #7c9735;
+	color: #fff;
+}
+
+.but-card6:hover {
+
+	background-color: #586c26;
+	color: #fff;
+}
+
+
 
 
 

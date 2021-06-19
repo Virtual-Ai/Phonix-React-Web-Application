@@ -14,7 +14,7 @@ let id = ''
 let replaceto
 let replacefrom
 let dragElement = document.createElement('span')
-let data = dataType.preposition
+let data = dataType.prepositions
 
 const DragDrop = () => {
 
@@ -38,11 +38,11 @@ const DragDrop = () => {
         console.log(type)
 
 
-        if (type === "preposition") {
-            data = dataType.preposition
+        if (type === "prepositions") {
+            data = dataType.prepositions
             q=0
-        } else if (type === "noun") {
-            data = dataType.noun
+        } else if (type === "conjunctions") {
+            data = dataType.conjunctions
             q=0
         }
 
