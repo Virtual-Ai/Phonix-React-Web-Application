@@ -16,7 +16,7 @@ class Dnd extends Component {
             {/*<PageTitle>Drag and Drop</PageTitle>*/}
             <SectionTitle>Which one ?</SectionTitle>
                 <div className="grid gap-6 mb-8 md:grid-cols-4">
-                <Link to="/app/play/dnd/index?preposition">
+                <Link to="/app/play/dnd/index?prepositions">
                     <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#68d4f9" , position:"relative",borderRadius:'0.9rem'}}>
                         <CardBody>
                             <img src={ob1_qz} alt="Image" className="qz-card" style={{position:"absolute",height:"100%",left:"-17px",bottom:"0",maxHeight:'15.5rem'}}/>
@@ -28,11 +28,11 @@ class Dnd extends Component {
                 </Link>
 
 
-                <Link to="/app/play/dnd/index?noun">
+                <Link to="/app/play/dnd/index?conjunctions">
                    <Card colored className="mb-8 shadow-md" style={{backgroundColor:"#f19775" , position:"relative",borderRadius:'0.9rem'}}>
                         <CardBody>
                             <img src={ob1_qz} alt="Image" className="qz-card" style={{position:"absolute",height:"100%",left:"-17px",bottom:"0",maxHeight:'15.5rem'}}/>
-                            <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'-1.3rem'}}>Nouns</h4>
+                            <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'-1.3rem'}}>Conjunction</h4>
                             <h4 className="text-4xl font-chewy text-white text-right">DND</h4>
                             <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#fae9e2'}}>5 Questions</h4>
                         </CardBody>

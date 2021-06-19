@@ -1,5 +1,5 @@
 export const dataType = {
-    preposition: [
+    prepositions: [
         {
             svg: require("./assets/cat.png"),
             question: 'The cat is  ________  the box.',
@@ -31,18 +31,30 @@ export const dataType = {
             correct: 'by',
         },
     ],
-    noun: [
+    conjunctions: [
         {
-            svg: require("./assets/table.png"),
-            question: 'HE  ________  the table.',
-            options: ['on', 'is', 'over', 'at'],
-            correct: 'on',
+            svg: require("./assets/car_crash2.png"),
+            question: 'I had a small accident ________ driving. ',
+            options: ['while', 'but', 'until', 'so'],
+            correct: 'while',
         },
         {
-            svg: require('../../assets/img/svg1.png'),
-            question: 'Book is sa ________  the table.',
-            options: ['onds', 'withas', 'overasas', 'atas'],
-            correct: 'on',
+            svg: require('./assets/camping.png'),
+            question: 'We went camping ________ the bad weather.',
+            options: ['since', 'but', 'despite', 'and'],
+            correct: 'despite',
         },
+        {
+            svg: require('./assets/fridge2.png'),
+            question: 'I am very hungry ________ the fridge is empty',
+            options: ['and', 'by', 'but', 'although'],
+            correct: 'but',
+        },
+        {
+            svg: require('./assets/play.png'),
+            question: 'You can play ________ you finish homework.',
+            options: ['so', 'by', 'provided', 'and'],
+            correct: 'provided',
+        },        
     ]
 }
