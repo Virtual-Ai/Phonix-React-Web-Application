@@ -108,14 +108,14 @@ class TenseSort extends Component {
             if (this.check()){
                 // this.correctA.play()
                 return <div className="flex">
-                    <img width="50px" src={require("./assets/check.png")}/>
+                    <img width="50px" alt="corrections" src={require("./assets/check.png")}/>
                     <p style={{padding: "7px"}}>Correct</p>
                 </div>
             }
             else{
                 // this.wrongA.play()
                 return <div className="flex">
-                    <img width="50px" src={require("./assets/false.svg")}/>
+                    <img width="50px" alt="corrections" src={require("./assets/false.svg")}/>
                     <p style={{padding: "7px"}}>Wrong</p>
                 </div>
             }
@@ -192,7 +192,7 @@ class TenseSort extends Component {
                 </div>
 
                 <div style={{justifyContent: "center" , backgroundColor: "rgb(201, 226, 101)", flexDirection: "column" , alignItems: "center"}} className="flex">
-                    <img className="clockimg" style={{display:""}} width = "100px" src={require("./assets/Clock.png")}/>
+                    <img className="clockimg" alt="clock" style={{display:""}} width = "100px" src={require("./assets/Clock.png")}/>
                     <Timer
                         initialTime={40000}
                         direction="backward"

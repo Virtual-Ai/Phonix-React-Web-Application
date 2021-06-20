@@ -95,7 +95,7 @@ function DesktopSidebar(props) {
               ),
             )}
           </ul>
-          <img src={require('./assets/mb-quiz.png')} />
+          <img alt="quiz-mobile" src={require('./assets/mb-quiz.png')} />
         </div>
       </div>
     </aside>

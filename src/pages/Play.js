@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import PageTitle from "../components/Typography/PageTitle";
+
 import SectionTitle from "../components/Typography/SectionTitle";
 import {Card, CardBody} from "@windmill/react-ui";
 import "./play-style.css";
@@ -43,7 +43,7 @@ function Cards() {
                             <img
                                 src={ob1}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -57,7 +57,7 @@ function Cards() {
                             <img
                                 src={mbQuiz}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -83,7 +83,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -105,7 +105,7 @@ function Cards() {
                             <img
                                 src={ob3}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -119,7 +119,7 @@ function Cards() {
                             <img
                                 src={mbDnd}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -145,7 +145,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -168,7 +168,7 @@ function Cards() {
                             <img
                                 src={ob4}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -181,7 +181,7 @@ function Cards() {
                             />
                             <img src={mbSent}
                                  className="mb-obs"
-                                 alt="Image"
+                                 alt="Play_IconSet"
                                  style={{
                                      position: "absolute",
                                      height: "100%",
@@ -203,7 +203,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -226,7 +226,7 @@ function Cards() {
                             <img
                                 src={ob6}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -240,7 +240,7 @@ function Cards() {
                             <img
                                 src={mbMatch}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -266,7 +266,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -289,7 +289,7 @@ function Cards() {
                             <img
                                 src={ob7}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -303,7 +303,7 @@ function Cards() {
                             <img
                                 src={mbMatch}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -329,7 +329,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -352,7 +352,7 @@ function Cards() {
                             <img
                                 src={ob5}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -366,7 +366,7 @@ function Cards() {
                             <img
                                 src={mbMatch}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -392,7 +392,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -415,7 +415,7 @@ function Cards() {
                             <img
                                 src={ob2}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -429,7 +429,7 @@ function Cards() {
                             <img
                                 src={mbMatch}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -455,7 +455,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}
@@ -478,7 +478,7 @@ function Cards() {
                             <img
                                 src={ob8}
                                 className="obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -492,7 +492,7 @@ function Cards() {
                             <img
                                 src={mbMatch}
                                 className="mb-obs"
-                                alt="Image"
+                                alt="Play_IconSet"
                                 style={{
                                     position: "absolute",
                                     height: "100%",
@@ -518,7 +518,7 @@ function Cards() {
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
-                                     alt="Image"
+                                     alt="Play_IconSet"
                                      style={{maxWidth: "2.5rem"}}/>
                             </div>
                             {/*<h4 className="text-xl font-balsamiq"> Play with Words!</h4>*/}

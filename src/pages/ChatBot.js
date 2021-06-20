@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import ChatBot from '../lib/index'
-import PageTitle from '../components/Typography/PageTitle'
+
 import botIcon from './BotIcon.png'
 import './chatbot-styles.css'
 

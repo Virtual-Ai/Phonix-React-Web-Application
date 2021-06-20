@@ -4,7 +4,7 @@ import correctAudio from '../Quiz/assets/audio/correct.mp3'
 import wrongAudio from '../Quiz/assets/audio/wrong.wav'
 import Dragula from 'dragula'
 import './SentenceBuilder.css'
-import DNDModal from '../DragDrop/DNDModal'
+
 import SentenceModal from './SentenceModal'
 
 const data = [
@@ -140,8 +140,8 @@ class SentenceBuilder extends Component {
             <div className="flex justify-center	mb-4 pb-4 tablet:text-sm   ">
               <div className="tablet:ml-0 outerBox">
                 <div className="flex">
-                  <img id="rod1" src={require('./assets/thread.png')} />
-                  <img id="rod2" src={require('./assets/thread.png')} />
+                  <img id="rod1" alt="rods" src={require('./assets/thread.png')} />
+                  <img id="rod2" alt="rods" src={require('./assets/thread.png')} />
                 </div>
                 <div className="">
                   {' '}
@@ -172,6 +172,7 @@ class SentenceBuilder extends Component {
                     {this.state.counter === 0 ? (
                       <img
                         width="75px"
+                        alt="previous"
                         className="arrowImage"
                         src={require('./assets/pre.png')}
                       />
@@ -179,6 +180,7 @@ class SentenceBuilder extends Component {
                       <img
                         onClick={this.onPreviousClick}
                         width="75px"
+                        alt="previous"
                         className="arrowImage"
                         src={require('./assets/pre.png')}
                       />
@@ -204,6 +206,7 @@ class SentenceBuilder extends Component {
                       onClick={this.onNextClick}
                       className="arrowImage"
                       width="75px"
+                      alt="next"
                       src={require('./assets/nxt.png')}
                     />
                   </div>

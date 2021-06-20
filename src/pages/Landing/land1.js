@@ -1,8 +1,8 @@
-import React,{ lazy } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import { Button } from '@windmill/react-ui';
+
 import './land1.css';
-import PageTitle from '../../components/Typography/PageTitle'
+
 import FadeIn from 'react-fade-in';
 
 
@@ -34,7 +34,7 @@ const styles = {
   	backgroundRepeat:"no-repeat"
 }
 
-{/*style={{fontSize:'8rem',color:"#fff"}}*/}
+/*style={{fontSize:'8rem',color:"#fff"}}*/
 
 export default class landing extends React.Component {
   render() {

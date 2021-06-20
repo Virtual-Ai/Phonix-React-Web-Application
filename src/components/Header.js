@@ -1,16 +1,14 @@
 import React, { useContext, useState } from 'react'
 import { SidebarContext } from '../context/SidebarContext'
 import {
-  SearchIcon,
   MoonIcon,
   SunIcon,
-  BellIcon,
   MenuIcon,
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
 } from '../icons'
-import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui'
+import { Avatar, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui'
 import './Header.css'
 
 function Header() {
@@ -19,10 +17,6 @@ function Header() {
 
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
-
-  function handleNotificationsClick() {
-    setIsNotificationsMenuOpen(!isNotificationsMenuOpen)
-  }
 
   function handleProfileClick() {
     setIsProfileMenuOpen(!isProfileMenuOpen)

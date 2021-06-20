@@ -3,7 +3,7 @@ import routes from "../../routes/sidebar";
 import { NavLink, Route } from "react-router-dom";
 import * as Icons from "../../icons";
 import SidebarSubmenu from "./SidebarSubmenu";
-import { Button } from "@windmill/react-ui";
+
 import "./Sidebar.css";
 
 function Icon({ icon, ...props }) {
@@ -16,7 +16,7 @@ function SidebarContent() {
     <div className="backg py-4 text-gray-500 dark:text-gray-400">
       <a
         className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-        href="#"
+        href="/"
       >
         Phonix
       </a>
@@ -51,7 +51,7 @@ function SidebarContent() {
             )
           )}
         </ul>
-        <img src={require("./assets/mb-quiz.png")} />
+        <img alt="quiz-iconset" src={require("./assets/mb-quiz.png")} />
       </div>
       {/* <div className="px-6 my-6">
         <Button>

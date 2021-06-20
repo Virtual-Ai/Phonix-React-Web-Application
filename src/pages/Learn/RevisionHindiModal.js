@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./RevisionHindiModal.css"
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
 
@@ -15,7 +15,7 @@ const RevisionHindiModal = (props) => {
                 <ModalBody>
                     <h4 className='text-2xl font-balsamiq'>{props.topic}  {`(` + String(props.id + 1) + `/` + String(props.no_of_cards) + ")\t"}</h4>
                     <p className='text-lg'>{props.content}</p>
-                    <img src={require(`./assets/${props.img}.png`)} />
+                    <img alt="Hindi-Illustration" src={require(`./assets/${props.img}.png`)} />
 
                 </ModalBody>
 

@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Button } from '@windmill/react-ui'
-import { ModalsIcon, EditIcon } from '../icons'
-import { Modal, ModalHeader, ModalBody, ModalFooter} from '@windmill/react-ui'
+import { ModalsIcon} from '../icons'
 import './learn-styles.css';
 import HindiLearn from "./Learn/HindiLearn";
 
 import Image2 from '../assets/img/learn/girlr.png'
 import Image33 from '../assets/img/learn/man.png'
 import Image4 from '../assets/img/learn/boy11.png'
-import Image5 from '../assets/img/learn/sir.png'
+
 import Image6 from '../assets/img/learn/man2.png'
 import Image7 from '../assets/img/learn/man3.png'
 import Image8 from '../assets/img/learn/boy2.png'
@@ -23,7 +21,7 @@ import Switch from "react-switch";
 
 import RevisionModal from '../components/RevisionModal'
 
-import PageTitle from '../components/Typography/PageTitle'
+
 import SectionTitle from '../components/Typography/SectionTitle'
 import { Card, CardBody } from '@windmill/react-ui'
 
@@ -429,7 +427,7 @@ function Learn() {
 						<h4 className="text-2xl font-chewy text-white mt-4"> Medial Grammar </h4>
 						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
-							Sentence Formation Part 2
+							Phrase & Clause
 						</h4>
 						<Button iconRight={ModalsIcon} onClick={() => openModal('4')} size="regular"
 								className="but-card5 font-bold">
@@ -447,7 +445,7 @@ function Learn() {
 						<h4 className="text-2xl font-chewy text-white mt-4"> Medial Grammar </h4>
 						<h4 className="text-3xl font-balsamiq pb-3 font-bold"
 							style={{color: "#5b4942", fontWeight: "700"}}>
-							Phrase & Clause
+							Sentences Part 2
 						</h4>
 						<Button iconRight={ModalsIcon} onClick={() => openModal('0')} size="regular"
 								className="but-card6 font-bold">
