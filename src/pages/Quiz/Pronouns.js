@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink, Router, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PageTitle from "../../components/Typography/PageTitle";
-import SectionTitle from "../../components/Typography/SectionTitle";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./quiz-style.css";
@@ -182,8 +181,8 @@ const Questions = () => {
   const [score, setScore] = useState(0);
   const [showExpln, setShowExpln] = useState(false);
   const [disable, setDisable] = useState(false);
-  const [dis, setDis] = useState("studyMore");
-  const [optionDis, setOptionDis] = useState("true");
+  // const [dis, setDis] = useState("studyMore");
+  // const [optionDis, setOptionDis] = useState("true");
 
   const handleAnswerOptionClick = (isCorrect) => {
     setDisable(true)
@@ -232,20 +231,20 @@ const Questions = () => {
     }
     setShowExpln(false);
   };
-  const Party = () => {
-    return (
-      <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
-    );
-  };
+  // const Party = () => {
+  //   return (
+  //     <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
+  //   );
+  // };
 
-  const StudyMore = () => {
-    return (
-      <>
-        {" "}
-        <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
-      </>
-    );
-  };
+  // const StudyMore = () => {
+  //   return (
+  //     <>
+  //       {" "}
+  //       <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
+  //     </>
+  //   );
+  // };
 
   const OptionsBelow = () => {
     return (
