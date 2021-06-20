@@ -17,6 +17,7 @@ function DesktopSidebar(props) {
   const open = () => {
     openHandler(!isOpen)
     if (isOpen) {
+      // eslint-disable-next-line
       routes.map((route) => {
         if (route.routes) {
         } else {
@@ -27,6 +28,7 @@ function DesktopSidebar(props) {
       document.getElementById('sideBar').className =
         ' backg z-30 flex-shrink-0 hidden  w-64  overflow-y-auto bg-white dark:bg-gray-800 lg:block'
     } else {
+      // eslint-disable-next-line
       routes.map((route) => {
         if (route.routes) {
         } else {
