@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink, Router, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PageTitle from "../../components/Typography/PageTitle";
-import SectionTitle from "../../components/Typography/SectionTitle";
+// import SectionTitle from "../../components/Typography/SectionTitle";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./quiz-style.css";
@@ -198,8 +198,8 @@ const Questions = () => {
   const [score, setScore] = useState(0);
   const [showExpln, setShowExpln] = useState(false);
   const [disable, setDisable] = useState(false);
-  const [dis, setDis] = useState("studyMore");
-  const [optionDis, setOptionDis] = useState("true");
+  // const [dis, setDis] = useState("studyMore");
+  // const [optionDis, setOptionDis] = useState("true");
 
   const handleAnswerOptionClick = (isCorrect) => {
     setDisable(true)
@@ -248,20 +248,20 @@ const Questions = () => {
     }
     setShowExpln(false);
   };
-  const Party = () => {
-    return (
-      <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
-    );
-  };
+  // const Party = () => {
+  //   return (
+  //     <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
+  //   );
+  // };
 
-  const StudyMore = () => {
-    return (
-      <>
-        {" "}
-        <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
-      </>
-    );
-  };
+  // const StudyMore = () => {
+  //   return (
+  //     <>
+  //       {" "}
+  //       <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
+  //     </>
+  //   );
+  // };
 
   const OptionsBelow = () => {
     return (
@@ -314,6 +314,7 @@ const Questions = () => {
             <div className="layout-instructions">
               <div className="answer-section answer-wid">
                 {questions[currentQuestion].answers.map((answerOption) => (
+                   // eslint-disable-next-line
                   <button
                     className="options-display"
                     disabled={disable === true}
@@ -345,6 +346,7 @@ const Questions = () => {
                 </div>
                 <div className="expl-box">
                   {showExpln === true ? (
+                    // eslint-disable-next-line
                     <div className="expln-ques expln-box expln-wid">
                       📝 Explanation: <br />
                       {questions[currentQuestion].explanation}
@@ -406,7 +408,7 @@ const QuizInstructions = () => {
           <img
             className="instrucImage"
             src={require("./assets/woman.png")}
-            alt="instruc-image"
+            alt="instruc"
           />
         </div>
       </div>
@@ -423,9 +425,9 @@ const Play = () => {
   );
 };
 
-const QuizSummary = () => {
-  return <h1>Quiz Summary</h1>;
-};
+// const QuizSummary = () => {
+//   return <h1>Quiz Summary</h1>;
+// };
 
 function Adjective() {
   const [showComp, setShowComp] = useState("instruc");

@@ -297,6 +297,7 @@ const Questions = () => {
             <div className="layout-instructions">
               <div className="answer-section answer-wid">
                 {questions[currentQuestion].answers.map((answerOption) => (
+                   // eslint-disable-next-line
                   <button
                     className="options-display"
                     disabled={disable === true}
@@ -328,6 +329,7 @@ const Questions = () => {
                 </div>
                 <div className="expl-box">
                   {showExpln === true ? (
+                     // eslint-disable-next-line 
                     <div className="expln-ques expln-box expln-wid">
                       📝 Explanation: <br />
                       {questions[currentQuestion].explanation}
@@ -389,7 +391,7 @@ const QuizInstructions = () => {
           <img
             className="instrucImage"
             src={require("./assets/woman.png")}
-            alt="instruc-image"
+            alt="instruc"
           />
         </div>
       </div>
@@ -406,9 +408,9 @@ const Play = () => {
   );
 };
 
-const QuizSummary = () => {
-  return <h1>Quiz Summary</h1>;
-};
+// const QuizSummary = () => {
+//   return <h1>Quiz Summary</h1>;
+// };
 
 function Pronouns() {
   const [showComp, setShowComp] = useState("instruc");

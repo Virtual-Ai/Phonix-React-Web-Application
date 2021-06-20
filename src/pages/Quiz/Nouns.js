@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink, Router, Route, Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import PageTitle from "../../components/Typography/PageTitle";
-import SectionTitle from "../../components/Typography/SectionTitle";
+// import SectionTitle from "../../components/Typography/SectionTitle";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./quiz-style.css";
@@ -34,160 +34,158 @@ const skipNextA = new UIfx(buttonAudio, {
 const questions = [
   {
     id: 0,
-    question: "Choose the sentence with the right word order",
+    question: "How many _______ of birds are there in the world?",
     answers: [
       {
-        answerText: "Tom a lot of people invited.",
+        answerText: "a species",
         isCorrect: false,
         imgSrc: A,
       },
       {
-        answerText: "A lot of people Tom invited.",
+        answerText: "specieses",
         isCorrect: false,
         imgSrc: B,
       },
       {
-        answerText: "Tom invited a lot of people.",
+        answerText: "species",
         isCorrect: true,
         imgSrc: C,
       },
       {
-        answerText: "Tom invited of people a lot.",
+        answerText: "speciess",
         isCorrect: false,
         imgSrc: D,
       },
     ],
     explanation:
-      "We usually use a certain word order: Subject - Predicate - Object. In this sentence 'Tom' is a subject, 'invited' is a predicate and 'a lot of people' is an object.",
-
+    "There are some nouns which have the same form in the singular and in the plural: ONE SPECIES - TWO SPECIES",
     topic: 0,
   },
   {
     id: 1,
-    question: "Have you got _ pen?",
+    question: "This airport can handle more than 300 _______ every day.",
     answers: [
-      { answerText: "—", isCorrect: false, imgSrc: A },
-      { answerText: "a", isCorrect: true, imgSrc: B },
-      { answerText: "an", isCorrect: false, imgSrc: C },
-      { answerText: "the", isCorrect: false, imgSrc: D },
+      { answerText: "an aircraft", isCorrect: false, imgSrc: A },
+      { answerText: "aircraftes", isCorrect: false, imgSrc: B },
+      { answerText: "aircrafts", isCorrect: true, imgSrc: C },
+      { answerText: "aircraft", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "We use the article 'a' with singular countable nouns when we talk about them in general.",
-
+    "There are some nouns which have the same form in the singular and in the plural: ONE AIRCRAFT - TWO AIRCRAFT",
+        
     topic: 1,
   },
   {
     id: 2,
-    question: "Tom _______ (to read) a newspaper now.",
+    question: "Mothers always give us ___________ .",
     answers: [
-      { answerText: "reads", isCorrect: false, imgSrc: A },
-      { answerText: "is reading", isCorrect: true, imgSrc: B },
-      { answerText: "read", isCorrect: false, imgSrc: C },
-      { answerText: "has read", isCorrect: false, imgSrc: D },
+      { answerText: "many advices", isCorrect: false, imgSrc: A },
+      { answerText: "much advice", isCorrect: true, imgSrc: B },
+      { answerText: "many advice", isCorrect: false, imgSrc: C },
+      { answerText: "much advices", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "The adverb 'now' means that the action is taking place at the moment of speaking.  In this case we should use the Present Continuous Tense: am/is/are + Verb-ing.",
-
+    "The noun 'advice' is uncountable. Uncountable nouns do not have plural forms.",
+            
     topic: 2,
   },
   {
     id: 3,
-    question: "The Romans _______ (to come) to Britain in 54 BC.",
+    question: "There is _______ (hair) in my soup.",
     answers: [
-      { answerText: "came", isCorrect: true, imgSrc: A },
-      { answerText: "were coming", isCorrect: false, imgSrc: B },
-      { answerText: "comed", isCorrect: false, imgSrc: C },
-      { answerText: "had come", isCorrect: false, imgSrc: D },
+      { answerText: "hair", isCorrect: false, imgSrc: A },
+      { answerText: "hairs", isCorrect: false, imgSrc: B },
+      { answerText: "a hair", isCorrect: true, imgSrc: C },
+      { answerText: "haires", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "If an action happened at a definite time in the past we use the Past Simple Tense. If there is a regular verb in a sentence we add '-ed'. Irregular verbs should be memorized. Here: COME-CAME-COME",
-
+    "Noun 'hair' can be used in singular in case when it is important to show the quantity: 'I can see one hair in my soup'. But it is impossible to say 'there are hairs'.",
+          
     topic: 3,
   },
   {
     id: 4,
     question:
-      "Bill __________ (to visit) his parents tomorrow. He has got an appointment with them.",
+      "There are three ______ (a brush) on the bathroom shelf.",
     answers: [
-      { answerText: "is visiting", isCorrect: false, imgSrc: A },
-      { answerText: "will have visited", isCorrect: false, imgSrc: B },
-      { answerText: "will visit", isCorrect: true, imgSrc: C },
-      { answerText: "visits", isCorrect: false, imgSrc: D },
+      { answerText: "brushies", isCorrect: false, imgSrc: A },
+      { answerText: "brush", isCorrect: false, imgSrc: B },
+      { answerText: "brushs", isCorrect: false, imgSrc: C },
+      { answerText: "brushes", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "We use ‘I am doing’ (present continuous) when we say what we have arranged to do. While ‘I am going to do something’ means ‘I've decided to do it, but perhaps not arranged to do it.",
-
+    "The noun ‘brush’ is countable. Countable nouns can be singular or plural. The rules for making the plural of nouns depend on the spelling and pronunciation. Most nouns form their plural by adding -s: part – parts,cake – cakes. In other cases, the plural depends on how the noun ends. If the noun ends in -ch, -s, -sh, -x, -z,we add -es. The plural ending -es is pronounced /iz/. The noun ‘brush’ ends in -sh, therefore, we need to add-es. Consequently, we are to choose ANSWER 4 (brushes).",
+            
     topic: 4,
   },
   {
     id: 5,
-    question: "Tom, look! The mail ______________ (to deliver).",
+    question: "Carla was sitting with two nice _______ (a woman).",
     answers: [
-      { answerText: "is delivered", isCorrect: true, imgSrc: A },
-      { answerText: "delivers", isCorrect: false, imgSrc: B },
-      { answerText: "delivered", isCorrect: false, imgSrc: C },
-      { answerText: "is delivering", isCorrect: false, imgSrc: D },
+      { answerText: "woman", isCorrect: false, imgSrc: A },
+      { answerText: "womans", isCorrect: false, imgSrc: B },
+      { answerText: "women", isCorrect: true, imgSrc: C },
+      { answerText: "womens", isCorrect: false, imgSrc: D },
     ],
     explanation:
-      "Sometimes we don't know who carries out the action and also it can be obvious or unimportant to us. In this case we use the Passive Voice.",
-
+    "The noun 'woman' has the irregular plural form: WOMAN -WOMEN",
+ 
     topic: 5,
   },
   {
     id: 6,
     question:
-      "My brother is only 6, but he _____________ already play the piano.",
+      "How many _______ (a child) do the Greens have?",
     answers: [
-      { answerText: "has to", isCorrect: false, imgSrc: A },
-      { answerText: "must", isCorrect: false, imgSrc: B },
-      { answerText: "may", isCorrect: false, imgSrc: C },
-      { answerText: "can", isCorrect: true, imgSrc: D },
+      { answerText: "childrens", isCorrect: false, imgSrc: A },
+      { answerText: "childes", isCorrect: false, imgSrc: B },
+      { answerText: "childs", isCorrect: false, imgSrc: C },
+      { answerText: "children", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "The modal verb 'can' is used when we speak about someone's ability to do something.",
-
+    "The noun 'child' has the irregular plural form: CHILD -CHILDREN",
+  
     topic: 6,
   },
   {
     id: 7,
     question:
-      "At first you have to _______________ (to complete a form) the application form.",
+      "My grandmother has got 12 _______ (a goose) in her village.",
     answers: [
-      { answerText: "try on", isCorrect: false, imgSrc: A },
-      { answerText: "fill in", isCorrect: true, imgSrc: B },
-      { answerText: "come on", isCorrect: false, imgSrc: C },
-      { answerText: "take off", isCorrect: false, imgSrc: D },
+      { answerText: "goose", isCorrect: false, imgSrc: A },
+      { answerText: "geeses", isCorrect: false, imgSrc: B },
+      { answerText: "gooses", isCorrect: false, imgSrc: C },
+      { answerText: "geese", isCorrect: true, imgSrc: D },
     ],
     explanation:
-      "Phrasal verbs are verbs that consist of a verb and a particle and/or a preposition. Phrasal verbs are typical of spoken English or informal writing, e.g. letters to friends and articles in popular journalism. They cannot be understood based upon the meanings of the individual parts in isolation, thus, their meanings are unpredictable. The phrasal verb 'to fill in' means 'to complete a form by providing needed information'.",
-
+    "The noun 'goose' has the irregular plural form: GOOSE - GEESE",
     topic: 7,
   },
   {
     id: 8,
     question:
-      "Choose two forms of the verb 'to be' according to the order: Past Simple - Past Participle",
+      "My cat has caught three ______ (a mouse) today.",
     answers: [
-      { answerText: "was/were - been", isCorrect: false, imgSrc: A },
-      { answerText: "was - was", isCorrect: true, imgSrc: B },
-      { answerText: "been - been", isCorrect: false, imgSrc: C },
-      { answerText: "been - was", isCorrect: false, imgSrc: D },
+      { answerText: "mices", isCorrect: false, imgSrc: A },
+      { answerText: "mouses", isCorrect: false, imgSrc: B },
+      { answerText: "mice", isCorrect: true, imgSrc: C },
+      { answerText: "mouse", isCorrect: false, imgSrc: D },
     ],
-    explanation: "TO BE - WAS/WERE - BEEN",
-
+    explanation: "For the test sentence ‘My cat has caught three ______ (a mouse) today.’ we need to transform the singular form of the noun ‘mouse’ into the plural form. The noun 'mouse' that means ‘a small mammal with short fur, a pointed face, and a long, thin tail’ usually has the irregular plural form: MOUSE → MICE.But be attentive: if the meaning of the word ‘mouse’ is ‘a small mobile manual device that controls movement of the cursor and selection of functions on a computer display’, the plural form can also be ‘mouses’.",
+  
     topic: 8,
   },
   {
     id: 9,
-    question: "Your brother is so rude. I don't like ____ .",
+    question: "Kate doesn't have ________ knowledge at Maths .",
     answers: [
-      { answerText: "him", isCorrect: true, imgSrc: A },
-      { answerText: "he", isCorrect: false, imgSrc: B },
-      { answerText: "his", isCorrect: false, imgSrc: C },
-      { answerText: "himself", isCorrect: false, imgSrc: D },
+      { answerText: "some", isCorrect: false, imgSrc: A },
+      { answerText: "a few", isCorrect: false, imgSrc: B },
+      { answerText: "many", isCorrect: false, imgSrc: C },
+      { answerText: "much", isCorrect: true, imgSrc: D },
     ],
-    explanation: "If a pronoun is an object we use its object form: He - Him",
-
+    explanation:  "We use the quantifiers ‘some’, ‘(a) few’, ‘many’, ‘much’ to talk about quantities, amounts and degree.We can use them with a noun (as a determiner) or without a noun (as a pronoun).‘Some’ is a determiner and a pronoun (without a noun following, when this noun is understood). We use ‘some’ as a determiner before both countable and uncountable nouns to refer to indefinite quantities: some snow, some people. ‘Some’ is used in positive sentences (I drink some coffee every morning.) But we can use ‘some’ in questions when we are offering something (Would you like some mango ice-cream?) or when we are making a request (Can I buy some ice-cream?).We use ‘a few’ instead of ‘some’ with plural countable nouns when we talk about a small number: a few days, a few questions, a few friends. We use ‘many’ that means ‘a large number of’ with plural nouns (I don’t have many dresses.). We use ‘much’ that means ‘a large amount or to a large degree’ with singular uncountable nouns (I don’t earn much money.). We usually use ‘much’ with questions (?) and negatives(−). In affirmative clauses we sometimes use ‘much’ in more formal styles: There is much concern about drug addiction in the world.The test sentence ‘Kate doesn't have ________ knowledge at Maths.’ is negative, therefore, we cannot choose ‘some’ here. As we need to choose a quantifier for the uncountable noun ‘knowledge’, we can’t choose ‘a few’ and ‘many’. Therefore, we are to choose ANSWER 4 (much) from the test variants.",
+          
     topic: 9,
   },
 ];
@@ -198,9 +196,7 @@ const Questions = () => {
   const [score, setScore] = useState(0);
   const [showExpln, setShowExpln] = useState(false);
   const [disable, setDisable] = useState(false);
-  const [dis, setDis] = useState("studyMore");
-  const [optionDis, setOptionDis] = useState("true");
-
+ 
   const handleAnswerOptionClick = (isCorrect) => {
     setDisable(true)
     const CorrectAnswer = () =>
@@ -209,7 +205,7 @@ const Questions = () => {
       });
 
     const WrongAnswer = () =>
-      toast.error("❌ Wrong answer! Read the explanation 📝!", {
+     toast.error("❌ Wrong answer! Read the explanation 📝!", {
         position: toast.POSITION.TOP_RIGHT,
       });
 
@@ -248,20 +244,20 @@ const Questions = () => {
     }
     setShowExpln(false);
   };
-  const Party = () => {
-    return (
-      <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
-    );
-  };
+  // const Party = () => {
+  //   return (
+  //     <> {/* <img src={require("./assets/party.png")} alt="yayy!" />{" "} */}</>
+  //   );
+  // };
 
-  const StudyMore = () => {
-    return (
-      <>
-        {" "}
-        <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
-      </>
-    );
-  };
+  // const StudyMore = () => {
+  //   return (
+  //     <>
+  //       {" "}
+  //       <img src={require("./assets/studyMore.png")} alt="instruc-image" />{" "}
+  //     </>
+  //   );
+  // };
 
   const OptionsBelow = () => {
     return (
@@ -286,6 +282,7 @@ const Questions = () => {
 
   return (
     <>
+   
       <div className="app container grid px-6 mx-auto">
         {showScore ? (
           <div className="score-section">
@@ -314,6 +311,7 @@ const Questions = () => {
             <div className="layout-instructions">
               <div className="answer-section answer-wid">
                 {questions[currentQuestion].answers.map((answerOption) => (
+                   // eslint-disable-next-line
                   <button
                     className="options-display"
                     disabled={disable === true}
@@ -343,8 +341,10 @@ const Questions = () => {
                   <span className = "text-600-30px">Score: {score} /10</span>
                   <OptionsBelow />
                 </div>
+
                 <div className="expl-box">
                   {showExpln === true ? (
+                   // eslint-disable-next-line
                     <div className="expln-ques expln-box expln-wid">
                       📝 Explanation: <br />
                       {questions[currentQuestion].explanation}
@@ -406,7 +406,7 @@ const QuizInstructions = () => {
           <img
             className="instrucImage"
             src={require("./assets/woman.png")}
-            alt="instruc-image"
+            alt="instruc"
           />
         </div>
       </div>
@@ -423,9 +423,9 @@ const Play = () => {
   );
 };
 
-const QuizSummary = () => {
-  return <h1>Quiz Summary</h1>;
-};
+// const QuizSummary = () => {
+//   return <h1>Quiz Summary</h1>;
+// };
 
 function Noun() {
   const [showComp, setShowComp] = useState("instruc");
