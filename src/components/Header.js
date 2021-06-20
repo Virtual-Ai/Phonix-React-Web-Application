@@ -15,7 +15,7 @@ function Header() {
   const { mode, toggleMode } = useContext(WindmillContext)
   const { toggleSidebar } = useContext(SidebarContext)
 
-  const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
+//   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
 
   function handleProfileClick() {
