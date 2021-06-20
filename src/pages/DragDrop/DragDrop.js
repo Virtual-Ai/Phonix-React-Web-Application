@@ -208,7 +208,7 @@ const DragDrop = () => {
                                     <td>
                                         <div
                                             className="m-1 p-1 md:w-40 opt-in-mb"
-                                            id={'drag' + "0"}
+                                            id={'drag0'}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
                                             style={{
@@ -226,7 +226,7 @@ const DragDrop = () => {
                                     <td>
                                         <div
                                             className="m-1 p-1 md:w-40 opt-in-mb"
-                                            id={'drag' + "1"}
+                                            id={'drag1'}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
                                             style={{
@@ -246,7 +246,7 @@ const DragDrop = () => {
                                     <td>
                                         <div
                                             className="m-1 p-1 md:w-40 opt-in-mb"
-                                            id={'drag' + "2"}
+                                            id={'drag2'}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
                                             style={{
@@ -264,7 +264,7 @@ const DragDrop = () => {
                                     <td>
                                         <div
                                             className="m-1 p-1 md:w-40 opt-in-mb"
-                                            id={'drag' + "3"}
+                                            id={'drag3'}
                                             draggable="true"
                                             onDragStart={(ev) => drag(ev)}
                                             style={{
