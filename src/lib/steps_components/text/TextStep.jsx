@@ -14,6 +14,11 @@ class TextStep extends Component {
     apiResponse: [],
   };
 
+  constructor(props) {
+    super(props);
+    data[0] = "Hello"
+  }
+  
   componentDidMount() {
     const { step, speak, previousValue, triggerNextStep } = this.props;
     const { component, delay, waitAction } = step;
