@@ -88,6 +88,8 @@ class TextStep extends Component {
               }
         }else{
             this.apiCallOver=true
+            speak(step, "Hello !, type in a phrase to know more...");
+
         }
         fetch('https://api.perfecttense.com/usage', {
                           method: 'GET',
@@ -183,7 +185,7 @@ class TextStep extends Component {
 
     renderMessage = () => {
         const { step, steps, previousStep, triggerNextStep } = this.props;
-        const { component, message } = step;
+        const { component } = step;
     
 
         // console.log(message.includes("{previousValue}"));
