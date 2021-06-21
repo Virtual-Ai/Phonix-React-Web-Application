@@ -72,7 +72,7 @@ class TextStep extends Component {
                             
             
                         } else {
-                           message = "No changes"
+                           message = "This sentence is structured correctly."
             
                         }
 
@@ -121,8 +121,8 @@ class TextStep extends Component {
             //     data[0] = message;
             //     return message;
             // } else {
-            //     data[0] = "No Changes";
-            //     return "No changes";
+            //     data[0] = "This sentence is structured correctly.";
+            //     return "This sentence is structured correctly.";
             // }
 
             if (this.state.apiResponse.offset[0].corrections.length !== 0) {
@@ -138,8 +138,8 @@ class TextStep extends Component {
                 return message;
 
             } else {
-                data[0] = "No Changes";
-                return "No changes";
+                data[0] = "This sentence is structured correctly.";
+                return "This sentence is structured correctly.";
 
             }
 
