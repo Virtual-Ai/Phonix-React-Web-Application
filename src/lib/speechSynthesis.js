@@ -1,5 +1,4 @@
 import { isString } from "./utils";
-import data from "./steps_components/text/data";
 
 export const getSpeakText = (step) => {
   const { message, metadata = {} } = step;
