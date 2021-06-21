@@ -25,11 +25,13 @@ export const speakFn = (speechSynthesisOptions) => (step, previousValue) => {
   if (!enable) {
     return;
   }
+  console.log(previousValue);
 
   const msg = new window.SpeechSynthesisUtterance();
-  msg.text = data[0];
+  msg.text = previousValue;
   msg.lang = lang;
   msg.voice = voice;
+  console.log(msg);
   window.speechSynthesis.speak(msg);
 
   // const data =
