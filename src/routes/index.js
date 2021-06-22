@@ -32,6 +32,11 @@ const Pronouns = lazy(() => import("../pages/Quiz/Pronouns"));
 const Tenses = lazy(() => import("../pages/Quiz/Tenses"));
 
 const Pronounce = lazy(() => import("../pages/pronounce/Pronounce"))
+const Apro = lazy(() => import("../pages/pronounce/Apro"))
+const Bpro = lazy(() => import("../pages/pronounce/Bpro"))
+const Cpro = lazy(() => import("../pages/pronounce/Cpro"))
+const Dpro = lazy(() => import("../pages/pronounce/Dpro"))
+const Epro = lazy(() => import("../pages/pronounce/Epro"))
 
 
 const Lcard1 = lazy(() => import("../pages/Learn/Learn1"));
@@ -125,6 +130,23 @@ const routes = [
   {
     path: "/play/pronounce",
     component: Pronounce,
+  },
+  {
+    path: "/play/pronounce/Apro",
+    component: Apro,
+  },{
+    path: "/play/pronounce/Bpro",
+    component: Bpro,
+  },{
+    path: "/play/pronounce/Cpro",
+    component: Cpro,
+  },{
+    path: "/play/pronounce/Dpro",
+    component: Dpro,
+  },
+  {
+    path: "/play/pronounce/Epro",
+    component: Epro,
   },
 
   {

@@ -262,7 +262,7 @@ function Cards() {
                                 className="text-lg font-chewy text-white text-right mb-12 pl-cd-btmLine"
                                 style={{color: "#fbf0d0"}}
                             >
-                                Coming Soon...
+                               Tap here to begin
                             </h4>
                             <div className="flex justify-end">
                                 <img src={arrow}
