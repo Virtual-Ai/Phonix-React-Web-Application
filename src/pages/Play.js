@@ -212,7 +212,7 @@ function Cards() {
                 </Link>
 
 
-                <Link to="/app/play/mtp">
+                <Link to="/app/play/pronunciation">
                     <Card
                         colored
                         className="mb-8 shadow-md"
