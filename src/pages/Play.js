@@ -212,7 +212,7 @@ function Cards() {
                 </Link>
 
 
-                <Link to="/app/play/pronunciation">
+                <Link to="/app/play/pronounce">
                     <Card
                         colored
                         className="mb-8 shadow-md"
@@ -253,7 +253,7 @@ function Cards() {
                                 className="text-6xl font-chewy text-white text-right pl-cd-title"
                                 style={{}}
                             >
-                                Rhyming
+                                Pronounce
                             </h4>
                             <h4 className="text-5xl font-chewy text-white text-right pl-cd-byline">
                                 Play

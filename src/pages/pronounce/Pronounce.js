@@ -1,32 +1,19 @@
-import ReactCardFlip from 'react-card-flip';
+import React from "react";
+import {useState} from "react";
+import "./pronounce.css"
 
-class App extends React.Component {
-    constructor() {
-      super();
-        this.state = {
-        isFlipped: false
-      };
-      this.handleClick = this.handleClick.bind(this);
-    }
-  
-    handleClick(e) {
-      e.preventDefault();
-      this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-    }
-  
-    render() {
+const Pronounce = () => {
+  const [flip, setFlip] = useState(false);
+   console.log("are you here?")
       return (
-        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-          <YOUR_FRONT_CCOMPONENT>
-            This is the front of the card.
-            <button onClick={this.handleClick}>Click to flip</button>
-          </YOUR_FRONT_CCOMPONENT>
-  
-          <YOUR_BACK_COMPONENT>
-            This is the back of the card.
-            <button onClick={this.handleClick}>Click to flip</button>
-          </YOUR_BACK_COMPONENT>
-        </ReactCardFlip>
+        <>
+        <h1>qwertyui</h1>
+        <div className="Card">
+          yoooo
+        </div>
+        </>
       )
     }
-  }
+
+
+  export default Pronounce;

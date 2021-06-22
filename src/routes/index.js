@@ -31,6 +31,7 @@ const Adjectives = lazy(() => import("../pages/Quiz/Adjectives"));
 const Pronouns = lazy(() => import("../pages/Quiz/Pronouns"));
 const Tenses = lazy(() => import("../pages/Quiz/Tenses"));
 
+const Pronounce = lazy(() => import("../pages/pronounce/Pronounce"))
 
 
 const Lcard1 = lazy(() => import("../pages/Learn/Learn1"));
@@ -121,7 +122,10 @@ const routes = [
     path: "/play/sentencebuilder",
     component: SentenceBuilder,
   },
-
+  {
+    path: "/play/pronounce",
+    component: Pronounce,
+  },
 
   {
     path: "/learn",
