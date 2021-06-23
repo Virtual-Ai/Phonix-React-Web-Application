@@ -15,6 +15,7 @@ class TextStep extends Component {
     loading: true,
     apiResponse: {},
     wordApiResponse: [],
+    synonymsResponse:[]
   }
 
   apiCallOver = false
@@ -42,11 +43,28 @@ class TextStep extends Component {
       '"' +
       ',"responseType": ["corrected", "grammarScore", "rulesApplied", "offset", "summary"]}'
 
-    if (
-      previousValue !== '' &&
-      previousValue !== 'menu' &&
-      previousValue !== '1' &&
-      previousValue !== '2'
+      if (previousValue === '1') {
+      flag = previousValue
+      this.apiCallOver = true
+      speak(step, 'Please enter the sentence you wish to check ')
+    } else if (previousValue === '2') {
+      this.apiCallOver = true
+      flag = previousValue
+      speak(step, 'Please enter the word to know its meaning and its usage')
+    } else if(previousValue==='3'){
+      this.apiCallOver = true
+      flag=previousValue
+      speak(step,'Please enter the word to know its synonyms')
+    }  
+    else if (previousValue === 'menu') {
+      this.apiCallOver = true
+      speak(
+        step,
+        'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning and usage of a word.\n 3. To know synonyms of word.',
+      )
+    }
+    else if (
+      previousValue !== ''
     ) {
       if (flag === '1') {
         try {
@@ -106,7 +124,7 @@ class TextStep extends Component {
         } catch (err) {
           console.error(err)
         }
-      } else {
+      } else if(flag==="2") {
         try {
           this.apiCallOver = false
           fetch(
@@ -138,30 +156,68 @@ class TextStep extends Component {
                     '  means                                 ' +
                     json[0].meanings[0].definitions[0].definition,
                 )
+                speak(step," usage of "+json[0].word+" is as follows ")
+                speak(step,json[0].meanings[0].definitions[0].example)
               }
             })
             .catch((err) => {})
         } catch (err) {}
+      }else if(flag==='3'){
+        try {
+          this.apiCallOver = false
+          fetch(
+            'https://api.dictionaryapi.dev/api/v2/entries/en_US/' +
+              previousValue,
+          )
+            .then((res) => {
+              if (res.status === 200) {
+                return res.json()
+              } else {
+                return 'wrong'
+              }
+            })
+            .then((json) => {
+              this.apiCallOver = true
+
+              if (json === 'wrong') {
+                this.setState({
+                  synonymsResponse: [
+                    { message: 'Please type the correct spelling' },
+                  ],
+                })
+                speak(step, 'Please type the correct spelling')
+              } else {
+                this.setState({ synonymsResponse: json })
+                speak(step,"Synonyms of "+json[0].word +" are ")
+                if(json[0].meanings[0].definitions[0].synonyms.length>4){
+                  for(let i=0;i<4;i++){
+                    speak(step,json[0].meanings[0].definitions[0].synonyms[i])
+                  }
+                }else{
+
+                  json[0].meanings[0].definitions[0].synonyms.forEach(element => {
+                    speak(
+                      step,
+                        element
+                    )
+                  });
+
+                }
+                
+                
+                
+              }
+            })
+            .catch((err) => {})
+        } catch (err) {}
+
       }
-    } else if (previousValue === '1') {
-      flag = previousValue
-      this.apiCallOver = true
-      speak(step, 'Please enter the sentence you wish to check ')
-    } else if (previousValue === '2') {
-      this.apiCallOver = true
-      flag = previousValue
-      speak(step, 'Please enter the word to know its meaning')
-    } else if (previousValue === 'menu') {
+    }
+     else {
       this.apiCallOver = true
       speak(
         step,
-        'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning of a word.',
-      )
-    } else {
-      this.apiCallOver = true
-      speak(
-        step,
-        'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning of a word.',
+        'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning and usage of a word.\n 3. To know synonyms of word.',
       )
     }
   }
@@ -173,9 +229,12 @@ class TextStep extends Component {
       if (previousValue === '1') {
         return 'Please enter the sentence you wish to check.'
       } else if (previousValue === '2') {
-        return 'Please enter the word to know its meaning.'
-      } else if (previousValue === 'menu') {
-        return 'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning of a word.'
+        return 'Please enter the word to know its meaning and its usage'
+      }else if(previousValue==='3'){
+        return 'Please enter the word to know its synonyms.'
+      } 
+      else if (previousValue === 'menu') {
+        return 'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning and usage of a word.\n 3. To know synonyms of word.'
       } else if (this.state.apiResponse.hasOwnProperty('offset')) {
         if (this.state.apiResponse.offset[0].corrections.length !== 0) {
           let i = 0
@@ -205,13 +264,36 @@ class TextStep extends Component {
         }
       } else if (this.state.wordApiResponse.length !== 0) {
         if (this.state.wordApiResponse[0].hasOwnProperty('meanings')) {
-          return (
-            this.state.wordApiResponse[0].word +
-            ' : ' +
-            this.state.wordApiResponse[0].meanings[0].definitions[0].definition
-          )
+          
+            return (
+              this.state.wordApiResponse[0].word +
+              ' : ' +
+              this.state.wordApiResponse[0].meanings[0].definitions[0].definition+'\nusage of '+this.state.wordApiResponse[0].word +" is as follow : "+this.state.wordApiResponse[0].meanings[0].definitions[0].example
+            )
+
+          
+         
         } else {
           return this.state.wordApiResponse[0].message
+        }
+      } else if (this.state.synonymsResponse.length !== 0){
+         if(this.state.synonymsResponse[0].hasOwnProperty('meanings')){
+          let str='Synonyms of '+this.state.synonymsResponse[0].word+' :';
+          if( this.state.synonymsResponse[0].meanings[0].definitions[0].synonyms.length > 4){
+            for(let i=0;i<4;i++){
+              str=str+"\n"+this.state.synonymsResponse[0].meanings[0].definitions[0].synonyms[i]
+            }
+          }else{
+            this.state.synonymsResponse[0].meanings[0].definitions[0].synonyms.forEach(element => {
+              str=str+"\n"+element
+            });
+          }
+          
+          return (
+           str.trim()
+          )
+        }else {
+          return this.state.synonymsResponse[0].message
         }
       }
     }

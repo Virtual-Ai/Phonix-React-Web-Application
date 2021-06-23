@@ -1,9 +1,9 @@
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import ChatBot from '../lib/index'
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import ChatBot from '../lib/index';
 
-import botIcon from './BotIcon.png'
-import './chatbot-styles.css'
+import botIcon from './BotIcon.png';
+import './chatbot-styles.css';
 
 const otherFontTheme = {
   background: '#f5f8fb',
@@ -15,13 +15,13 @@ const otherFontTheme = {
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
-}
+};
 
 const steps = [
   {
     id: '1',
     message:
-      'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning of a word.',
+      'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning and usage of a word.\n 3. To know synonyms of word.',
     trigger: '2',
   },
   {
@@ -34,7 +34,7 @@ const steps = [
     message: 'Hi {previousValue}, nice to meet you!',
     trigger: 2,
   },
-]
+];
 
 function Chat() {
   return (
@@ -42,7 +42,7 @@ function Chat() {
       <ThemeProvider theme={otherFontTheme}>
         <React.StrictMode>
           <div
-            className="chat-mb"
+            className='chat-mb'
             style={{
               textAlign: ' -webkit-center',
               zIndex: 'auto',
@@ -53,15 +53,15 @@ function Chat() {
               steps={steps}
               speechSynthesis={{ enable: true, lang: 'en' }}
               recognitionEnable={true}
-              width="700px"
-              headerTitle="Phonix Chat"
+              width='700px'
+              headerTitle='Phonix Chat'
               enableSmoothScroll={true}
             />
           </div>
         </React.StrictMode>
       </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default Chat
+export default Chat;
