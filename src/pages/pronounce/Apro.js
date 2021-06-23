@@ -14,7 +14,7 @@ import apple_pro from '../../assets/img/play/pronounce/apple.png'
 import ant_pro from '../../assets/img/play/pronounce/ant.png'
 import actor_pro from '../../assets/img/play/pronounce/actor.png'
 import angry_pro from '../../assets/img/play/pronounce/angry.png'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function Cards() {
     //const [audio, setAudio] = useEffect(Audio(appleAudio));
@@ -34,8 +34,8 @@ function Cards() {
 		        	<img alt="backdrop-icon" src={apple_pro} className="qz-card" style={{position:"absolute",height:"100%",left:"px",bottom:"0",maxHeight:'15.5rem'}}/>
 
 		          <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'2.5rem'}}>Apple</h4>
-		          <h4 className="text-4xl font-chewy text-white text-right mb-4"></h4>
-	            <h4 className="text-lg font-chewy text-white text-right mb-4" style={{color:'#dfc5e7'}}></h4>
+		          <h4 className="text-4xl font-chewy text-white text-right mb-4"> </h4>
+	            <h4 className="text-lg font-chewy text-white text-right mb-4" style={{color:'#dfc5e7'}}> </h4>
 
 	            {/*<div className="flex justify-end">
 	                <img src={arrow} alt="Image" style={{maxWidth:'1.8rem'}}/>
@@ -50,8 +50,8 @@ function Cards() {
 		        	<img alt="backdrop-icon" src={actor_pro} className="qz-card" style={{position:"absolute",height:"100%",left:"0px",bottom:"0",maxHeight:'15.5rem'}}/>
 
 		          <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'2.5rem'}}>Actor</h4>
-		          <h4 className="text-4xl font-chewy text-white text-right"></h4>
-	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#f7d3a6'}}></h4>
+		          <h4 className="text-4xl font-chewy text-white text-right"> </h4>
+	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#f7d3a6'}}> </h4>
 
 	        </CardBody>
 	     	</Card>
@@ -64,8 +64,8 @@ function Cards() {
 
 
 		          <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'2.5rem'}}>Angry</h4>
-		          <h4 className="text-4xl font-chewy text-white text-right"></h4>
-	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#f9dea1'}}></h4>
+		          <h4 className="text-4xl font-chewy text-white text-right"> </h4>
+	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#f9dea1'}}> </h4>
 
 	        </CardBody>
 	     	</Card>
@@ -77,8 +77,8 @@ function Cards() {
 							<img alt="backdrop-icon" src={ant_pro} className="qz-card" style={{position:"absolute",height:"100%",left:"0px",bottom:"0",maxHeight:'15.5rem'}}/>
 
 		          <h4 className="text-5xl font-chewy text-white text-right" style={{marginBottom:'2.5rem'}}>Ant</h4>
-		          <h4 className="text-4xl font-chewy text-white text-right"></h4>
-	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#efc2ac'}}></h4>
+		          <h4 className="text-4xl font-chewy text-white text-right"> </h4>
+	            <h4 className="text-lg font-chewy text-white text-right mb-2" style={{color:'#efc2ac'}}> </h4>
 
 	        </CardBody>
 	     	</Card>

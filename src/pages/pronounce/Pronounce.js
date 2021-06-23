@@ -10,11 +10,11 @@ import arrow from "../../icons/arrow3.png";
 import ob1 from "../../assets/img/play/ob1.png";
 import ob3 from "../../assets/img/play/ob3.png";
 import ob4 from "../../assets/img/play/ob4.png";
-import ob5 from "../../assets/img/play/ob5.png";
+// import ob5 from "../../assets/img/play/ob5.png";
 import ob6 from "../../assets/img/play/ob6.png";
-import ob2 from "../../assets/img/play/ob2.png";
+// import ob2 from "../../assets/img/play/ob2.png";
 import ob7 from "../../assets/img/play/ob7.png";
-import ob8 from "../../assets/img/play/ob8.png";
+// import ob8 from "../../assets/img/play/ob8.png";
 
 import mbQuiz from "../../assets/img/play/mb-pl-cards/mb-quiz.png";
 import mbDnd from "../../assets/img/play/mb-pl-cards/mb-dnd.png";
