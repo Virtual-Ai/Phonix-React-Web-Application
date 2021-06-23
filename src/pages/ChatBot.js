@@ -20,7 +20,8 @@ const otherFontTheme = {
 const steps = [
   {
     id: '1',
-    message: 'Hello !, type in a phrase to know more...',
+    message:
+      'Hello..! Choose one of the following options: \n 1. To check grammatical errors.\n 2. To know the meaning of a word.',
     trigger: '2',
   },
   {
@@ -35,31 +36,30 @@ const steps = [
   },
 ]
 
-
 function Chat() {
   return (
     <>
-  
-<ThemeProvider theme={otherFontTheme}>
-    <React.StrictMode>
-      <div className="chat-mb"
-        style={{
-          textAlign: ' -webkit-center',
-          zIndex: 'auto',
-        }}
-      >
-        <ChatBot
-          botAvatar={botIcon}
-          steps={steps}
-          speechSynthesis={{ enable: true, lang: 'en' }}
-          recognitionEnable={true}
-          width="700px"
-          headerTitle="Phonix Chat"
-          enableSmoothScroll={true}
-        />
-      </div>
-    </React.StrictMode>
-  </ThemeProvider>      
+      <ThemeProvider theme={otherFontTheme}>
+        <React.StrictMode>
+          <div
+            className="chat-mb"
+            style={{
+              textAlign: ' -webkit-center',
+              zIndex: 'auto',
+            }}
+          >
+            <ChatBot
+              botAvatar={botIcon}
+              steps={steps}
+              speechSynthesis={{ enable: true, lang: 'en' }}
+              recognitionEnable={true}
+              width="700px"
+              headerTitle="Phonix Chat"
+              enableSmoothScroll={true}
+            />
+          </div>
+        </React.StrictMode>
+      </ThemeProvider>
     </>
   )
 }
