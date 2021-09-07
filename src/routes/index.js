@@ -11,6 +11,7 @@ const Tables = lazy(() => import("../pages/Tables"));
 const Page404 = lazy(() => import("../pages/404"));
 const Blank = lazy(() => import("../pages/Blank"));
 
+const ChatLanding = lazy(() => import("../pages/ChatLanding"));
 const Chat = lazy(() => import("../pages/ChatBot"));
 const Play = lazy(() => import("../pages/Play"));
 const Learn = lazy(() => import("../pages/Learn"));
@@ -60,6 +61,10 @@ const routes = [
   {
     path: "/chatbot",
     component: Chat,
+  },
+  {
+    path: "/chatlanding",
+    component: ChatLanding,
   },
 
   {
